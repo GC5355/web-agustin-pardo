@@ -48,7 +48,7 @@ export default function RootLayout({
         <div className="sticky top-0 z-10">
           <Navbar />
         </div>
-        <div className={roboto_init.variable}>{children}</div>
+        <div className={montserrat_init.variable}>{children}</div>
         <Footer />
       </body>
     </html>

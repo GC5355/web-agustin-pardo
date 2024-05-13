@@ -26,7 +26,7 @@ const montserrat_init = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Web German",
+  title: "Web Agustín Pardo",
   description: "Proximamente...",
 };
 

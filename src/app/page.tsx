@@ -3,7 +3,7 @@
 import Image from "next/image";
 import foto from "@/imagenes/portada 2.jpg";
 import * as React from "react";
-import fotoSection from "@/imagenes/4.jpg";
+import fotoSection from "@/imagenes/AGU01881.jpg";
 
 export default function Home() {
   return (

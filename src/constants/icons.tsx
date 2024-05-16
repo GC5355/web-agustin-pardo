@@ -34,31 +34,30 @@ export const Icons = {
   ),
   instagram: (props: LucideProps) => (
     <svg
-      className="hover:scale-110 lucide lucide-instagram"
+      xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
+      viewBox="0 0 23 23"
       fill="none"
-      stroke="currentColor"
+      stroke="#FFFFFF"
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
     >
-      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
     </svg>
   ),
   youtube: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="hover:scale-110 lucide lucide-youtube"
-      width="20"
-      height="20"
+      className="lucide lucide-youtube"
+      width="22"
+      height="22"
       viewBox="0 0 23 23"
       fill="none"
-      stroke="currentColor"
+      stroke="#FFFFFF"
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -70,12 +69,12 @@ export const Icons = {
   email: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="hover:scale-110 lucide lucide-mail"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
+      className="lucide lucide-mail"
+      width="21"
+      height="21"
+      viewBox="0 0 23 23"
       fill="none"
-      stroke="currentColor"
+      stroke="#FFFFFF"
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -86,17 +85,24 @@ export const Icons = {
   ),
   spotify: (props: LucideProps) => (
     <svg
-      className="hover:scale-125"
+      fill="none"
       width="20"
       height="20"
-      viewBox="0 0 15 15"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 23 23"
+          xmlns="http://www.w3.org/2000/svg"
     >
-      <path
-        d="M14 7.5A6.5 6.5 0 0 1 7.5 14v1A7.5 7.5 0 0 0 15 7.5zM7.5 14A6.5 6.5 0 0 1 1 7.5H0A7.5 7.5 0 0 0 7.5 15zM1 7.5A6.5 6.5 0 0 1 7.5 1V0A7.5 7.5 0 0 0 0 7.5zM7.5 1A6.5 6.5 0 0 1 14 7.5h1A7.5 7.5 0 0 0 7.5 0zm-3.838 9.116c.986-.24 2.2-.345 3.392-.228 1.196.117 2.334.454 3.202 1.065l.575-.819c-1.053-.74-2.375-1.113-3.679-1.241a11.5 11.5 0 0 0-3.727.252zm-.336-2.124c3.446-.61 5.848-.297 7.839 1.132l.583-.813C9.45 6.661 6.732 6.374 3.152 7.008zm-.225-2.151c1.353-.478 3.003-.676 4.624-.544 1.623.133 3.18.595 4.364 1.4l.561-.828c-1.364-.927-3.099-1.426-4.843-1.568-1.746-.143-3.539.067-5.039.597z"
-        fill="#000"
-      />
+      <g
+      stroke="#FFFFFF"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-miterlimit="10"
+        stroke-width="2"
+      >
+        <path d="m12 22c5.5228 0 10-4.4772 10-10 0-5.52285-4.4772-10-10-10-5.52285 0-10 4.47715-10 10 0 5.5228 4.47715 10 10 10z" />
+        <path d="m6.6001 9.3001c3.6-1.4 7.7-.9 10.9 1.3" />
+        <path d="m7.8999 12.4c2.7-1 5.7-.7 8 1" />
+        <path d="m8.80005 15.4001c1.99995-.8 4.19995-.5 5.99995.7" />
+      </g>
     </svg>
   ),
   espanol: (props: LucideProps) => (

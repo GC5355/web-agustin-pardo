@@ -1,5 +1,5 @@
 import { LucideProps, Moon, SunMedium, type LucideIcon } from "lucide-react";
-import hamburguesa from '@/imagenes/hamburguer.png'
+
 export type Icon = LucideIcon;
 
 export const Icons = {
@@ -105,7 +105,5 @@ export const Icons = {
       </g>
     </svg>
   ),
-  hamburguer: (props: LucideProps) => (
-    hamburguesa
-  ),
+
 };

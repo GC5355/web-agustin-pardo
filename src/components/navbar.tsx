@@ -7,8 +7,8 @@ import Image from "next/image";
 import { nav_links } from "@/constants/nav-links";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import hamburguesa from "@/imagenes/hamburguer.png";
-
+import hamburguesa from "@/imagenes/logos/logo navbar.png";
+import fotoRedondaPepe from "@/imagenes/logos/LogoRedondo.png";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,7 +24,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-import fotoRedondaPepe from "@/imagenes/LogoRedondo.png";
+
 import { Github, User } from "lucide-react";
 
 export const Navbar = () => {

@@ -39,6 +39,7 @@ export default function Home() {
             <Image alt="imagen" src={fotoSection} height={500} width={500} />
           </section>
         </div>
+        
 
     </main>
   );

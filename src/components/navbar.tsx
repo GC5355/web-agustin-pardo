@@ -24,7 +24,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-
 import { Github, User } from "lucide-react";
 
 export const Navbar = () => {
@@ -61,13 +60,6 @@ export const Navbar = () => {
           : "transition-all duration-500 ease-out bg-neutral-950"
       }`}
     >
-      {/* 
-${
-        isScrolled
-          ? "transition-opacity duration-500 ease-in opacity-50"
-          : "transition-opacity duration-500 ease-out opacity-100"
-      } */}
-
       <Link href="/" className="col-span-4 space-x-4 ">
         <Image
           src={fotoRedondaPepe}
@@ -108,17 +100,16 @@ ${
       </ul>
 
       <div className="lg:hidden col-start-8">
-        <DropdownMenu>
-          <DropdownMenuTrigger
-            
-            asChild
-          >
+        {/* <DropdownMenu>
+          <DropdownMenuTrigger asChild>
             <div className="flex h-6 w-6 items-center content-center pt-5">
               <Image src={hamburguesa} alt="nav" height={30} width={30} />
             </div>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56">
-            <DropdownMenuLabel>Agustin Pardo</DropdownMenuLabel>
+          <DropdownMenuContent className="w-56 bg-black">
+            <DropdownMenuLabel className="text-slate-50">
+              Agustin Pardo
+            </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               {nav_links.map((link, i) => (
@@ -126,7 +117,7 @@ ${
                   <Link
                     href={link.href}
                     key={i}
-                    className="regular-16 px-3 text-neutral-950  cursor-pointer pb-1.5 transition-all hover:font-bold"
+                    className="regular-16 px-3 text-slate-50  cursor-pointer pb-1.5 transition-all hover:font-bold"
                   >
                     {link.title.toUpperCase()}
                   </Link>
@@ -135,11 +126,36 @@ ${
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
 
-            <DropdownMenuSeparator />
             <DropdownMenuItem>
               <Github className="mr-2 h-4 w-4" />
               <span>GitHub</span>
             </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu> */}
+
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <div className="flex h-6 w-6 items-center content-center pt-5">
+              <Image src={hamburguesa} alt="nav" height={30} width={30} />
+            </div>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="w-56 bg-black text-slate-50 border-neutral-800">
+            <DropdownMenuLabel>AGUSTÍN PARDO</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+
+            <DropdownMenuGroup className="bg-black text-slate-50">
+              {nav_links.map((link, i) => (
+                <DropdownMenuItem key={i}>
+                  <a
+                    href={link.href}
+                    className="regular-16 px-3  cursor-pointer pb-1.5 transition-all"
+                  >
+                    {" "}
+                    {link.title.toUpperCase()}
+                  </a>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>

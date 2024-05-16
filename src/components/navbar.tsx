@@ -68,7 +68,7 @@ ${
           : "transition-opacity duration-500 ease-out opacity-100"
       } */}
 
-      <Link href="/" className="sm:col-span-2 md:col-span-4 space-x-4 ">
+      <Link href="/" className="col-span-4 space-x-4 ">
         <Image
           src={fotoRedondaPepe}
           alt="logo"
@@ -107,40 +107,42 @@ ${
         ))}
       </ul>
 
-<div className="lg:hidden col-start-7 md:col-start-8 items-end" >
-  <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <div className="flex h-6 w-6 items-center content-center pt-5">
-            <Image src={hamburguesa} alt="nav" height={30} width={30} />
-          </div>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56">
-          <DropdownMenuLabel>Agustin Pardo</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuGroup>
-            {nav_links.map((link, i) => (
-              <DropdownMenuItem key={i}>
-                <Link
-                  href={link.href}
-                  key={i}
-                  className="regular-16 px-3 text-neutral-950  cursor-pointer pb-1.5 transition-all hover:font-bold"
-                >
-                  {link.title.toUpperCase()}
-                </Link>
-              </DropdownMenuItem>
-            ))}
-          </DropdownMenuGroup>
-          <DropdownMenuSeparator />
+      <div className="lg:hidden col-start-8">
+        <DropdownMenu>
+          <DropdownMenuTrigger
+            
+            asChild
+          >
+            <div className="flex h-6 w-6 items-center content-center pt-5">
+              <Image src={hamburguesa} alt="nav" height={30} width={30} />
+            </div>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="w-56">
+            <DropdownMenuLabel>Agustin Pardo</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuGroup>
+              {nav_links.map((link, i) => (
+                <DropdownMenuItem key={i}>
+                  <Link
+                    href={link.href}
+                    key={i}
+                    className="regular-16 px-3 text-neutral-950  cursor-pointer pb-1.5 transition-all hover:font-bold"
+                  >
+                    {link.title.toUpperCase()}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuGroup>
+            <DropdownMenuSeparator />
 
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>
-            <Github className="mr-2 h-4 w-4" />
-            <span>GitHub</span>
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-</div>
-      
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <Github className="mr-2 h-4 w-4" />
+              <span>GitHub</span>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
     </nav>
   );
 };

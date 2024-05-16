@@ -18,7 +18,7 @@ const footer = () => {
         </span>
       </div>
 
-      <div className="flex space-x-4   col-start-5 justify-center content-center">
+      <div className="flex space-x-4   col-start-5 justify-center content-center mr-11">
         <Link
           className="hover:scale-110"
           target="_blank"

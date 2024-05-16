@@ -40,7 +40,7 @@ export const Icons = {
       viewBox="0 0 23 23"
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
+      strokeWidth="2"
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -58,7 +58,7 @@ export const Icons = {
       viewBox="0 0 23 23"
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
+      strokeWidth="2"
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -75,7 +75,7 @@ export const Icons = {
       viewBox="0 0 23 23"
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
+      strokeWidth="2"
       stroke-linecap="round"
       stroke-linejoin="round"
     >
@@ -96,7 +96,7 @@ export const Icons = {
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-miterlimit="10"
-        stroke-width="2"
+        strokeWidth="2"
       >
         <path d="m12 22c5.5228 0 10-4.4772 10-10 0-5.52285-4.4772-10-10-10-5.52285 0-10 4.47715-10 10 0 5.5228 4.47715 10 10 10z" />
         <path d="m6.6001 9.3001c3.6-1.4 7.7-.9 10.9 1.3" />

@@ -15,7 +15,7 @@ export default function Home() {
           className="object-cover w-full h-full"
           layout="fill"
         />
-        <h1 className="font-montserrat font-normal text-6xl tracking-widest text-slate-50 absolute inset-0 flex items-center justify-center select-none">
+        <h1 className="font-montserrat font-normal text-2xl md:text-3xl lg:text-6xl tracking-widest text-slate-50 absolute inset-0 flex items-center justify-center select-none">
           AGUSTIN PARDO
         </h1>
       </div>
@@ -42,5 +42,5 @@ export default function Home() {
         
 
     </main>
-  );
+  ); 
 }

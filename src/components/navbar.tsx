@@ -23,7 +23,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-import fotoRedondaPepe from "@/imagenes/fotoRedondaPepe.png";
+import fotoRedondaPepe from "@/imagenes/LogoRedondo.png";
 import { Github, User } from "lucide-react";
 
 export const Navbar = () => {
@@ -54,12 +54,19 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`grid grid-cols-8 bg-slate-200 border-y-2 border-slate-400 drop-shadow-md pl-5 py-4 justify-center content-center ${
+      className={`grid grid-cols-8  pl-5 py-3 justify-center content-center   ${
+        isScrolled
+          ? "transition-all duration-500 ease-in backdrop-blur-sm bg-black/30 "
+          : "transition-all duration-500 ease-out bg-neutral-950"
+      }`}
+    >
+{/* 
+${
         isScrolled
           ? "transition-opacity duration-500 ease-in opacity-50"
           : "transition-opacity duration-500 ease-out opacity-100"
-      } `}
-    >
+      } */}
+      
       <Link href="/" className="col-span-4 space-x-4 ">
         <Image
           src={fotoRedondaPepe}
@@ -70,7 +77,7 @@ export const Navbar = () => {
         />
         <span
           onClick={() => handleLinkClick("Inicio")}
-          className={`hidden sm:inline-block font-semibold text-2xl font-montserrat ${
+          className={`hidden sm:inline-block font-semibold text-slate-50 text-2xl font-montserrat ${
             selectedEnlace === "Inicio" ? "" : ""
           }`}
         >
@@ -78,16 +85,17 @@ export const Navbar = () => {
         </span>{" "}
       </Link>
 
-      <ul className="hidden col-start-5  col-span-3  lg:flex content-center space-x-10 ml-11 items-center justify-center pt-2">
+      <ul className='hidden col-start-5 col-span-3 lg:flex content-center space-x-10 ml-11 items-center justify-center pt-2}'>
         {nav_links.map((link, i) => (
           <Link
             href={link.href}
             key={i}
-            className=" px-3 font-semibold font-montserrat tracking-wide text-neutral-950  cursor-pointer pb-1.5 transition-all hover:font-bold select-none"
-          >
+            className='px-3 font-semibold  font-montserrat tracking-wide text-slate-50  cursor-pointer transition-all hover:font-bold select-none ' >
+
+
             <div
               onClick={() => handleLinkClick(link.title)}
-              className={`px-3 font-semibold tracking-wide text-neutral-950 pb-1.5 transition-all hover:font-bold ${
+              className={`px-3 font-semibold tracking-wide text-slate-50  transition-all hover:font-bold ${
                 selectedEnlace === link.title ? "underline underline-offset-4" : ""
               }`}
             >

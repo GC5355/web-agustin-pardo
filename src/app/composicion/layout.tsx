@@ -15,9 +15,7 @@ export const metadata: Metadata = {
 export default function layout({ children }: LayoutProps) {
   return (
     <div>
-      <h1 className='my-10 text-center text-5xl font-extrabold tracking-tight'>
-        Composiciones
-      </h1>
+  
       {children}
     </div>
   )

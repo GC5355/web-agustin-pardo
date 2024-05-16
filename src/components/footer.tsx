@@ -7,7 +7,7 @@ import { Icons } from '@/constants/icons';
 
 const footer = () => {
   return (
-    <div className=' grid grid-cols-5 bottom-0 bg-slate-100 border-2 drop-shadow-md py-4 pr-5'>
+    <div className=' grid grid-cols-5 bottom-0 bg-slate-100 border-2 drop-shadow-md py-4 pr-5 mt-12'>
       <div className='flex pl-4 '>
         <span className='flex grow justify-center  space-x-7'>
           <Icons.espanol />

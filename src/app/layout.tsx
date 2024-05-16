@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "@/styles/globals.css"
+import "@/styles/globals.css";
 import { Inter as FontSans } from "next/font/google";
 import { Roboto, Montserrat } from "next/font/google";
 
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
+import { Icons } from "@/constants/icons";
+import Head from 'next/head';
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -28,6 +30,7 @@ const montserrat_init = Montserrat({
 export const metadata: Metadata = {
   title: "Web Agustín Pardo",
   description: "Proximamente...",
+ 
 };
 
 export default function RootLayout({
@@ -37,9 +40,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+   
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans bg-black antialiased",
           fontSans.variable,
           roboto_init.variable,
           montserrat_init.variable
@@ -49,7 +53,10 @@ export default function RootLayout({
           <Navbar />
         </div>
         <div className={montserrat_init.variable}>{children}</div>
-        <Footer />
+        
+        
+        <Footer  />
+       
       </body>
     </html>
   );

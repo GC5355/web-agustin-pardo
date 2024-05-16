@@ -1,9 +1,9 @@
 export default function arreglos() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 pt-10  ">
       <div>
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-          Pagina de arreglos
+        <h1 className="text-4xl font-montserrat font-normal text-slate-50 tracking-tight lg:text-5xl">
+         ARREGLOS
         </h1>
       </div>
     </main>

@@ -21,13 +21,15 @@ export default function Bio() {
     Autoplay({ delay: 1500, stopOnInteraction: true })
   )
     return (
-      <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
+      <main className="flex min-h-screen flex-col items-center justify-between pt-10 ">
         <div>
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Pagina de bio
+          <h1 className="text-4xl font-montserrat font-normal text-slate-50 tracking-tight lg:text-5xl">
+            PAGINA DE BIO
           </h1>
 
       
+
+
         <Carousel
           plugins={[plugin.current]}
           className="w-full max-w-xs"

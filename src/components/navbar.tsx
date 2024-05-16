@@ -6,7 +6,8 @@ import { Icons } from "@/constants/icons";
 import Image from "next/image";
 import { nav_links } from "@/constants/nav-links";
 import { useEffect, useState } from "react";
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
+import hamburguesa from "@/imagenes/hamburguer.png";
 
 import {
   DropdownMenu,
@@ -60,14 +61,14 @@ export const Navbar = () => {
           : "transition-all duration-500 ease-out bg-neutral-950"
       }`}
     >
-{/* 
+      {/* 
 ${
         isScrolled
           ? "transition-opacity duration-500 ease-in opacity-50"
           : "transition-opacity duration-500 ease-out opacity-100"
       } */}
-      
-      <Link href="/" className="col-span-4 space-x-4 ">
+
+      <Link href="/" className="sm:col-span-2 md:col-span-4 space-x-4 ">
         <Image
           src={fotoRedondaPepe}
           alt="logo"
@@ -85,18 +86,19 @@ ${
         </span>{" "}
       </Link>
 
-      <ul className='hidden col-start-5 col-span-3 lg:flex content-center space-x-10 ml-11 items-center justify-center pt-2}'>
+      <ul className="hidden col-start-5 col-span-3 lg:flex content-center space-x-10 ml-11 items-center justify-center pt-2}">
         {nav_links.map((link, i) => (
           <Link
             href={link.href}
             key={i}
-            className='px-3 font-semibold  font-montserrat tracking-wide text-slate-50  cursor-pointer transition-all hover:font-bold select-none ' >
-
-
+            className="px-3 font-semibold  font-montserrat tracking-wide text-slate-50  cursor-pointer transition-all hover:font-bold select-none "
+          >
             <div
               onClick={() => handleLinkClick(link.title)}
               className={`px-3 font-semibold tracking-wide text-slate-50  transition-all hover:font-bold ${
-                selectedEnlace === link.title ? "underline underline-offset-4" : ""
+                selectedEnlace === link.title
+                  ? "underline underline-offset-4"
+                  : ""
               }`}
             >
               {link.title}
@@ -105,14 +107,12 @@ ${
         ))}
       </ul>
 
-      <DropdownMenu>
-        <DropdownMenuTrigger className="lg:hidden col-start-8" asChild>
-          <Button variant={"ghost"}>
-            <svg width="20" height="20" viewBox="0 0 16 16">
-              <path fill="none" d="M0 0h16v16H0z" />
-              <path d="M1 9h14V7H1zm0 5h14v-2H1zM1 2v2h14V2z" />
-            </svg>
-          </Button>
+<div className="lg:hidden col-start-7 md:col-start-8 items-end" >
+  <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <div className="flex h-6 w-6 items-center content-center pt-5">
+            <Image src={hamburguesa} alt="nav" height={30} width={30} />
+          </div>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-56">
           <DropdownMenuLabel>Agustin Pardo</DropdownMenuLabel>
@@ -139,6 +139,8 @@ ${
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+</div>
+      
     </nav>
   );
 };

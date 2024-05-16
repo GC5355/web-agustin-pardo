@@ -1,5 +1,5 @@
 import { LucideProps, Moon, SunMedium, type LucideIcon } from "lucide-react";
-
+import hamburguesa from '@/imagenes/hamburguer.png'
 export type Icon = LucideIcon;
 
 export const Icons = {
@@ -89,10 +89,10 @@ export const Icons = {
       width="20"
       height="20"
       viewBox="0 0 23 23"
-          xmlns="http://www.w3.org/2000/svg"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <g
-      stroke="#FFFFFF"
+        stroke="#FFFFFF"
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-miterlimit="10"
@@ -105,48 +105,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  espanol: (props: LucideProps) => (
-    <svg
-      className="hover:scale-125 "
-      width="20"
-      height="20"
-      viewBox="0 0 130 120"
-    >
-      <path fill="#D8D8D8" d="M-1250-1020H930V680h-2180z" />
-      <g />
-      <g />
-      <path fill="#DC4437" d="M0 0h130v23H0zm0 97h130v23H0z" />
-      <path fill="#FCBE1F" d="M0 23h130v74H0z" />
-      <path
-        fill="#DC4437"
-        d="M45.3 45.8v-3h5.5v-8.2h-5.5v-6.3h-8.7v6.3h-5.5v8.2h5.5v3c-18 1-15.6 1.9-15.6 1.9V74s-1.2 16 20 16 20-16 20-16V47.6s2.3-.8-15.7-1.8"
-      />
-      <g />
-      <g />
-      <g />
-    </svg>
-  ),
-  ingles: (props: LucideProps) => (
-    <svg
-      className="hover:scale-125 "
-      width="20"
-      height="20"
-      viewBox="0 0 512 512"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <path
-        d="M494.7 78.5c-159.5-37.1-319 45.5-478.6 8.3-8.9-2-16.1 3.1-16.1 12v314.4c0 8.9 7.2 18.2 16.1 20.3 159.5 37.1 319-45.5 478.6-8.3 8.9 2.1 16.1-3 16.1-11.9V98.9c0-9-7.2-18.3-16.1-20.4"
-        fill="#0b67b2"
-      />
-      <path
-        d="M510.8 98.8c0-8.9-7.2-18.2-16.1-20.3-1-.2-2.1-.5-3.1-.7L313.9 186V74.8c-39 4.7-78 11.1-117 15.8v94.2L45 92.3c-9.6-1.4-19.2-3.2-28.9-5.5-8.9-2-16.1 3.1-16.1 12v20.8l128 77.9H0v117h133.9L0 396v17.2c0 8.9 7.2 18.2 16.1 20.3 3 .7 6 1.3 8.9 1.9l171.8-104.7v106.4c39-4.7 78-11.1 117-15.8v-91.9L460.7 419c11.3 1.5 22.6 3.5 33.9 6.2 8.9 2.1 16.1-3 16.1-11.9v-18.4l-131.9-80.3h131.9v-117h-126l126-76.7c.1-7.5.1-14.8.1-22.1"
-        fill="#ff473e"
-      />
-      <path
-        d="m412.9 323.5 97.9 59.6v23.4l-136.3-83h-51.3l164.3 100.1c-16.6-3.5-33.3-5.7-49.9-7l-114.7-69.8v73.6c-6 .7-12 1.4-18 2.2v-117h205.9v18h-97.9zm-225 114.8c6-.7 12-1.4 18-2.2V305.5H0v18h99.9L0 384.3v23.4l138.3-84.2h49.6v1L11.7 431.8c1.4.7 2.9 1.3 4.4 1.7 7.9 1.8 15.8 3.4 23.7 4.7L187.9 348zM0 188.5v18h205.9v-117c-6 .8-12 1.5-18 2.2v76L68.7 95.1c-17.2-1.5-34.4-4-51.6-8l166.5 101.4h-51.3L0 107.9v23.4l94 57.2zM322.9 73.7c-6 .7-12 1.4-18 2.2v130.6h205.9v-18h-92l92-56v-23.4l-130.4 79.4h-51.3L502.8 82.7c-2.4-2-5.1-3.5-8.1-4.2-5.9-1.4-11.7-2.5-17.6-3.6l-154.2 93.9z"
-        fill="#e8e8e8"
-      />
-    </svg>
+  hamburguer: (props: LucideProps) => (
+    hamburguesa
   ),
 };

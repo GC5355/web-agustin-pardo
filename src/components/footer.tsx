@@ -6,7 +6,7 @@ import { Icons } from "@/constants/icons";
 
 const footer = () => {
   return (
-    <div className=" grid grid-cols-5 bottom-0  py-8 pr-5 mt-12">
+    <div className=" grid grid-cols-5 bottom-0  bg-neutral-950 py-8 pr-5 mt-12">
       <div className="flex pl-4 ">
         <span className="flex grow justify-center  space-x-7">
           <h3 className=" font-normal text-slate-50 text-lg font-montserrat hover:scale-110 hover:font-semibold select-none">
@@ -18,7 +18,7 @@ const footer = () => {
         </span>
       </div>
 
-      <div className="flex space-x-4   col-start-5 justify-center content-center mr-11">
+      <div className="flex space-x-4  gap-1 col-start-5 justify-center content-center mr-16">
         <Link
           className="hover:scale-110"
           target="_blank"

@@ -83,7 +83,7 @@ export const Navbar = () => {
           <Link
             href={link.href}
             key={i}
-            className="px-3 font-semibold  font-montserrat tracking-wide text-slate-50  cursor-pointer transition-all hover:font-bold select-none "
+            className="px-3 font-semibold  font-montserrat tracking-wide text-slate-50  cursor-pointer transition-all hover:font-bold hover:scale-110 select-none "
           >
             <div
               onClick={() => handleLinkClick(link.title)}

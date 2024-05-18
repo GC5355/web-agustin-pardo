@@ -1,0 +1,17 @@
+{
+  "Navigation": {
+    "Bio": "Bio",
+    "Arreglos": "Arrangements",
+    "Composicion": "Composition",
+    "Direccion": "Direction"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, es {es ESP} en {en ENG} other {Unknown}}"
+  },
+  "LandingPage": {
+    "Titulo1": "Welcome to my Web Page",
+    "Texto1": "This is Pepe's website, which he is carrying out so elegantly.",
+    "Texto2": "Pepe is such a beautiful and hairy person."
+  }
+}

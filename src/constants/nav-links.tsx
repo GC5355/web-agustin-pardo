@@ -3,25 +3,25 @@
 export const nav_links: { title: string; href: string; description: string }[] = [
    
     {
-      title: "BIO",
+      title: "Bio",
       href: "/bio",
       description:
         "Una pagina llegina de biografia",
     },
     {
-      title: "ARREGLOS",
+      title: "Arreglos",
       href: "/arreglos",
       description:
         "Una pagina totalmente asediada por los arreglos.",
     },
     {
-      title: "COMPOSICION",
+      title: "Composicion",
       href: "/composicion",
       description:
         "Una pagina totalmente asediada por los arreglos.",
     },
     {
-      title: "DIRECCION",
+      title: "Direccion",
       href: "/direccion",
       description:
         "Una pagina totalmente asediada por los arreglos.",

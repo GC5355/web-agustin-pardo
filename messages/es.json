@@ -1,0 +1,18 @@
+{
+  "Navigation": {
+    "Bio": "Bio",
+    "Arreglos": "Arreglos",
+    "Composicion": "Composicion",
+    "Direccion": "Direccion"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, es {es ESP} en {en ENG} other {Unknown}}"
+  },
+  "LandingPage": {
+    "Titulo1": "Bienvenidos a mi pagina Web",
+    "Texto1": "Esta es la pagina web del pepe, que tan elegantemente esta llevando a cabo.",
+    "Texto2": "Pepe es una persona taaaaan bella como peluda."
+  }
+}
+

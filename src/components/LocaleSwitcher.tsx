@@ -9,7 +9,7 @@ export default function LocaleSwitcher() {
   console.log('localeeeeeeee' , locales);
   console.log('localeeeeeeee' , locale);
   return (
-    <LocaleSwitcherSelect defaultValue={locale} label={t('label')}>
+    <LocaleSwitcherSelect defaultValue={locale}  label={t('label')}>
       {locales.map((cur) => (
         
         <option key={cur} value={cur}>

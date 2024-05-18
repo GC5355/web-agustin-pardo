@@ -3,19 +3,24 @@ import React from "react";
 import Link from "next/link";
 //import {logoIg} from '../../../public'
 import { Icons } from "@/constants/icons";
+import LocaleSwitcher from "./LocaleSwitcher";
 
 const footer = () => {
   return (
     <div className=" grid grid-cols-5 bottom-0  bg-neutral-950 py-8 pr-5 mt-12">
       <div className="flex pl-4 ">
-        <span className="flex grow justify-center  space-x-7">
+           {/* localSwitcher */}
+      <div className=" lg:hidden ">
+        <LocaleSwitcher />
+      </div>
+        {/* <span className="flex grow justify-center  space-x-7">
           <h3 className=" font-normal text-slate-50 text-lg font-montserrat hover:scale-110 hover:font-semibold select-none">
             ESP
           </h3>
           <h3 className=" font-normal text-slate-50 text-lg font-montserrat hover:scale-110 hover:font-semibold select-none">
             ENG
           </h3>
-        </span>
+        </span> */}
       </div>
 
       <div className="flex space-x-4  gap-1 col-start-5 justify-center content-center mr-16">
@@ -48,7 +53,7 @@ const footer = () => {
           <Icons.spotify />
         </Link>
       </div>
-      <div></div>
+   
     </div>
   );
 };

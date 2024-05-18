@@ -6,7 +6,7 @@ import { Roboto, Montserrat } from "next/font/google";
 
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/navbar";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer";
 import { Icons } from "@/constants/icons";
 import Head from "next/head";
 

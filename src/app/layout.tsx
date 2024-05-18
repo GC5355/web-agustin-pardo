@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Icons } from "@/constants/icons";
-import Head from 'next/head';
+import Head from "next/head";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -30,7 +30,6 @@ const montserrat_init = Montserrat({
 export const metadata: Metadata = {
   title: "Web Agustín Pardo",
   description: "Proximamente...",
- 
 };
 
 export default function RootLayout({
@@ -40,7 +39,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-   
       <body
         className={cn(
           "min-h-screen bg-background font-sans bg-black antialiased",
@@ -53,10 +51,8 @@ export default function RootLayout({
           <Navbar />
         </div>
         <div className={montserrat_init.variable}>{children}</div>
-        
-        
-        <Footer  />
-       
+
+        <Footer />
       </body>
     </html>
   );

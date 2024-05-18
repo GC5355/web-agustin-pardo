@@ -13,5 +13,9 @@
     "Titulo1": "Welcome to my Web Page",
     "Texto1": "This is Pepe's website, which he is carrying out so elegantly.",
     "Texto2": "Pepe is such a beautiful and hairy person."
+  },
+    "NotFoundPage": {
+    "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
+    "title": "Page not found"
   }
 }

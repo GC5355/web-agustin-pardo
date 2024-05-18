@@ -13,6 +13,10 @@
     "Titulo1": "Bienvenidos a mi pagina Web",
     "Texto1": "Esta es la pagina web del pepe, que tan elegantemente esta llevando a cabo.",
     "Texto2": "Pepe es una persona taaaaan bella como peluda."
+  },
+    "NotFoundPage": {
+    "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
+    "title": "Page not found"
   }
 }
 

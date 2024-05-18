@@ -6,9 +6,8 @@ import { Roboto, Montserrat } from "next/font/google";
 
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/navbar";
-import Footer from "@/components/Footer";
-import { Icons } from "@/constants/icons";
-import Head from "next/head";
+// import Footer from "@/components/Footer";
+
 
 import { NextIntlClientProvider } from "next-intl";
 import {
@@ -17,6 +16,7 @@ import {
   unstable_setRequestLocale,
 } from "next-intl/server";
 import Navigation from "@/components/Navigation";
+import FooterNav from "@/components/FooterNav";
 
 const montserrat_init = Montserrat({
   subsets: ["latin"],
@@ -56,7 +56,8 @@ export default async function LocaleLayout({
             <Navigation />
           </div>
           <div className={montserrat_init.variable}>{children}</div>
-          <Footer />
+          {/* <Footer /> */}
+          <FooterNav />
         </NextIntlClientProvider>
       </body>
     </html>

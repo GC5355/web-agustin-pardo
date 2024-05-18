@@ -4,7 +4,7 @@ import Link from "next/link";
 //import {logoIg} from '../../../public'
 import { Icons } from "@/constants/icons";
 
-const Footer = () => {
+const footer = () => {
   return (
     <div className=" grid grid-cols-5 bottom-0  bg-neutral-950 py-8 pr-5 mt-12">
       <div className="flex pl-4 ">
@@ -53,4 +53,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default footer;

@@ -2,8 +2,12 @@
   "Navigation": {
     "Bio": "Bio",
     "Arreglos": "Arrangements",
-    "Composicion": "Composition",
-    "Direccion": "Direction"
+    "Composición": "Composition",
+    "Dirección": "Direction",
+    "Instrumentista": "Instrumentalist",
+    "Productor": "Producer",
+    "Docencia": "Teaching",
+    "Contacto": "Contact"
   },
   "LocaleSwitcher": {
     "label": "Change language",
@@ -14,8 +18,22 @@
     "Texto1": "This is Pepe's website, which he is carrying out so elegantly.",
     "Texto2": "Pepe is such a beautiful and hairy person."
   },
-    "NotFoundPage": {
+  "NotFoundPage": {
     "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
     "title": "Page not found"
+  },
+  "Bio": {
+    "titulo": "Biography",
+    "texto1": "Agustín Pardo Motz is an Uruguayan musician, composer, arranger, and conductor. He currently resides in Germany, where he is pursuing a Doctorate (Dr. sc. mus.) at the Hochschule für Musik und Theater (HfMT) in Hamburg. Previously, he completed a Master's in Jazz Composition at the same institution, thanks to a scholarship from the German Academic Exchange Service (DAAD). Additionally, he holds a Bachelor's degree in Composition and a Bachelor's degree in Orchestral Conducting from the University of the Republic (UdelaR) in Montevideo, Uruguay. He is also a graduate of the Escuela de Música Contemporánea (Berklee International Network) in Buenos Aires, Argentina, in Jazz Guitar, and has a specialization in Arrangements and Composition from the same institution.",
+    "texto2": "As a composer, he is primarily dedicated to writing for large ensembles, such as Big Bands, Orchestras, and Symphonic Bands. His music seeks to establish a dialogue between South American musical traditions, jazz, contemporary academic music, and the symphonic tradition.",
+    "texto3": "His compositions and arrangements have been performed in various parts of the world, including Germany, Switzerland, Austria, Norway, Argentina, and Uruguay, among other countries. Notable performances include the NDR BigBand, the Hamburger Jazz Kombinat, the Jazz Hall Large Ensemble, the HfMT BigBand, Det Nye Norske Storband from Oslo, the Sodre Symphony Orchestra, and various departmental bands from Uruguay.",
+    "texto4": "As a conductor, he has led ensembles such as the NDR BigBand, the Jazz Hall Large Ensemble, the HfMT BigBand, the Large Ensemble of the Norwegian Academy of Music in Oslo, the European Jazz Workshop Large Ensemble, the UTEC Orchestra, the EUM BigBand, the Departmental Band of San José, and the Montevideo Symphonic Band, among others.",
+    "texto5": "In 2022, he was awarded the Gerhard Trede Composition Prize in Hamburg for his work \"Die Elbe de la Plata\". In 2020, he received the National Music Prize from the Ministry of Education and Culture (MEC) in the Tango category for his composition \"Sol XIII\". In 2022, the piece \"No Llueve\" by La Imbailable Cumbia Orquesta, for which he wrote the arrangements, won the National Music Prize in the Tropical category.",
+    "texto6": "As a multi-instrumentalist performer, he has participated in numerous international tours, standing out for his versatility in a wide range of instruments and musical styles. Throughout his career, he has also collaborated with various artists on recording productions as a session musician and producer.",
+    "texto7": "As an educator, he is currently in charge of the Composition & Arrangements Area and the Research & Project Management Area at the Technological University (UTEC) in Mercedes, Uruguay. He also works in the Theory & Composition Department at the Faculty of Arts of the UdelaR in Montevideo. Previously, he has worked as a teacher at the International School of Contemporary Music at the National Pedro Henríquez Ureña University (UNPHU) in Santo Domingo, Dominican Republic, and at the Conservatorio Sur in Montevideo, Uruguay."
+  },
+  "Composicion": {
+    "titulo": "Compositions",
+    "texto1": "Text1"
   }
 }

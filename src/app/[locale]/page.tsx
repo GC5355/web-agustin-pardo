@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+
+import fotoProli from "@/imagenes/proli1.jpg";
 import foto from "@/imagenes/portada 2.jpg";
 import fotoSection from "@/imagenes/AGU01881.jpg";
 import { useTranslations } from "next-intl";
@@ -29,15 +31,15 @@ export default function Home() {
   const t = useTranslations("LandingPage");
   return (
     <main className="flex h-max flex-col items-center justify-between text-slate-50">
-      <div className="relative w-full h-[500px]">
+      <div className="relative w-full h-[800px]" >
         <Image
-          src={foto}
+          src={fotoProli}
           alt="Descripción de la imagen"
-          className="object-cover w-full h-full"
+          className="object-cover  w-1/2 h-1/2 lg:w-full lg:h-full"
           layout="fill"
         />
         <h1 className="font-montserrat font-normal text-2xl md:text-4xl lg:text-6xl tracking-widest  absolute inset-0 flex items-center justify-center select-none">
-          AGUSTIN PARDO
+          AGUSTÍN PARDO MOTZ
         </h1>
       </div>
 

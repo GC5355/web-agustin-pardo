@@ -74,7 +74,7 @@ export const Navbar = () => {
             selectedEnlace === "Inicio" ? "" : ""
           }`}
         >
-          Agustin Pardo Motz
+          AGUSTÍN PARDO MOTZ
         </span>{" "}
       </Link>
 

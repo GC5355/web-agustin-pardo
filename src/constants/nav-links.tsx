@@ -1,29 +1,43 @@
-
-
-export const nav_links: { title: string; href: string; description: string }[] = [
-   
+export const nav_links: { title: string; href: string; description: string }[] =
+  [
     {
       title: "Bio",
       href: "/bio",
-      description:
-        "Una pagina llegina de biografia",
+      description: "Una pagina llegina de biografia",
     },
     {
       title: "Arreglos",
       href: "/arreglos",
-      description:
-        "Una pagina totalmente asediada por los arreglos.",
+      description: "Una pagina totalmente asediada por los arreglos.",
     },
     {
-      title: "Composicion",
+      title: "Composición",
       href: "/composicion",
-      description:
-        "Una pagina totalmente asediada por los arreglos.",
+      description: "Una pagina totalmente asediada por los arreglos.",
     },
     {
-      title: "Direccion",
+      title: "Dirección",
       href: "/direccion",
-      description:
-        "Una pagina totalmente asediada por los arreglos.",
+      description: "Una pagina totalmente asediada por los arreglos.",
     },
-  ]
+    {
+      title: "Instrumentista",
+      href: "/instrumentista",
+      description: "Una pagina totalmente asediada por los arreglos.",
+    },
+    {
+      title: "Productor",
+      href: "/productor",
+      description: "Una pagina totalmente asediada por los arreglos.",
+    },
+    {
+      title: "Docencia",
+      href: "/docencia",
+      description: "Una pagina totalmente asediada por los arreglos.",
+    },
+    {
+      title: "Contacto",
+      href: "/contactoagustin",
+      description: "Una pagina totalmente asediada por los arreglos.",
+    },
+  ];

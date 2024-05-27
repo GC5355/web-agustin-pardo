@@ -14,22 +14,29 @@ import {
 import foto1 from '@/imagenes/foto1jpg.jpg';
 import foto2 from '@/imagenes/redondaRecurso 1.png';
 import foto3 from '@/imagenes/foto3.jpeg';
-
+import { useTranslations } from "next-intl";
 
 export default function Bio() {
+  const t = useTranslations("Bio");
   const plugin = React.useRef(
     Autoplay({ delay: 1500, stopOnInteraction: true })
   )
     return (
-      <main className="flex min-h-screen flex-col items-center  pt-10 ">
+      <main className="flex min-h-screen flex-col items-center  text-slate-50 pt-10 ">
         <div>
-          <h1 className="text-4xl font-montserrat font-normal text-slate-50 tracking-tight lg:text-5xl">
-            PAGINA DE BIO
+          <h1 className="text-4xl font-montserrat font-normal  tracking-tight lg:text-5xl">
+           {t('titulo').toLocaleUpperCase()}
           </h1>
 
-      
+    
 
 
+
+
+
+
+
+{/* 
         <Carousel
           plugins={[plugin.current]}
           className="w-full max-w-xs"
@@ -71,7 +78,7 @@ export default function Bio() {
           </CarouselContent>
           <CarouselPrevious />
           <CarouselNext />
-        </Carousel>
+        </Carousel> */}
         </div>
       </main>
     );

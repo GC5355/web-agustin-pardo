@@ -23,3 +23,10 @@ Me cambio a rama main:
     git add <resolved-file>
     git commit
     git push origin main
+
+
+
+
+---->  FONTS 
+
+Utilizando montserrat, usare cinzel?

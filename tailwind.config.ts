@@ -74,6 +74,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         'fade': "fadeIn .5s ease-in-out",
       },
+
       
     },
     fontFamily: {

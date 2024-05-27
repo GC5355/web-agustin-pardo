@@ -52,13 +52,13 @@ export default function Navigation() {
   return (
     <div className="bg-slate-850">
       <nav
-        className={`flex items-center justify-between py-3 ${
+        className={`flex items-center justify-between py-6 ${
           isScrolled
             ? "transition-all duration-500 ease-in backdrop-blur-sm bg-black/50"
             : "transition-all duration-500 ease-out bg-neutral-950"
         }`}
       >
-        <div className="flex items-center pl-7">
+        <div className="flex items-center pl-16">
           <Link href="/">
             <Image
               src={fotoRedondaPepe}
@@ -71,7 +71,7 @@ export default function Navigation() {
               onClick={() => handleLinkClick("Inicio")}
               className="hidden sm:inline-block pl-4 font-semibold text-slate-50 text-2xl font-montserrat"
             >
-              Agustin Pardo Motz
+              APM
             </span>
           </Link>
         </div>
@@ -81,7 +81,7 @@ export default function Navigation() {
             <Link
               href={link.href}
               key={i}
-              className="px-3 font-semibold font-montserrat tracking-wide text-slate-50 cursor-pointer transition-all hover:font-bold hover:scale-110 select-none"
+              className="px-3 font-semibold text-sm  font-montserrat tracking-wide text-slate-50 cursor-pointer transition-all hover:font-bold hover:scale-110 select-none"
             >
               <div
                 onClick={() => handleLinkClick(link.title)}

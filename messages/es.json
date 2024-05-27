@@ -2,8 +2,12 @@
   "Navigation": {
     "Bio": "Bio",
     "Arreglos": "Arreglos",
-    "Composicion": "Composicion",
-    "Direccion": "Direccion"
+    "Composición": "Composición",
+    "Dirección": "Dirección",
+    "Instrumentista": "instrumentista",
+    "Productor": "Productor",
+    "Docencia": "Docencia",
+    "Contacto": "Contacto"
   },
   "LocaleSwitcher": {
     "label": "Change language",
@@ -14,9 +18,22 @@
     "Texto1": "Esta es la pagina web del pepe, que tan elegantemente esta llevando a cabo.",
     "Texto2": "Pepe es una persona taaaaan bella como peluda."
   },
-    "NotFoundPage": {
+  "NotFoundPage": {
     "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
     "title": "Page not found"
+  },
+  "Bio": {
+    "titulo": "Biografía",
+    "texto1": " Agustín Pardo Motz es un músico, compositor, arreglador y director uruguayo. Actualmente reside en Alemania donde está cursando un Doctorado (Dr. sc. mus.) en la Hochschule für Musik und Theater (HfMT) de Hamburgo. Previamente, completó una Maestría en Jazz-Komposition en la misma institución, gracias a una beca del Servicio Alemán de Intercambio Académico (DAAD). Además, posee una Licenciatura en Composición y una Licenciatura en Dirección de Orquesta por la Universidad de la República (UdelaR) en Montevideo, Uruguay. También es egresado de la Escuela de Música Contemporánea (Berklee International Network) en Buenos Aires, Argentina, en Guitarra Jazz, y cuenta con una especialización en Arreglos y Composición realizada en la misma institución.",
+    "texto2": "Como compositor, se dedica principalmente a la escritura para ensambles de gran tamaño, tales como BigBands, Orquestas y Bandas Sinfónicas. Su música busca establecer un diálogo entre las tradiciones musicales sudamericanas, el jazz, la música contemporánea académica y la tradición sinfónica.",
+    "texto3": " Sus composiciones y arreglos han sido interpretados en diversas partes del mundo, incluyendo Alemania, Suiza, Austria, Noruega, Argentina y Uruguay, entre otros países. Destacan la NDR BigBand, el Hamburger Jazz Kombinat, el Jazz Hall Large Ensemble, la HfMT BigBand, Det Nye Norske Storband de Oslo, la Orquesta Sinfónica del Sodre y diversas bandas departamentales de Uruguay.",
+    "texto4": " Como director, ha dirigido ensambles como la NDR BigBand, el Jazz Hall Large Ensemble, la HfMT BigBand, el Large Ensemble de la Norges Musikkhøgskole de Oslo, el European Jazz Workshop Large Ensemble, la Orquesta UTEC, la EUM BigBand, la Banda Departamental de San José y la Banda Sinfónica de Montevideo entre otros.",
+    "texto5": " En 2022, fue galardonado con el Premio Gerhard Trede de Composición de Hamburgo por su obra \"Die Elbe de la Plata\". En 2020, recibió el Premio Nacional de Música del Ministerio de Educación y Cultura (MEC) en la categoría Tango por su composición \"Sol XIII\". En 2022, la pieza \"No Llueve\" de La Imbailable Cumbia Orquesta, para la cual escribió los arreglos, ganó el premio Nacional de Música en la categoría tropical.",
+    "texto6": " Como intérprete multi-instrumentista, ha participado en numerosas giras internacionales, destacándose por su versatilidad en una amplia gama de instrumentos y estilos musicales. A lo largo de su carrera, también ha colaborado con diversos artistas en producciones discográficas como sesionista y productor.",
+    "texto7": "Como docente, actualmente es encargado del Área de Composición & Arreglos y del Área de Investigación & Gestión de Proyectos en la Universidad Tecnológica (UTEC) en Mercedes, Uruguay. También trabaja en el Departamento de Teoría & Composición en la Facultad de Artes de la UdelaR en Montevideo. Anteriormente ha trabajado como docente en la Escuela Internacional de Música Contemporánea de la Universidad Nacional Pedro Henríquez Ureña (UNPHU) en Santo Domingo, República Dominicana y en el Conservatorio Sur de Montevideo, Uruguay."
+  },
+  "Composicion": {
+    "titulo": "Compositions",
+    "texto1": "Text1"
   }
 }
-

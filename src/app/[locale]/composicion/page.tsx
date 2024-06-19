@@ -1,111 +1,271 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import YouTube from "react-youtube";
+import { Link as ScrollLink, Element } from "react-scroll";
 
-export default function composicion() {
+export default function Composicion() {
   const optsLarge = {
-    height: '390',
-    width: '640',
-    playerVars: {
-      autoplay: 0, // Reproducción automática activada
-    },
-  };
-
-  const optsSmall = {
-    height: '195',
-    width: '320',
+    height: "290",
+    width: "540",
     playerVars: {
       autoplay: 0,
     },
   };
 
+  const optsMedium = {
+    height: "280",
+    width: "400",
+    playerVars: {
+      autoplay: 0,
+    },
+  };
+
+  const optsSmall = {
+    height: "195",
+    width: "320",
+    playerVars: {
+      autoplay: 0,
+    },
+  };
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const [selectedEnlace, setSelectedEnlace] = useState("");
+
+  const handleLinkClick = (enlace: React.SetStateAction<string>) => {
+    setSelectedEnlace(enlace);
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center pt-10 gap-10 mx-3 md:mx-32">
-      <h1 className="text-4xl font-montserrat font-normal text-slate-50 tracking-tight lg:text-5xl">
+    <main className="flex min-h-screen flex-col items-center text-slate-50 pt-10 w-5/6 mx-auto">
+      <h1 className="text-4xl font-montserrat font-normal text-slate-50 tracking-tight lg:text-5xl mt-16 mb-8">
         COMPOSICIONES
       </h1>
 
-      <div className="flex content-center justify-center mt-10 max-w-full ">
+      <nav
+        className={`md:sticky md:top-24 w-full my-14 p-4 flex justify-center z-10  ${
+          isScrolled
+            ? "transition-all duration-500 ease-in backdrop-blur-sm bg-black/30"
+            : "transition-all duration-500 ease-out"
+        }`}
+      >
+        <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-16 font-montserrat font-normal text-lg">
+          <li>
+            <ScrollLink
+              to="BigBand"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer text-white hover:underline underline-offset-8"
+            >
+              BIG BAND
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              to="Ensambles"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer text-white hover:underline underline-offset-8"
+            >
+              ENSAMBLES
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              to="Orquesta"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer text-white hover:underline underline-offset-8"
+            >
+              ORQUESTA SINFÓNICA
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              to="Cuartetos"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer text-white hover:underline underline-offset-8"
+            >
+              CUARTETOS
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              to="MusicaAcademica"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer text-white hover:underline underline-offset-8"
+            >
+              MÚSICA ACADÉMICA
+            </ScrollLink>
+          </li>
+        </ul>
+      </nav>
+
+      {/* Big Band*/}
+      <Element
+        name="BigBand"
+        className="border-solid border border-slate-50 rounded-md p-2 mb-8 "
+      >
+        <h2 className="text-center justify-center font-montserrat font-normal text-3xl mb-10 mt-6">
+          Big Bands
+        </h2>
         <div className="grid grid-cols-1 gap-16">
-          <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6 border-2 border-neutral-800 rounded-xl ">
+          <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
             <div className="text-slate-50">
-              <h3 className="font-montserrat font-semibold text-3xl tracking-widest text-slate-50 items-center select-none pb-4">
+              <h3 className="font-montserrat font-semibold text-2xl tracking-widest text-slate-50 items-center select-none pb-4">
                 Sin Palabras & Agustín Pardo - SOL XIII
               </h3>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50  items-center select-none pb-1">
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
                 <span className="font-bold">Composición:</span> Agustín Pardo
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50  items-center select-none pb-1">
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
                 <span className="font-bold">Músicos:</span> Sebastián Mederos -
                 Bandoneón Germán Álvarez - Contrabajo Andrés Antúnez - Piano &
                 Agustín Pardo - Guitarra
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50  items-center select-none pb-1">
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
                 <span className="font-bold">Grabación:</span> Gustavo de León
                 Grabado el 14 de octubre de 2020 en estudios Sondor, Montevideo,
                 Uruguay.
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50  items-center select-none pb-1">
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
                 <span className="font-bold">Mezcla:</span> Gustavo de León
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50  items-center select-none pb-1">
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
                 <span className="font-bold">Edición Sonido:</span> Agustín Pardo
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50  items-center select-none pb-1">
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
                 <span className="font-bold">Cámara y Edición de Video:</span>{" "}
                 Germán Cardoso
               </p>
             </div>
-            {/* <div className="text-slate-50 select-none object-cover w-full h-full">
-              <YouTube videoId="zZQ21852wV8"  opts={height: '300'} />
-            </div> */}
             <div className="text-slate-50 aspect-video">
-              {/* Renderiza el reproductor de YouTube con diferentes tamaños dependiendo del tamaño de la pantalla */}
               <div className="hidden lg:block">
-                <YouTube videoId='zZQ21852wV8' opts={optsLarge} />
+                <YouTube videoId="zZQ21852wV8" opts={optsLarge} />
               </div>
-              <div className="block lg:hidden">
-                <YouTube videoId='zZQ21852wV8' opts={optsSmall} />
+              <div className="md:hidden">
+                <YouTube videoId="zZQ21852wV8" opts={optsSmall} />
+              </div>
+              <div className="hidden md:block lg:hidden">
+                <YouTube videoId="zZQ21852wV8" opts={optsMedium} />
               </div>
             </div>
           </section>
+        </div>
+      </Element>
 
-          {/* <section className="grid grid-cols-2 gap-6 p-6 border-2 border-neutral-800 rounded-xl">
-            <div className="text-slate-50 select-none">
-              <YouTube videoId="SANbNx12flY" opts={opts} />
-            </div>
+      {/* CUARTETOS */}
+      <Element
+        name="Cuartetos"
+        className="border-solid border border-slate-50 rounded-md p-2 mb-8 "
+      >
+        <h2 className="text-center justify-center font-montserrat font-normal text-3xl mb-10 mt-6">
+          Cuartetos
+        </h2>
+        <div className="grid grid-cols-1 gap-16">
+          <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6">
             <div className="text-slate-50">
               <h3 className="font-montserrat font-semibold text-3xl tracking-widest text-slate-50 items-center select-none pb-4">
-              La Floresta
+                Candombe de los Mil Años
               </h3>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50  items-center select-none pb-1">
-                <span className="font-bold">Composición:</span> Agustín Pardo
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+                <span className="font-bold">Composición: </span> Agustín Pardo
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50  items-center select-none pb-1">
-                <span className="font-bold">Músicos:</span> Sebastián Mederos -
-                Bandoneón Germán Álvarez - Contrabajo Andrés Antúnez - Piano &
-                Agustín Pardo - Guitarra
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+                <span className="font-bold">Músicos: </span> Gustavo Villalba -
+                Saxo Soprano / Andrea Tejera - Saxo Alto / Gonzalo Levin - Saxo
+                Tenor / Alejandra Genta - Saxo Barítono
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50  items-center select-none pb-1">
-                <span className="font-bold">Grabación:</span> Gustavo de León
-                Grabado el 14 de octubre de 2020 en estudios Sondor, Montevideo,
-                Uruguay.
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+                <span className="font-bold">Grabación:</span> Gastón Akermann en
+                Mastodonte el 19 de setiembre de 2020
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50  items-center select-none pb-1">
-                <span className="font-bold">Mezcla:</span> Gustavo de León
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+                <span className="font-bold">Mezcla:</span> Nicolás Demczylo
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50  items-center select-none pb-1">
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
                 <span className="font-bold">Edición Sonido:</span> Agustín Pardo
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50  items-center select-none pb-1">
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
                 <span className="font-bold">Cámara y Edición de Video:</span>{" "}
                 Germán Cardoso
               </p>
             </div>
-          </section> */}
+            <div className="text-slate-50 aspect-video">
+              <div className="hidden lg:block">
+                <YouTube videoId="oGXYKgXxJPY" opts={optsLarge} />
+              </div>
+              <div className="md:hidden">
+                <YouTube videoId="oGXYKgXxJPY" opts={optsSmall} />
+              </div>
+              <div className="hidden md:block lg:hidden">
+                <YouTube videoId="oGXYKgXxJPY" opts={optsMedium} />
+              </div>
+            </div>
+          </section>
         </div>
-      </div>
+        <div className="grid grid-cols-1 gap-16">
+          <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6">
+            <div className="text-slate-50">
+              <h3 className="font-montserrat font-semibold text-3xl tracking-widest text-slate-50 items-center select-none pb-4">
+                La Floresta
+              </h3>
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+                <span className="font-bold">Composición: </span> Agustín Pardo
+              </p>
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+                <span className="font-bold">Cuarteto de Cuerdas: </span> Violín
+                I - Diego Swallow / Violín II - Emilio Sunhary / Viola - Gerardo
+                Gramajo / Violonchelo - Pedro Szulak
+              </p>
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+                <span className="font-bold">Grabación:</span> Grabado el 13 de Agosto de 2020 en el Cuarto Tavella por Martín Tavella
+              </p>
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+                <span className="font-bold">Mezcla:</span> Nicolás Demczylo
+              </p>
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+                <span className="font-bold">Edición Sonido:</span> Agustín Pardo
+              </p>
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+                <span className="font-bold">Cámara y Edición de Video:</span>{" "}
+                Germán Cardoso
+              </p>
+            </div>
+            <div className="text-slate-50 aspect-video">
+              <div className="hidden lg:block">
+                <YouTube videoId="SANbNx12flY" opts={optsLarge} />
+              </div>
+              <div className="md:hidden">
+                <YouTube videoId="SANbNx12flY" opts={optsSmall} />
+              </div>
+              <div className="hidden md:block lg:hidden">
+                <YouTube videoId="SANbNx12flY" opts={optsMedium} />
+              </div>
+            </div>
+          </section>
+        </div>
+      </Element>
     </main>
   );
 }

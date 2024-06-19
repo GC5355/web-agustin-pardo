@@ -54,11 +54,11 @@ export default function Navigation() {
       <nav
         className={`flex items-center justify-between py-6 ${
           isScrolled
-            ? "transition-all duration-500 ease-in backdrop-blur-sm bg-black/50"
+            ? "transition-all duration-500 ease-in backdrop-blur-sm bg-black/70"
             : "transition-all duration-500 ease-out bg-neutral-950"
         }`}
       >
-        <div className="flex items-center pl-16">
+        <div className="flex items-center justify-end pl-16">
           <Link href="/">
             <Image
               src={fotoRedondaPepe}
@@ -76,58 +76,60 @@ export default function Navigation() {
           </Link>
         </div>
 
-        <ul className="hidden lg:flex items-center space-x-4">
-          {nav_links.map((link, i) => (
-            <Link
-              href={link.href}
-              key={i}
-              className="px-3 font-semibold text-sm  font-montserrat tracking-wide text-slate-50 cursor-pointer transition-all hover:font-bold hover:scale-110 select-none"
-            >
-              <div
-                onClick={() => handleLinkClick(link.title)}
-                className={`font-semibold tracking-wide text-slate-50 transition-all hover:font-bold ${
-                  selectedEnlace === link.title
-                    ? "underline underline-offset-4"
-                    : ""
-                }`}
+        <div className="flex  items-center mr-4">
+          <ul className="hidden xl:flex items-end space-x-4">
+            {nav_links.map((link, i) => (
+              <Link
+                href={link.href}
+                key={i}
+                className="px-3 font-semibold text-sm  font-montserrat tracking-wide text-slate-50 cursor-pointer transition-all hover:font-bold hover:scale-110 select-none"
               >
-                {t(`${link.title}`).toUpperCase()}
-              </div>
-            </Link>
-          ))}
-        </ul>
+                <div
+                  onClick={() => handleLinkClick(link.title)}
+                  className={`font-semibold tracking-wide text-slate-50 transition-all hover:font-bold ${
+                    selectedEnlace === link.title
+                      ? "underline underline-offset-4"
+                      : ""
+                  }`}
+                >
+                  {t(`${link.title}`).toUpperCase()}
+                </div>
+              </Link>
+            ))}
+          </ul>
 
-        <div className="hidden lg:flex items-center pr-2">
-          <LocaleSwitcher />
-        </div>
+          <div className="hidden lg:flex items-center mx-10">
+            <LocaleSwitcher />
+          </div>
 
-        <div className="lg:hidden flex items-center pr-7">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <div className="flex h-6 w-6 items-center">
-                <Image src={hamburguesa} alt="nav" height={30} width={30} />
-              </div>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56 bg-black text-slate-50 border-neutral-800">
-              <DropdownMenuLabel className="text-center">
-                AGUSTÍN PARDO
-              </DropdownMenuLabel>
-              <DropdownMenuSeparator />
+          <div className="xl:hidden flex items-center pr-7">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <div className="flex h-6 w-6 items-center">
+                  <Image src={hamburguesa} alt="nav" height={30} width={30} />
+                </div>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56 bg-black text-slate-50 border-neutral-800">
+                <DropdownMenuLabel className="text-center">
+                  AGUSTÍN PARDO
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator />
 
-              <DropdownMenuGroup className="bg-black text-slate-50">
-                {nav_links.map((link, i) => (
-                  <DropdownMenuItem key={i}>
-                    <Link
-                      href={link.href}
-                      className="block w-full text-left px-3 py-1.5 cursor-pointer transition-all"
-                    >
-                      {t(`${link.title}`).toUpperCase()}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuGroup>
-            </DropdownMenuContent>
-          </DropdownMenu>
+                <DropdownMenuGroup className="bg-black text-slate-50">
+                  {nav_links.map((link, i) => (
+                    <DropdownMenuItem key={i}>
+                      <Link
+                        href={link.href}
+                        className="block w-full text-left px-3 py-1.5 cursor-pointer transition-all"
+                      >
+                        {t(`${link.title}`).toUpperCase()}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuGroup>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
         </div>
       </nav>
     </div>

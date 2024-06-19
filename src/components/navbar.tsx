@@ -56,7 +56,7 @@ export const Navbar = () => {
     <nav
       className={`grid grid-cols-8  pl-5 py-3 justify-center content-center   ${
         isScrolled
-          ? "transition-all duration-500 ease-in backdrop-blur-sm bg-black/30 "
+          ? "transition-all duration-500 ease-in backdrop-blur-sm bg-black/70 "
           : "transition-all duration-500 ease-out bg-neutral-950"
       }`}
     >

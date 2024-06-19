@@ -31,7 +31,7 @@ export default function Home() {
   const t = useTranslations("LandingPage");
   return (
     <main className="flex h-max flex-col items-center justify-between text-slate-50">
-      <div className="relative w-full h-[800px]" >
+      <div className="relative w-full h-[800px]">
         <Image
           src={fotoProli}
           alt="Descripción de la imagen"
@@ -49,8 +49,10 @@ export default function Home() {
             <h2 className="font-montserrat font-normal text-3xl tracking-widest  select-none pb-6">
               {t("Titulo1")}
             </h2>
-            <Text>{t("Texto1")}</Text>
-            <Text>{t("Texto2")}</Text>
+            <div className="text-gray-200">
+              <Text>{t("Texto1")}</Text>
+              <Text>{t("Texto2")}</Text>
+            </div>
           </div>
           <Image alt="imagen" src={fotoSection} height={700} width={700} />
         </section>

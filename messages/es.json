@@ -35,5 +35,11 @@
   "Composicion": {
     "titulo": "Compositions",
     "texto1": "Text1"
+  },
+  "Contacto": {
+    "titulo": "Contacto",
+    "texto": "Si querés contactarme, aquí te dejo varias formas de hacerlo. Te mando un saludo!",
+    "texto1": "Enviar email",
+    "texto2": "Escribime al WhatsApp"
   }
 }

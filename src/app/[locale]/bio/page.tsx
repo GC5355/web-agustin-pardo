@@ -24,7 +24,7 @@ export default function Bio() {
     Autoplay({ delay: 1500, stopOnInteraction: true })
   );
   return (
-    <main className="flex min-h-screen flex-col items-center text-slate-50 pt-10 w-5/6 mx-auto">
+    <main className="flex min-h-screen flex-col items-center text-slate-50 pt-10 w-5/6 mx-auto mb-10">
       <h1 className="text-4xl font-montserrat font-normal tracking-tight lg:text-5xl mt-5">
         {t("titulo").toLocaleUpperCase()}
       </h1>
@@ -34,7 +34,7 @@ export default function Bio() {
           className="hidden sm:inline-block object-cover rounded-sm"
           alt="foto agustín en su oficina"
         />
-        <div className="font-montserrat font-normal text-xl tracking-normal  indent-5 leading-relaxed space-y-10">
+        <div className="font-montserrat font-normal text-xl tracking-normal  indent-5 leading-relaxed space-y-10 text-justify">
           <p>{t("texto1")}</p>
           <p>{t("texto2")}</p>
         </div>
@@ -46,7 +46,7 @@ export default function Bio() {
           className="hidden sm:inline-block lg:hidden object-cover rounded-sm"
           alt="foto agustín en su oficina"
         />
-        <div className=" font-montserrat font-normal text-xl tracking-normal col-start-1 indent-5 leading-relaxed space-y-10">
+        <div className=" font-montserrat font-normal text-xl tracking-normal col-start-1 indent-5 leading-relaxed space-y-10 text-justify">
           <p>{t("texto3")}</p>
           <p>{t("texto4")}</p>
         </div>
@@ -57,13 +57,13 @@ export default function Bio() {
         />
       </section>
 
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 justify-center mt-28 text-gray-200">
+      <section className="grid grid-cols-1 lg:grid-cols-2  lg:gap-10 justify-center mt-28 text-gray-200">
         <Image
           src={foto3}
-          className="hidden sm:inline-block object-cover rounded-sm"
+          className="hidden lg:inline-block object-cover rounded-sm"
           alt="foto agustín en su oficina"
         />
-        <div className="col-start-2 font-montserrat font-normal text-xl tracking-normal  indent-5 leading-relaxed space-y-10">
+        <div className="col-start-2 font-montserrat font-normal text-xl tracking-normal  indent-5 leading-relaxed space-y-10 text-justify">
           <p>{t("texto5")}</p>
           <p>{t("texto6")}</p>
           <p>{t("texto7")}</p>

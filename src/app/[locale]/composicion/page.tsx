@@ -5,9 +5,16 @@ import YouTube from "react-youtube";
 import { Link as ScrollLink, Element } from "react-scroll";
 
 export default function Composicion() {
+  const optsExtraLarge = {
+    height: "500",
+    width: "950",
+    playerVars: {
+      autoplay: 0,
+    },
+  };
   const optsLarge = {
-    height: "290",
-    width: "540",
+    height: "300",
+    width: "500",
     playerVars: {
       autoplay: 0,
     },
@@ -22,8 +29,8 @@ export default function Composicion() {
   };
 
   const optsSmall = {
-    height: "195",
-    width: "320",
+    height: "150",
+    width: "290",
     playerVars: {
       autoplay: 0,
     },
@@ -124,7 +131,7 @@ export default function Composicion() {
       {/* Big Band*/}
       <Element
         name="BigBand"
-        className="border-solid border border-slate-50 rounded-md p-2 mb-8 "
+        className="border-solid border border-neutral-600 rounded-md p-2 mb-8 "
       >
         <h2 className="text-center justify-center font-montserrat font-normal text-3xl mb-10 mt-6">
           Big Bands
@@ -159,15 +166,19 @@ export default function Composicion() {
                 Germán Cardoso
               </p>
             </div>
-            <div className="text-slate-50 aspect-video">
-              <div className="hidden lg:block">
+            <div className="text-slate-50 aspect-video mx-auto">
+              <div className="hidden 2xl:block">
+                <YouTube videoId="zZQ21852wV8" opts={optsExtraLarge} />
+              </div>
+              <div className="hidden lg:block 2xl:hidden">
                 <YouTube videoId="zZQ21852wV8" opts={optsLarge} />
+              </div>
+
+              <div className="hidden md:block lg:hidden">
+                <YouTube videoId="zZQ21852wV8" opts={optsMedium} />
               </div>
               <div className="md:hidden">
                 <YouTube videoId="zZQ21852wV8" opts={optsSmall} />
-              </div>
-              <div className="hidden md:block lg:hidden">
-                <YouTube videoId="zZQ21852wV8" opts={optsMedium} />
               </div>
             </div>
           </section>
@@ -177,13 +188,13 @@ export default function Composicion() {
       {/* CUARTETOS */}
       <Element
         name="Cuartetos"
-        className="border-solid border border-slate-50 rounded-md p-2 mb-8 "
+        className="border-solid border border-neutral-600 rounded-md p-2 mb-8 "
       >
         <h2 className="text-center justify-center font-montserrat font-normal text-3xl mb-10 mt-6">
           Cuartetos
         </h2>
         <div className="grid grid-cols-1 gap-16">
-          <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6">
+          <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
             <div className="text-slate-50">
               <h3 className="font-montserrat font-semibold text-3xl tracking-widest text-slate-50 items-center select-none pb-4">
                 Candombe de los Mil Años
@@ -211,25 +222,32 @@ export default function Composicion() {
                 Germán Cardoso
               </p>
             </div>
-            <div className="text-slate-50 aspect-video">
-              <div className="hidden lg:block">
+
+            <div className="text-slate-50 aspect-video mx-auto">
+              <div className="hidden 2xl:block">
+                <YouTube videoId="oGXYKgXxJPY" opts={optsExtraLarge} />
+              </div>
+              <div className="hidden lg:block 2xl:hidden">
                 <YouTube videoId="oGXYKgXxJPY" opts={optsLarge} />
+              </div>
+
+              <div className="hidden md:block lg:hidden">
+                <YouTube videoId="oGXYKgXxJPY" opts={optsMedium} />
               </div>
               <div className="md:hidden">
                 <YouTube videoId="oGXYKgXxJPY" opts={optsSmall} />
               </div>
-              <div className="hidden md:block lg:hidden">
-                <YouTube videoId="oGXYKgXxJPY" opts={optsMedium} />
-              </div>
             </div>
           </section>
         </div>
+
         <div className="grid grid-cols-1 gap-16">
-          <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6">
-            <div className="text-slate-50">
+          <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
+            <div className="text-slate-50 ">
               <h3 className="font-montserrat font-semibold text-3xl tracking-widest text-slate-50 items-center select-none pb-4">
                 La Floresta
               </h3>
+
               <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
                 <span className="font-bold">Composición: </span> Agustín Pardo
               </p>
@@ -239,7 +257,8 @@ export default function Composicion() {
                 Gramajo / Violonchelo - Pedro Szulak
               </p>
               <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Grabación:</span> Grabado el 13 de Agosto de 2020 en el Cuarto Tavella por Martín Tavella
+                <span className="font-bold">Grabación:</span> Grabado el 13 de
+                Agosto de 2020 en el Cuarto Tavella por Martín Tavella
               </p>
               <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
                 <span className="font-bold">Mezcla:</span> Nicolás Demczylo
@@ -252,15 +271,20 @@ export default function Composicion() {
                 Germán Cardoso
               </p>
             </div>
-            <div className="text-slate-50 aspect-video">
-              <div className="hidden lg:block">
+
+            <div className="text-slate-50 aspect-video mx-auto">
+              <div className="hidden 2xl:block">
+                <YouTube videoId="SANbNx12flY" opts={optsExtraLarge} />
+              </div>
+              <div className="hidden lg:block 2xl:hidden">
                 <YouTube videoId="SANbNx12flY" opts={optsLarge} />
+              </div>
+
+              <div className="hidden md:block lg:hidden">
+                <YouTube videoId="SANbNx12flY" opts={optsMedium} />
               </div>
               <div className="md:hidden">
                 <YouTube videoId="SANbNx12flY" opts={optsSmall} />
-              </div>
-              <div className="hidden md:block lg:hidden">
-                <YouTube videoId="SANbNx12flY" opts={optsMedium} />
               </div>
             </div>
           </section>

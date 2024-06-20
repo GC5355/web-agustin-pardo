@@ -82,11 +82,11 @@ export default function Navigation() {
               <Link
                 href={link.href}
                 key={i}
-                className="px-3 font-semibold text-sm  font-montserrat tracking-wide text-slate-50 cursor-pointer transition-all hover:font-bold hover:scale-110 select-none"
+                className="px-3  font-montserrat font-normal tracking-wide text-slate-50 cursor-pointer transition-all hover:font-bold hover:scale-110 select-none"
               >
                 <div
                   onClick={() => handleLinkClick(link.title)}
-                  className={`font-semibold tracking-wide text-slate-50 transition-all hover:font-bold ${
+                  className={`font-montserrat font-normal tracking-wide text-slate-50 transition-all hover:font-bold ${
                     selectedEnlace === link.title
                       ? "underline underline-offset-4"
                       : ""

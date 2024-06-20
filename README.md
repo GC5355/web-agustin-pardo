@@ -16,11 +16,9 @@ Guia para mergear a main working branch
 
 Me cambio a rama main:
 
-    git checkout main
-    git pull origin main
+ 
     git merge 'nombre-branch-para-mergear'
-    # Resolve any conflicts
-    git add <resolved-file>
+
     git commit
     git push origin main
 

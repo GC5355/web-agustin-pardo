@@ -5,7 +5,7 @@ import LocaleSwitcher from "./LocaleSwitcher";
 
 const Footer = () => {
   return (
-    <div className="flex justify-between lg:content-center conten items-center  bg-neutral-950 py-8 px-5 mt-8">
+    <div className="flex justify-between lg:content-center conten items-center z-50 bg-neutral-950 py-8 px-5 mt-8">
       <div className="flex pl-4">
         <div className="lg:hidden">
           <LocaleSwitcher />

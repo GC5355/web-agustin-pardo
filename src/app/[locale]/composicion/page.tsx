@@ -6,15 +6,15 @@ import { Link as ScrollLink, Element } from "react-scroll";
 
 export default function Composicion() {
   const optsExtraLarge = {
-    height: "500",
-    width: "950",
+    height: "300",
+    width: "550",
     playerVars: {
       autoplay: 0,
     },
   };
   const optsLarge = {
-    height: "300",
-    width: "500",
+    height: "250",
+    width: "350",
     playerVars: {
       autoplay: 0,
     },
@@ -66,15 +66,8 @@ export default function Composicion() {
       <h1 className="text-4xl font-montserrat font-normal text-slate-50 tracking-tight lg:text-5xl mt-16 mb-8">
         COMPOSICIONES
       </h1>
-
-      <nav
-        className={`md:sticky md:top-24 w-full my-14 p-4 flex justify-center z-10  ${
-          isScrolled
-            ? "transition-all duration-500 ease-in backdrop-blur-sm bg-black/30"
-            : "transition-all duration-500 ease-out"
-        }`}
-      >
-        <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-16 font-montserrat font-normal text-lg">
+      <nav className="md:sticky md:top-24 w-full my-14 p-4 flex justify-center z-10 ">
+        <ul className="xl:hidden flex flex-col space-y-6 font-montserrat font-normal text-2xl text-center">
           <li>
             <ScrollLink
               to="BigBand"
@@ -134,7 +127,7 @@ export default function Composicion() {
         className="border-solid border border-neutral-600 rounded-md p-2 mb-8 "
       >
         <h2 className="text-center justify-center font-montserrat font-normal text-3xl mb-10 mt-6">
-          Big Bands
+          BIG BANDS
         </h2>
         <div className="grid grid-cols-1 gap-16">
           <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
@@ -185,13 +178,71 @@ export default function Composicion() {
         </div>
       </Element>
 
+      {/* Ensambles*/}
+      <Element
+        name="Ensambles"
+        className="border-solid border border-neutral-600 rounded-md p-2 mb-8 "
+      >
+        <h2 className="text-center justify-center font-montserrat font-normal text-3xl mb-10 mt-6">
+          ENSAMBLES
+        </h2>
+        <div className="grid grid-cols-1 gap-16">
+          <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
+            <div className="text-slate-50">
+              <h3 className="font-montserrat font-semibold text-2xl tracking-widest text-slate-50 items-center select-none pb-4">
+                William Pequeño
+              </h3>
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+                <span className="font-bold">Composición:</span> Agustín Pardo
+                
+              </p>
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+                <span className="font-bold">Músicos:</span> Gustavo Villalba –
+                Saxo Soprano / Agustín Pardo – Piano / Rodrigo Fernández – Bajo
+                / Mauricio Ramos – Batería
+              </p>
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+                <span className="font-bold">Grabación:</span> Gino Maiuri
+                Grabado el 23 de diciembre de 2019 en la Escuela Universitaria
+                de Música, UdelaR Montevideo, Uruguay
+              </p>
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+                <span className="font-bold">Mezcla:</span> Nicolás Demczylo
+              </p>
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+                <span className="font-bold">Edición Sonido:</span> Gino Maiuri & Agustín Pardo
+              </p>
+              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+                <span className="font-bold">Cámara y Edición de Video:</span>{" "}
+                Germán Cardoso
+              </p>
+            </div>
+            <div className="text-slate-50 aspect-video mx-auto">
+              <div className="hidden 2xl:block">
+                <YouTube videoId="og9skSDNPto" opts={optsExtraLarge} />
+              </div>
+              <div className="hidden lg:block 2xl:hidden">
+                <YouTube videoId="og9skSDNPto" opts={optsLarge} />
+              </div>
+
+              <div className="hidden md:block lg:hidden">
+                <YouTube videoId="og9skSDNPto" opts={optsMedium} />
+              </div>
+              <div className="md:hidden">
+                <YouTube videoId="og9skSDNPto" opts={optsSmall} />
+              </div>
+            </div>
+          </section>
+        </div>
+      </Element>
+
       {/* CUARTETOS */}
       <Element
         name="Cuartetos"
         className="border-solid border border-neutral-600 rounded-md p-2 mb-8 "
       >
         <h2 className="text-center justify-center font-montserrat font-normal text-3xl mb-10 mt-6">
-          Cuartetos
+          CUARTETOS
         </h2>
         <div className="grid grid-cols-1 gap-16">
           <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">

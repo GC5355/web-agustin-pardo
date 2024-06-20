@@ -15,10 +15,7 @@
 Guia para mergear a main working branch
 
 Me cambio a rama main:
-
- 
     git merge 'nombre-branch-para-mergear'
-
     git commit
     git push origin main
 

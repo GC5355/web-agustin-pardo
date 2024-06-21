@@ -3,11 +3,13 @@
 import React, { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 import { Link as ScrollLink, Element } from "react-scroll";
+import Image from "next/image";
+import fotoProli from "@/imagenes/proli1.jpg";
 
 export default function Composicion() {
   const optsExtraLarge = {
-    height: "300",
-    width: "550",
+    height: "250",
+    width: "450",
     playerVars: {
       autoplay: 0,
     },
@@ -62,99 +64,101 @@ export default function Composicion() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center text-slate-50 pt-10 w-5/6 mx-auto">
-      <h1 className="text-4xl font-montserrat font-normal text-slate-50 tracking-tight lg:text-5xl mt-16 mb-8">
-        COMPOSICIONES
-      </h1>
-      <nav className="md:sticky md:top-24 w-full my-14 p-4 flex justify-center z-10 ">
-        <ul className="xl:hidden flex flex-col space-y-6 font-montserrat font-normal text-2xl text-center">
-          <li>
-            <ScrollLink
-              to="BigBand"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer text-white hover:underline underline-offset-8"
-            >
-              BIG BAND
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
-              to="Ensambles"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer text-white hover:underline underline-offset-8"
-            >
-              ENSAMBLES
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
-              to="Orquesta"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer text-white hover:underline underline-offset-8"
-            >
-              ORQUESTA SINFÓNICA
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
-              to="Cuartetos"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer text-white hover:underline underline-offset-8"
-            >
-              CUARTETOS
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
-              to="MusicaAcademica"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer text-white hover:underline underline-offset-8"
-            >
-              MÚSICA ACADÉMICA
-            </ScrollLink>
-          </li>
-        </ul>
-      </nav>
+    <main className="flex min-h-screen flex-col items-center text-slate-50 pt-10 w-5/6 mx-auto  font-montserrat font-normal">
+      <div>
+        <h1 className="tracking-widest text-amber-100 text-2xl  lg:text-4xl mt-14 ">
+          COMPOSICIONES
+        </h1>
+        <nav className=" text-amber-50 md:sticky  w-full mb-14 mt-10 p-4 flex justify-center">
+          <ul className="xl:hidden flex flex-col space-y-6  text-lg text-center">
+            <li>
+              <ScrollLink
+                to="BigBand"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer  hover:underline underline-offset-8"
+              >
+                BIG BAND
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="Ensambles"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer hover:underline underline-offset-8"
+              >
+                ENSAMBLES
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="Orquesta"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer  hover:underline underline-offset-8"
+              >
+                ORQUESTA SINFÓNICA
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="Cuartetos"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer  hover:underline underline-offset-8"
+              >
+                CUARTETOS
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="MusicaAcademica"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer hover:underline underline-offset-8"
+              >
+                MÚSICA ACADÉMICA
+              </ScrollLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
       {/* Big Band*/}
       <Element
         name="BigBand"
         className="border-solid border border-neutral-600 rounded-md p-2 mb-8 "
       >
-        <h2 className="text-center justify-center font-montserrat font-normal text-3xl mb-10 mt-6">
+        <h2 className="text-amber-100 text-center justify-center text-2xl mb-10 mt-6">
           BIG BANDS
         </h2>
         <div className="grid grid-cols-1 gap-16">
           <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
-            <div className="text-slate-50">
-              <h3 className="font-montserrat font-semibold text-2xl tracking-widest text-slate-50 items-center select-none pb-4">
+            <div className="">
+              <h3 className="text-amber-50  font-semibold text-xl lg:text-lg tracking-widest items-center select-none pb-4">
                 Sin Palabras & Agustín Pardo - SOL XIII
               </h3>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Composición:</span> Agustín Pardo
+              <p className=" font-normal text-base  tracking-normal text-neutral-300  items-center select-none pb-1">
+                <span className="font-bold ">Composición:</span> Agustín Pardo
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Músicos:</span> Sebastián Mederos -
+              <p className="font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
+                <span className="font-bold text-neutral-300 ">Músicos:</span> Sebastián Mederos -
                 Bandoneón Germán Álvarez - Contrabajo Andrés Antúnez - Piano &
                 Agustín Pardo - Guitarra
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
                 <span className="font-bold">Grabación:</span> Gustavo de León
                 Grabado el 14 de octubre de 2020 en estudios Sondor, Montevideo,
                 Uruguay.
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
                 <span className="font-bold">Mezcla:</span> Gustavo de León
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className=" font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
                 <span className="font-bold">Edición Sonido:</span> Agustín Pardo
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
                 <span className="font-bold">Cámara y Edición de Video:</span>{" "}
                 Germán Cardoso
               </p>
@@ -183,7 +187,7 @@ export default function Composicion() {
         name="Ensambles"
         className="border-solid border border-neutral-600 rounded-md p-2 mb-8 "
       >
-        <h2 className="text-center justify-center font-montserrat font-normal text-3xl mb-10 mt-6">
+        <h2 className="text-center justify-center  text-2xl mb-10 mt-6">
           ENSAMBLES
         </h2>
         <div className="grid grid-cols-1 gap-16">
@@ -194,7 +198,6 @@ export default function Composicion() {
               </h3>
               <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
                 <span className="font-bold">Composición:</span> Agustín Pardo
-                
               </p>
               <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
                 <span className="font-bold">Músicos:</span> Gustavo Villalba –
@@ -210,7 +213,8 @@ export default function Composicion() {
                 <span className="font-bold">Mezcla:</span> Nicolás Demczylo
               </p>
               <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Edición Sonido:</span> Gino Maiuri & Agustín Pardo
+                <span className="font-bold">Edición Sonido:</span> Gino Maiuri &
+                Agustín Pardo
               </p>
               <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
                 <span className="font-bold">Cámara y Edición de Video:</span>{" "}

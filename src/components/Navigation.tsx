@@ -58,7 +58,7 @@ export default function Navigation() {
             : "transition-all duration-500 ease-out bg-neutral-950"
         }`}
       >
-        <div className="flex items-center justify-end pl-16">
+        <div className="flex items-center justify-end pl-10">
           <Link href="/">
             <Image
               src={fotoRedondaPepe}
@@ -82,11 +82,11 @@ export default function Navigation() {
               <Link
                 href={link.href}
                 key={i}
-                className="px-3  font-montserrat font-normal tracking-wide text-slate-50 cursor-pointer transition-all hover:font-bold hover:scale-110 select-none"
+                className="px-3 text-sm font-montserrat font-normal tracking-wide text-slate-50 cursor-pointer transition-all hover:font-bold hover:scale-110 select-none"
               >
                 <div
                   onClick={() => handleLinkClick(link.title)}
-                  className={`font-montserrat font-normal tracking-wide text-slate-50 transition-all hover:font-bold ${
+                  className={`font-montserrat font-normal tracking-wide text-slate-50 transition-all hover:text-amber-100  hover:font-bold ${
                     selectedEnlace === link.title
                       ? "underline underline-offset-4"
                       : ""

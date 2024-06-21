@@ -11,7 +11,7 @@ const Footer = () => {
           <LocaleSwitcher />
         </div>
       </div>
-      <div className="flex space-x-6 gap-1 justify-center items-center mr-10">
+      <div className="flex space-x-4 gap-1 justify-center items-center mr-2">
         <Link
           className="hover:scale-110"
           target="_blank"

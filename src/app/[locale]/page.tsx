@@ -30,15 +30,15 @@ const Text: React.FC<TextProps> = ({ children, className }) => (
 export default function Home() {
   const t = useTranslations("LandingPage");
   return (
-    <main className="flex h-max flex-col items-center justify-between text-slate-50">
-      <div className="relative w-full h-[800px]">
+    <main className="flex h-max flex-col items-center justify-between text-neutral-50 font-montserrat font-normal">
+      <div className="relative w-full h-screen">
         <Image
           src={fotoProli}
           alt="Descripción de la imagen"
-          className="object-cover  w-1/2 h-1/2 lg:w-full lg:h-full"
+          className="object-cover  w-1/2 h-1/2 lg:w-full lg:h-screen"
           layout="fill"
         />
-        <h1 className="font-montserrat font-normal text-2xl md:text-4xl lg:text-6xl tracking-widest  absolute inset-0 flex items-center justify-center select-none">
+        <h1 className=" text-lg md:text-xl lg:text-4xl xl:text-6xl tracking-widest  absolute inset-0 flex items-center justify-center select-none mb-24">
           AGUSTÍN PARDO MOTZ
         </h1>
       </div>
@@ -46,12 +46,12 @@ export default function Home() {
       <div className="flex content-center justify-center mt-14">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-12 w-4/5">
           <div className="text-center md:text-left">
-            <h2 className="font-montserrat font-normal text-3xl tracking-widest  select-none pb-6">
+            <h2 className=" text-xl tracking-widest  select-none pb-6">
               {t("Titulo1")}
             </h2>
-            <div className="text-gray-200">
-              <Text>{t("Texto1")}</Text>
-              <Text>{t("Texto2")}</Text>
+            <div className="text-neutral-300  font-normal text-sm space-y-4">
+              <p>{t("Texto1")}</p>
+              <p>{t("Texto2")}</p>
             </div>
           </div>
           <Image alt="imagen" src={fotoSection} height={700} width={700} />

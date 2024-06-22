@@ -2,13 +2,10 @@
 
 import { useTranslations } from "next-intl";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
-
 import { SetStateAction, useEffect, useState } from "react";
 import { nav_links } from "@/constants/nav-links";
 import Link from "next/link";
-
 import Image from "next/image";
-
 import hamburguesa from "@/imagenes/logos/logo navbar.png";
 import fotoRedondaPepe from "@/imagenes/logos/LogoRedondo.png";
 import {
@@ -20,33 +17,32 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
 export default function Navigation() {
   const t = useTranslations("Navigation");
 
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [selectedEnlace, setSelectedEnlace] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      if (scrollPosition > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(scrollPosition > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const [selectedEnlace, setSelectedEnlace] = useState("");
-
   const handleLinkClick = (enlace: SetStateAction<string>) => {
     setSelectedEnlace(enlace);
+    setIsMenuOpen(false);
+  };
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -76,7 +72,7 @@ export default function Navigation() {
           </Link>
         </div>
 
-        <div className="flex  items-center mr-4">
+        <div className="flex items-center mr-4">
           <ul className="hidden xl:flex items-end space-x-3">
             {nav_links.map((link, i) => (
               <Link href={link.href} key={i} className="p-1">
@@ -100,9 +96,9 @@ export default function Navigation() {
           </div>
 
           <div className="xl:hidden flex items-center pr-5">
-            <DropdownMenu>
+            <DropdownMenu open={isMenuOpen} onOpenChange={handleMenuToggle}>
               <DropdownMenuTrigger className="h-16 w-16" asChild>
-                <div className="flex  items-center">
+                <div className="flex items-center">
                   <Image src={hamburguesa} alt="nav" height={30} width={30} />
                 </div>
               </DropdownMenuTrigger>
@@ -111,13 +107,13 @@ export default function Navigation() {
                   AGUSTÍN PARDO
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
-
                 <DropdownMenuGroup className="bg-black">
                   {nav_links.map((link, i) => (
                     <DropdownMenuItem key={i}>
                       <Link
                         href={link.href}
                         className="block font-montserrat font-normal tracking-wide w-full text-left px-3 py-1.5 cursor-pointer transition-all"
+                        onClick={() => handleLinkClick(link.title)}
                       >
                         {t(`${link.title}`).toUpperCase()}
                       </Link>

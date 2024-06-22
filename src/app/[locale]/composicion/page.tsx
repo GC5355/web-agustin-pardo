@@ -148,7 +148,7 @@ export default function Composicion() {
       {/* Big Band*/}
       <Element
         name="BigBand"
-        className="border-solid border border-neutral-600 rounded-md p-2 mb-8 "
+        className="border-solid md:border border-neutral-600 rounded-md p-2 mb-8 "
       >
         <h2 className="text-amber-100 text-center justify-center text-2xl mb-10 mt-6">
           BIG BANDS
@@ -205,10 +205,13 @@ export default function Composicion() {
         </div>
       </Element>
 
+
+      <Separator className="md:hidden  mb-16 bg-amber-50 " />
+      
       {/* Ensambles*/}
       <Element
         name="Ensambles"
-        className="border-solid border border-neutral-600 rounded-md p-2 mb-8 "
+        className="border-solid md:border border-neutral-600 rounded-md p-2 mb-8 "
       >
         <h2 className="text-center justify-center  text-2xl mb-10 mt-6">
           ENSAMBLES
@@ -263,10 +266,12 @@ export default function Composicion() {
         </div>
       </Element>
 
+      <Separator className="md:hidden  mb-16 bg-amber-50 " />
+      
       {/* CUARTETOS */}
       <Element
         name="Cuartetos"
-        className="border-solid border border-neutral-600 rounded-md p-2 mb-8 "
+        className="border-solid md:border border-neutral-600 rounded-md p-2 mb-8 "
       >
         <h2 className="text-center justify-center font-montserrat font-normal text-3xl mb-10 mt-6">
           CUARTETOS

@@ -4,6 +4,7 @@ import Image from "next/image";
 import fotoContacto from "@/imagenes/proli6.jpg";
 import { Icons } from "@/constants/icons";
 import { useTranslations } from "next-intl";
+import { Separator } from "@/components/ui/separator";
 
 const ContactoAgustin = () => {
   const t = useTranslations("Contacto");
@@ -13,13 +14,14 @@ const ContactoAgustin = () => {
         <Image
           alt="Foto contacto"
           src={fotoContacto}
-          className="hidden md:block -mt-16 object-cover w-full h-full"
+          className=" md:block -mt-16 object-cover w-full h-full"
         />
         <div className="text-slate-50 mx-full px-10">
-          <h1 className="text-xl lg:text-4xl uppercase  text-amber-100 tracking-tight text-left mt-32 mb-8">
+          <h1 className="text-xl lg:text-4xl uppercase  text-amber-100 tracking-tight text-left md:mt-32 ">
             {t("titulo")}
           </h1>
-          <p className="text-lg lg:text-lg tracking-tight text-neutral-300 text-left mb-16">
+          <Separator className=" mt-4 w-1/2  bg-amber-100" />
+          <p className="text-lg lg:text-lg tracking-tight text-neutral-300 text-left my-10">
             {t("texto")}
           </p>
           <div className="flex flex-col  mx-auto space-y-6">

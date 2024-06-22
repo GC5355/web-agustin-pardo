@@ -31,18 +31,17 @@ export default function Home() {
   const t = useTranslations("LandingPage");
   return (
     <main className="flex h-max flex-col items-center justify-between text-neutral-50 font-montserrat font-normal">
-      <div className="relative w-full h-screen">
+      <div className="relative w-full h-screen ">
         <Image
           src={fotoProli}
-          alt="Descripción de la imagen"
-          className="object-cover grayscale w-1/2 h-1/2 lg:w-full lg:h-screen"
+          alt="magen de la portada"
+          className="object-cover grayscale w-1/2 h-1/2 lg:w-full lg:h-screen "
           layout="fill"
         />
-        
-            <h1 className="text-amber-300 text-lg md:text-xl lg:text-2xl xl:text-5xl tracking-widest font-medium absolute inset-0 flex items-center justify-center select-none mb-24">
+
+        <h1 className="text-amber-300 text-2xl md:text-xl lg:text-2xl xl:text-5xl tracking-widest font-medium absolute inset-0 flex items-center justify-center select-none mb-48">
           AGUSTÍN PARDO MOTZ
         </h1>
-  
       </div>
 
       <div className="flex content-center justify-center mt-14">
@@ -56,7 +55,13 @@ export default function Home() {
               <p>{t("Texto2")}</p>
             </div>
           </div>
-          <Image alt="imagen" src={fotoSection} height={700} width={700} className="rounded-sm" />
+          <Image
+            alt="imagen"
+            src={fotoSection}
+            height={700}
+            width={700}
+            className="rounded-sm"
+          />
         </section>
       </div>
     </main>

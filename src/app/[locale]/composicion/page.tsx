@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import YouTube from "react-youtube";
 import { Link as ScrollLink, Element } from "react-scroll";
 import Image from "next/image";
@@ -13,6 +13,7 @@ export default function Composicion() {
     width: "450",
     playerVars: {
       autoplay: 0,
+      origin: window.location.origin,
     },
   };
   const optsLarge = {
@@ -20,6 +21,7 @@ export default function Composicion() {
     width: "350",
     playerVars: {
       autoplay: 0,
+      origin: window.location.origin,
     },
   };
 
@@ -28,6 +30,7 @@ export default function Composicion() {
     width: "400",
     playerVars: {
       autoplay: 0,
+      origin: window.location.origin,
     },
   };
 
@@ -36,6 +39,7 @@ export default function Composicion() {
     width: "290",
     playerVars: {
       autoplay: 0,
+      origin: window.location.origin,
     },
   };
 
@@ -64,13 +68,26 @@ export default function Composicion() {
     setSelectedEnlace(enlace);
   };
 
+  const videoRefs = {
+    video1: useRef(null),
+    video2: useRef(null),
+    video3: useRef(null),
+    video4: useRef(null),
+  };
+  
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+  
   return (
     <main className="flex min-h-screen flex-col items-center text-slate-50 pt-10 w-5/6 mx-auto  font-montserrat font-normal">
       <h1 className="tracking-widest text-amber-100 text-2xl  lg:text-4xl mt-14 ">
         COMPOSICIONES
       </h1>
       <Separator className=" mt-8 lg:w-1/2 w-5/6 bg-amber-50 " />
-
+  
       <nav className=" text-amber-50 sm:sticky  w-full my-10 p-4 flex justify-center">
         <ul className="xl:hidden flex flex-col space-y-6  text-lg text-center text-amber-50">
           <li>
@@ -125,9 +142,9 @@ export default function Composicion() {
           </li>
         </ul>
       </nav>
-
+  
       <Separator className="xl:hidden lg:w-1/2 w-5/6 mb-16 bg-amber-50 " />
-
+  
       {/* Big Band*/}
       <Element
         name="BigBand"
@@ -167,19 +184,22 @@ export default function Composicion() {
               </p>
             </div>
             <div className="text-slate-50 aspect-video mx-auto">
-              <div className="hidden 2xl:block">
-                <YouTube videoId="zZQ21852wV8" opts={optsExtraLarge} />
-              </div>
-              <div className="hidden lg:block 2xl:hidden">
-                <YouTube videoId="zZQ21852wV8" opts={optsLarge} />
-              </div>
-
-              <div className="hidden md:block lg:hidden">
-                <YouTube videoId="zZQ21852wV8" opts={optsMedium} />
-              </div>
-              <div className="md:hidden">
-                <YouTube videoId="zZQ21852wV8" opts={optsSmall} />
-              </div>
+              {isLoaded && (
+                <>
+                  <div className="hidden 2xl:block">
+                    <YouTube videoId="zZQ21852wV8" opts={optsExtraLarge} ref={videoRefs.video1} />
+                  </div>
+                  <div className="hidden lg:block 2xl:hidden">
+                    <YouTube videoId="zZQ21852wV8" opts={optsLarge} ref={videoRefs.video1} />
+                  </div>
+                  <div className="hidden md:block lg:hidden">
+                    <YouTube videoId="zZQ21852wV8" opts={optsMedium} ref={videoRefs.video1} />
+                  </div>
+                  <div className="md:hidden">
+                    <YouTube videoId="zZQ21852wV8" opts={optsSmall} ref={videoRefs.video1} />
+                  </div>
+                </>
+              )}
             </div>
           </section>
         </div>

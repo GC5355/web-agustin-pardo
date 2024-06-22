@@ -99,7 +99,7 @@ export default function Composicion() {
               <h3 className="text-xl tracking-widest  font-semibold items-center select-none pb-4">
                 Zita
               </h3>
-              <p className="font-montserrat font-normal text-lg tracking-normalitems-center select-none pb-1">
+              <p className="font-montserrat font-normal text-base tracking-normalitems-center select-none pb-1">
                 <span className="font-semibold">Arreglo:</span> Agustín Pardo
               </p>
 
@@ -115,6 +115,7 @@ export default function Composicion() {
                 src={fotoPartitura}
                 height={500}
                 width={500}
+                className="rounded-sm"
               />
             </div>
           </section>
@@ -168,7 +169,7 @@ export default function Composicion() {
         <div className="grid grid-cols-1 gap-16">
           <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-2 lg:p-6">
             <div className="text-neutral-300 ">
-              <h3 className="text-xl tracking-widest  font-semibold items-center select-none pb-4">
+              <h3 className="text-base tracking-widest  font-semibold items-center select-none pb-4">
                 Algun otro arreglo
               </h3>
               <p className="font-montserrat font-normal text-lg tracking-normalitems-center select-none pb-1">

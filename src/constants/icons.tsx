@@ -87,8 +87,8 @@ export const Icons = {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className="lucide lucide-mail"
-      width="32"
-      height="32"
+      width="26"
+      height="26"
       viewBox="0 0 23 23"
       fill="none"
       stroke="#FFFFFF"
@@ -124,8 +124,8 @@ export const Icons = {
   ),
   whatsapp: (props: LucideProps) => (
     <svg
-      width="32"
-      height="32"
+      width="26"
+      height="26"
       viewBox="-2 -2 24 24"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMinYMin"

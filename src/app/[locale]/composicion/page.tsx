@@ -5,6 +5,7 @@ import YouTube from "react-youtube";
 import { Link as ScrollLink, Element } from "react-scroll";
 import Image from "next/image";
 import fotoProli from "@/imagenes/proli1.jpg";
+import { Separator } from "@/components/ui/separator";
 
 export default function Composicion() {
   const optsExtraLarge = {
@@ -65,65 +66,67 @@ export default function Composicion() {
 
   return (
     <main className="flex min-h-screen flex-col items-center text-slate-50 pt-10 w-5/6 mx-auto  font-montserrat font-normal">
-      <div>
-        <h1 className="tracking-widest text-amber-100 text-2xl  lg:text-4xl mt-14 ">
-          COMPOSICIONES
-        </h1>
-        <nav className=" text-amber-50 md:sticky  w-full mb-14 mt-10 p-4 flex justify-center">
-          <ul className="xl:hidden flex flex-col space-y-6  text-lg text-center">
-            <li>
-              <ScrollLink
-                to="BigBand"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer  hover:underline underline-offset-8"
-              >
-                BIG BAND
-              </ScrollLink>
-            </li>
-            <li>
-              <ScrollLink
-                to="Ensambles"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer hover:underline underline-offset-8"
-              >
-                ENSAMBLES
-              </ScrollLink>
-            </li>
-            <li>
-              <ScrollLink
-                to="Orquesta"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer  hover:underline underline-offset-8"
-              >
-                ORQUESTA SINFÓNICA
-              </ScrollLink>
-            </li>
-            <li>
-              <ScrollLink
-                to="Cuartetos"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer  hover:underline underline-offset-8"
-              >
-                CUARTETOS
-              </ScrollLink>
-            </li>
-            <li>
-              <ScrollLink
-                to="MusicaAcademica"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer hover:underline underline-offset-8"
-              >
-                MÚSICA ACADÉMICA
-              </ScrollLink>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <h1 className="tracking-widest text-amber-100 text-2xl  lg:text-4xl mt-14 ">
+        COMPOSICIONES
+      </h1>
+      <Separator className=" mt-8 lg:w-1/2 w-5/6 bg-amber-50 " />
+
+      <nav className=" text-amber-50 sm:sticky  w-full my-10 p-4 flex justify-center">
+        <ul className="xl:hidden flex flex-col space-y-6  text-lg text-center text-amber-50">
+          <li>
+            <ScrollLink
+              to="BigBand"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer  hover:underline underline-offset-8"
+            >
+              BIG BAND
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              to="Ensambles"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer hover:underline underline-offset-8"
+            >
+              ENSAMBLES
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              to="Orquesta"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer  hover:underline underline-offset-8"
+            >
+              ORQUESTA SINFÓNICA
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              to="Cuartetos"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer  hover:underline underline-offset-8"
+            >
+              CUARTETOS
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              to="MusicaAcademica"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer hover:underline underline-offset-8"
+            >
+              MÚSICA ACADÉMICA
+            </ScrollLink>
+          </li>
+        </ul>
+      </nav>
+
+      <Separator className="xl:hidden lg:w-1/2 w-5/6 mb-16 bg-amber-50 " />
 
       {/* Big Band*/}
       <Element
@@ -143,9 +146,9 @@ export default function Composicion() {
                 <span className="font-bold ">Composición:</span> Agustín Pardo
               </p>
               <p className="font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold text-neutral-300 ">Músicos:</span> Sebastián Mederos -
-                Bandoneón Germán Álvarez - Contrabajo Andrés Antúnez - Piano &
-                Agustín Pardo - Guitarra
+                <span className="font-bold text-neutral-300 ">Músicos:</span>{" "}
+                Sebastián Mederos - Bandoneón Germán Álvarez - Contrabajo Andrés
+                Antúnez - Piano & Agustín Pardo - Guitarra
               </p>
               <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
                 <span className="font-bold">Grabación:</span> Gustavo de León

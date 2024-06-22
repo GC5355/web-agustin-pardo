@@ -8,45 +8,43 @@ import { useTranslations } from "next-intl";
 const ContactoAgustin = () => {
   const t = useTranslations("Contacto");
   return (
-    <main className="flex flex-col items-center text-slate-50">
+    <main className="flex flex-col items-center text-slate-50  font-montserrat font-normal">
       <div className="grid md:grid-cols-2 h-screen mx-auto">
         <Image
           alt="Foto contacto"
           src={fotoContacto}
-          className="hidden md:block object-cover w-full h-full"
+          className="hidden md:block -mt-16 object-cover w-full h-full"
         />
-        <div className="text-slate-50 mx-full">
-          <h1 className="text-4xl font-montserrat font-normal text-slate-50 tracking-tight lg:text-5xl text-center mt-32 mb-16">
+        <div className="text-slate-50 mx-full px-10">
+          <h1 className="text-xl lg:text-4xl uppercase  text-amber-100 tracking-tight text-left mt-32 mb-8">
             {t("titulo")}
           </h1>
-          <p className="text-lg lg:text-xl font-montserrat font-normal text-neutral-400 tracking-tight text-center my-16">
-          {t("texto")}
+          <p className="text-lg lg:text-lg tracking-tight text-neutral-300 text-left mb-16">
+            {t("texto")}
           </p>
-          <div className="w-1/2 mx-auto space-y-12">
-            <div className="flex items-center">
+          <div className="flex flex-col  mx-auto space-y-6">
+            <div>
               <a
-                className="flex items-center hover:scale-105"
+                className="flex items-center hover:text-amber-100 hover:underline hover:underline-offset-4"
                 href="mailto:agustin.pardo@utec.edu.uy"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icons.emailGrande />
-                <p className="mx-10 font-montserrat font-normal text-xl">
-                  {" "}
+                <Icons.emailGrande  />
+                <p className="mx-5 font-montserrat font-normal text-lg">
                   {t("texto1")}
                 </p>
               </a>
             </div>
-            <div className="flex items-center">
+            <div>
               <a
-                className="flex items-center hover:scale-105"
+                className="flex items-center hover:text-amber-100 hover:underline hover:underline-offset-4"
                 href="https://wa.me/+59898832945"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Icons.whatsapp />
-                <p className="mx-10 font-montserrat font-normal text-xl">
-                  {" "}
+                <p className="mx-5 font-montserrat font-normal text-lg">
                   {t("texto2")}
                 </p>
               </a>

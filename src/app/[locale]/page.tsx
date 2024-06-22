@@ -35,26 +35,28 @@ export default function Home() {
         <Image
           src={fotoProli}
           alt="Descripción de la imagen"
-          className="object-cover  w-1/2 h-1/2 lg:w-full lg:h-screen"
+          className="object-cover grayscale w-1/2 h-1/2 lg:w-full lg:h-screen"
           layout="fill"
         />
-        <h1 className=" text-lg md:text-xl lg:text-4xl xl:text-6xl tracking-widest  absolute inset-0 flex items-center justify-center select-none mb-24">
+        
+            <h1 className="text-amber-300 text-lg md:text-xl lg:text-2xl xl:text-5xl tracking-widest font-medium absolute inset-0 flex items-center justify-center select-none mb-24">
           AGUSTÍN PARDO MOTZ
         </h1>
+  
       </div>
 
       <div className="flex content-center justify-center mt-14">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-12 w-4/5">
           <div className="text-center md:text-left">
-            <h2 className=" text-xl tracking-widest  select-none pb-6">
+            <h2 className=" text-2xl xl:text-3xl tracking-widest text-amber-100 select-none pb-6">
               {t("Titulo1")}
             </h2>
-            <div className="text-neutral-300  font-normal text-sm space-y-4">
+            <div className="text-neutral-300  font-normal text-base xl:text-lg space-y-4">
               <p>{t("Texto1")}</p>
               <p>{t("Texto2")}</p>
             </div>
           </div>
-          <Image alt="imagen" src={fotoSection} height={700} width={700} />
+          <Image alt="imagen" src={fotoSection} height={700} width={700} className="rounded-sm" />
         </section>
       </div>
     </main>

@@ -4,42 +4,15 @@ import React from "react";
 import { Link as ScrollLink, Element } from "react-scroll";
 import Image from "next/image";
 import fotoPartitura from "@/imagenes/partitura.jpeg";
-import { useEffect, useState } from "react";
 import ReactAudioPlayer from "react-audio-player";
 import { Separator } from "@/components/ui/separator";
 
 export default function Composicion() {
-  const [loading, setLoading] = useState(true);
-
-  const [pdfUrl, setPdfUrl] = useState("");
-
-  useEffect(() => {
-    const fetchPdf = async () => {
-      try {
-        const response = await fetch(
-          "https://pub-11d873aa0eb4407dad2effa87772616b.r2.dev/Presupuesto.pdf"
-        );
-        const blob = await response.blob();
-        const url = URL.createObjectURL(blob);
-        setPdfUrl(url);
-        console.log(url);
-
-        //       // Aquí puedes hacer lo que desees con el archivo de audio,
-        //       // como reproducirlo en un reproductor de audio en tu aplicación.
-
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        setLoading(false);
-      }
-    };
-
-    fetchPdf();
-  }, []);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  const scrollLinks = [
+    { to: "Ensambles", label: "ENSAMBLES" },
+    { to: "Cuerdas", label: "CUERDAS" },
+    { to: "Vientos", label: "VIENTOS" },
+  ];
 
   return (
     <main className="flex min-h-screen flex-col items-center text-slate-50 pt-10 w-5/6 mx-auto">
@@ -50,36 +23,18 @@ export default function Composicion() {
 
       <nav className=" text-amber-50 sm:sticky  w-full my-10 p-4 flex justify-center">
         <ul className="xl:hidden flex flex-col space-y-6  text-lg text-center text-amber-50">
-          <li>
-            <ScrollLink
-              to="Ensambles"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer  hover:underline underline-offset-8 "
-            >
-              ENSAMBLES
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
-              to="Cuerdas"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer hover:underline underline-offset-8 "
-            >
-              CUERDAS
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
-              to="Vientos"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer  hover:underline underline-offset-8 "
-            >
-              VIENTOS
-            </ScrollLink>
-          </li>
+          {scrollLinks.map((link, i) => (
+            <li key={i}>
+              <ScrollLink
+                to={link.to}
+                smooth={true}
+                duration={500}
+                className="cursor-pointer  hover:underline underline-offset-8"
+              >
+                {link.label}
+              </ScrollLink>
+            </li>
+          ))}
         </ul>
       </nav>
 
@@ -158,8 +113,8 @@ export default function Composicion() {
         </div>
       </Element>
 
-     {/*Ensamles*/}
-     <Element
+      {/*Ensamles*/}
+      <Element
         name="Vientos"
         className="border-solid border border-neutral-600 rounded-md p-2 mb-8 "
       >

@@ -43,108 +43,45 @@ export default function Composicion() {
     },
   };
 
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      if (scrollPosition > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const [selectedEnlace, setSelectedEnlace] = useState("");
-
-  const handleLinkClick = (enlace: React.SetStateAction<string>) => {
-    setSelectedEnlace(enlace);
-  };
-
-  const videoRefs = {
-    video1: useRef(null),
-    video2: useRef(null),
-    video3: useRef(null),
-    video4: useRef(null),
-  };
-  
+  const scrollLinks = [
+    { to: "BigBand", label: "BIG BAND" },
+    { to: "Ensambles", label: "ENSAMBLES" },
+    { to: "Orquesta", label: "ORQUESTA SINFÓNICA" },
+    { to: "Cuartetos", label: "CUARTETOS" },
+    { to: "MusicaAcademica", label: "MÚSICA ACADÉMICA" },
+  ];
 
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-  
+
   return (
     <main className="flex min-h-screen flex-col items-center text-slate-50 pt-10 w-5/6 mx-auto  font-montserrat font-normal">
       <h1 className="tracking-widest text-amber-100 text-2xl  lg:text-4xl mt-14 ">
         COMPOSICIONES
       </h1>
       <Separator className=" mt-8 lg:w-1/2 w-5/6 bg-amber-50 " />
-  
+
       <nav className=" text-amber-50 sm:sticky  w-full my-10 p-4 flex justify-center">
         <ul className="xl:hidden flex flex-col space-y-6  text-lg text-center text-amber-50">
-          <li>
-            <ScrollLink
-              to="BigBand"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer  hover:underline underline-offset-8"
-            >
-              BIG BAND
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
-              to="Ensambles"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer hover:underline underline-offset-8"
-            >
-              ENSAMBLES
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
-              to="Orquesta"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer  hover:underline underline-offset-8"
-            >
-              ORQUESTA SINFÓNICA
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
-              to="Cuartetos"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer  hover:underline underline-offset-8"
-            >
-              CUARTETOS
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
-              to="MusicaAcademica"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer hover:underline underline-offset-8"
-            >
-              MÚSICA ACADÉMICA
-            </ScrollLink>
-          </li>
+          {scrollLinks.map((link, i) => (
+            <li key={i}>
+              <ScrollLink
+                to={link.to}
+                smooth={true}
+                duration={500}
+                className="cursor-pointer  hover:underline underline-offset-8"
+              >
+                {link.label}
+              </ScrollLink>
+            </li>
+          ))}
         </ul>
       </nav>
-  
+
       <Separator className="xl:hidden lg:w-1/2 w-5/6 mb-16 bg-amber-50 " />
-  
+
       {/* Big Band*/}
       <Element
         name="BigBand"
@@ -187,16 +124,16 @@ export default function Composicion() {
               {isLoaded && (
                 <>
                   <div className="hidden 2xl:block">
-                    <YouTube videoId="zZQ21852wV8" opts={optsExtraLarge} ref={videoRefs.video1} />
+                    <YouTube videoId="zZQ21852wV8" opts={optsExtraLarge} />
                   </div>
                   <div className="hidden lg:block 2xl:hidden">
-                    <YouTube videoId="zZQ21852wV8" opts={optsLarge} ref={videoRefs.video1} />
+                    <YouTube videoId="zZQ21852wV8" opts={optsLarge} />
                   </div>
                   <div className="hidden md:block lg:hidden">
-                    <YouTube videoId="zZQ21852wV8" opts={optsMedium} ref={videoRefs.video1} />
+                    <YouTube videoId="zZQ21852wV8" opts={optsMedium} />
                   </div>
                   <div className="md:hidden">
-                    <YouTube videoId="zZQ21852wV8" opts={optsSmall} ref={videoRefs.video1} />
+                    <YouTube videoId="zZQ21852wV8" opts={optsSmall} />
                   </div>
                 </>
               )}
@@ -205,9 +142,8 @@ export default function Composicion() {
         </div>
       </Element>
 
-
       <Separator className="md:hidden  mb-16 bg-amber-50 " />
-      
+
       {/* Ensambles*/}
       <Element
         name="Ensambles"
@@ -267,7 +203,7 @@ export default function Composicion() {
       </Element>
 
       <Separator className="md:hidden  mb-16 bg-amber-50 " />
-      
+
       {/* CUARTETOS */}
       <Element
         name="Cuartetos"

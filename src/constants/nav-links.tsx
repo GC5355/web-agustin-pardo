@@ -6,11 +6,6 @@ export const nav_links: { title: string; href: string; description: string }[] =
       description: "Una pagina llegina de biografia",
     },
     {
-      title: "Arreglos",
-      href: "/arreglos",
-      description: "Una pagina totalmente asediada por los arreglos.",
-    },
-    {
       title: "Composición",
       href: "/composicion",
       description: "Una pagina totalmente asediada por los arreglos.",
@@ -20,6 +15,12 @@ export const nav_links: { title: string; href: string; description: string }[] =
       href: "/direccion",
       description: "Una pagina totalmente asediada por los arreglos.",
     },
+    {
+      title: "Arreglos",
+      href: "/arreglos",
+      description: "Una pagina totalmente asediada por los arreglos.",
+    },
+
     {
       title: "Instrumentista",
       href: "/instrumentista",

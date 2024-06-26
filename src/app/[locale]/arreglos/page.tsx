@@ -63,7 +63,8 @@ export default function Composicion() {
             <ReactAudioPlayer
               src="https://pub-11d873aa0eb4407dad2effa87772616b.r2.dev/Zita.mp3"
               controls
-              className="lg:my-10 my-3 bg-slate-500"
+              className="lg:my-10 my-3"
+              
             />
             <Link
               href="https://www.youtube.com/watch?v=1IAs7SytyTg"

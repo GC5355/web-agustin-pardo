@@ -28,3 +28,9 @@ Utilizando montserrat, usare cinzel?
 
 
 
+----> Audio player
+Lo saque de este repositorio github https://github.com/bjrshussain/audio_player_in_react/blob/master/src/App.js
+Del video de youtube https://www.youtube.com/watch?v=KIwgfJF_gEk
+
+
+

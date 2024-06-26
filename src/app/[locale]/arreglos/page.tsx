@@ -6,6 +6,8 @@ import Image from "next/image";
 import fotoPartitura from "@/imagenes/partitura.jpeg";
 import ReactAudioPlayer from "react-audio-player";
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Composicion() {
   const scrollLinks = [
@@ -48,33 +50,39 @@ export default function Composicion() {
         <h2 className="text-amber-100 text-center justify-center text-2xl mb-6 mt-6">
           ENSAMBLES
         </h2>
-        <div className="grid grid-cols-1 gap-16">
-          <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-2 lg:p-6">
-            <div className="text-neutral-300 ">
-              <h3 className="text-xl tracking-widest  font-semibold items-center select-none pb-4">
-                Zita
-              </h3>
-              <p className="font-montserrat font-normal text-base tracking-normalitems-center select-none pb-1">
-                <span className="font-semibold">Arreglo:</span> Agustín Pardo
-              </p>
 
-              <ReactAudioPlayer
-                src="https://pub-11d873aa0eb4407dad2effa87772616b.r2.dev/Zita.mp3"
-                controls
-                className="lg:my-10 my-3"
-              />
-            </div>
-            <div className="text-slate-50 aspect-video mx-auto">
-              <Image
-                alt="imagen"
-                src={fotoPartitura}
-                height={500}
-                width={500}
-                className="rounded-sm"
-              />
-            </div>
-          </section>
-        </div>
+        <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-2 lg:p-6">
+          <div className="text-neutral-300 ">
+            <h3 className="text-xl tracking-widest  font-semibold items-center select-none pb-4">
+              Zita
+            </h3>
+            <p className="font-montserrat font-normal text-base tracking-normalitems-center select-none pb-1">
+              <span className="font-semibold">Arreglo:</span> Agustín Pardo
+            </p>
+
+            <ReactAudioPlayer
+              src="https://pub-11d873aa0eb4407dad2effa87772616b.r2.dev/Zita.mp3"
+              controls
+              className="lg:my-10 my-3 bg-slate-500"
+            />
+            <Link
+              href="https://www.youtube.com/watch?v=1IAs7SytyTg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant={"default"}>Ver video completo</Button>
+            </Link>
+          </div>
+          <div className="text-slate-50 aspect-video mx-auto">
+            <Image
+              alt="imagen"
+              src={fotoPartitura}
+              height={500}
+              width={500}
+              className="rounded-sm"
+            />
+          </div>
+        </section>
       </Element>
 
       {/*Ensamles*/}

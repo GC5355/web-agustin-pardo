@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { Link as ScrollLink, Element } from "react-scroll";
 import Image from "next/image";
 import fotoPartitura from "@/imagenes/partitura.jpeg";
@@ -8,6 +7,31 @@ import ReactAudioPlayer from "react-audio-player";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import React, { useRef, useState, useEffect } from "react";
+import Player from "@/components/Player/Player";
+import {FaYoutube } from "react-icons/fa";
+
+interface Song {
+  title: string;
+  url: string;
+  progress: number;
+  length: number;
+}
+
+const songsdata: Song[] = [
+  {
+    title: "Zita",
+    url: "https://pub-11d873aa0eb4407dad2effa87772616b.r2.dev/Zita.mp3",
+    progress: 0,
+    length: 0,
+  },
+  {
+    title: "Zita",
+    url: "https://pub-11d873aa0eb4407dad2effa87772616b.r2.dev/Zita.mp3",
+    progress: 0,
+    length: 0,
+  },
+];
 
 export default function Composicion() {
   const scrollLinks = [
@@ -15,6 +39,33 @@ export default function Composicion() {
     { to: "Cuerdas", label: "CUERDAS" },
     { to: "Vientos", label: "VIENTOS" },
   ];
+
+  const [songs, setSongs] = useState<Song[]>(songsdata);
+  const [isplaying, setisplaying] = useState(false);
+  const [currentSong, setCurrentSong] = useState<Song>(songsdata[1]);
+
+  const audioElem = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    if (isplaying) {
+      audioElem.current?.play();
+    } else {
+      audioElem.current?.pause();
+    }
+  }, [isplaying, currentSong]);
+
+  const onPlaying = () => {
+    if (audioElem.current) {
+      const duration = audioElem.current.duration;
+      const ct = audioElem.current.currentTime;
+
+      setCurrentSong({
+        ...currentSong,
+        progress: (ct / duration) * 100,
+        length: duration,
+      });
+    }
+  };
 
   return (
     <main className="flex min-h-screen flex-col items-center text-slate-50 pt-10 w-5/6 mx-auto">
@@ -60,18 +111,27 @@ export default function Composicion() {
               <span className="font-semibold">Arreglo:</span> Agustín Pardo
             </p>
 
-            <ReactAudioPlayer
-              src="https://pub-11d873aa0eb4407dad2effa87772616b.r2.dev/Zita.mp3"
-              controls
-              className="lg:my-10 my-3"
-              
-            />
+            <div className="w-2/3 my-10 mb-5">
+              <audio
+                src={currentSong.url}
+                ref={audioElem}
+                onTimeUpdate={onPlaying}
+              />
+              <Player
+                songs={songs}
+                isplaying={isplaying}
+                setisplaying={setisplaying}
+                audioElem={audioElem}
+                currentSong={currentSong}
+                setCurrentSong={setCurrentSong}
+              />
+            </div>
             <Link
               href="https://www.youtube.com/watch?v=1IAs7SytyTg"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant={"default"}>Ver video completo</Button>
+              <Button variant={"default"} className="mt-3"><FaYoutube className=" mr-3" /> Ver video </Button>
             </Link>
           </div>
           <div className="text-slate-50 aspect-video mx-auto">
@@ -104,11 +164,28 @@ export default function Composicion() {
                 <span className="font-semibold">Arreglo:</span> Agustín Pardo
               </p>
 
-              <ReactAudioPlayer
-                src="https://pub-11d873aa0eb4407dad2effa87772616b.r2.dev/Zita.mp3"
-                controls
-                className="lg:my-10 my-3"
+              <div className="w-2/3 my-10 mb-5">
+              <audio
+                src={currentSong.url}
+                ref={audioElem}
+                onTimeUpdate={onPlaying}
               />
+              <Player
+                songs={songs}
+                isplaying={isplaying}
+                setisplaying={setisplaying}
+                audioElem={audioElem}
+                currentSong={currentSong}
+                setCurrentSong={setCurrentSong}
+              />
+            </div>
+            <Link
+              href="https://www.youtube.com/watch?v=1IAs7SytyTg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant={"default"} className="mt-3"><FaYoutube className=" mr-3" /> Ver video </Button>
+            </Link>
             </div>
             <div className="text-slate-50 aspect-video mx-auto">
               <Image
@@ -140,11 +217,28 @@ export default function Composicion() {
                 <span className="font-semibold">Arreglo:</span> Agustín Pardo
               </p>
 
-              <ReactAudioPlayer
-                src="https://pub-11d873aa0eb4407dad2effa87772616b.r2.dev/Zita.mp3"
-                controls
-                className="lg:my-10 my-3"
+              <div className="w-2/3 my-10 mb-5">
+              <audio
+                src={currentSong.url}
+                ref={audioElem}
+                onTimeUpdate={onPlaying}
               />
+              <Player
+                songs={songs}
+                isplaying={isplaying}
+                setisplaying={setisplaying}
+                audioElem={audioElem}
+                currentSong={currentSong}
+                setCurrentSong={setCurrentSong}
+              />
+            </div>
+            <Link
+              href="https://www.youtube.com/watch?v=1IAs7SytyTg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant={"default"} className="mt-3"><FaYoutube className=" mr-3" /> Ver video </Button>
+            </Link>
             </div>
             <div className="text-slate-50 aspect-video mx-auto">
               <Image

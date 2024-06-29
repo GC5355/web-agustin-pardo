@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function layout({ children }: LayoutProps) {
   return (
-    <div>
+    <div className='text-neutral-50 font-montserrat font-normal'>
   
       {children}
     </div>

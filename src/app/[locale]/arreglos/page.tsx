@@ -9,7 +9,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import React, { useRef, useState, useEffect } from "react";
 import Player from "@/components/Player/Player";
-import {FaYoutube } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 
 interface Song {
   title: string;
@@ -131,7 +131,9 @@ export default function Composicion() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant={"default"} className="mt-3"><FaYoutube className=" mr-3" /> Ver video </Button>
+              <Button variant={"default"} className="mt-3">
+                <FaYoutube className=" mr-3" /> Ver video{" "}
+              </Button>
             </Link>
           </div>
           <div className="text-slate-50 aspect-video mx-auto">
@@ -165,27 +167,29 @@ export default function Composicion() {
               </p>
 
               <div className="w-2/3 my-10 mb-5">
-              <audio
-                src={currentSong.url}
-                ref={audioElem}
-                onTimeUpdate={onPlaying}
-              />
-              <Player
-                songs={songs}
-                isplaying={isplaying}
-                setisplaying={setisplaying}
-                audioElem={audioElem}
-                currentSong={currentSong}
-                setCurrentSong={setCurrentSong}
-              />
-            </div>
-            <Link
-              href="https://www.youtube.com/watch?v=1IAs7SytyTg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button variant={"default"} className="mt-3"><FaYoutube className=" mr-3" /> Ver video </Button>
-            </Link>
+                <audio
+                  src={currentSong.url}
+                  ref={audioElem}
+                  onTimeUpdate={onPlaying}
+                />
+                <Player
+                  songs={songs}
+                  isplaying={isplaying}
+                  setisplaying={setisplaying}
+                  audioElem={audioElem}
+                  currentSong={currentSong}
+                  setCurrentSong={setCurrentSong}
+                />
+              </div>
+              <Link
+                href="https://www.youtube.com/watch?v=1IAs7SytyTg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant={"default"} className="mt-3">
+                  <FaYoutube className=" mr-3" /> Ver video{" "}
+                </Button>
+              </Link>
             </div>
             <div className="text-slate-50 aspect-video mx-auto">
               <Image
@@ -218,27 +222,29 @@ export default function Composicion() {
               </p>
 
               <div className="w-2/3 my-10 mb-5">
-              <audio
-                src={currentSong.url}
-                ref={audioElem}
-                onTimeUpdate={onPlaying}
-              />
-              <Player
-                songs={songs}
-                isplaying={isplaying}
-                setisplaying={setisplaying}
-                audioElem={audioElem}
-                currentSong={currentSong}
-                setCurrentSong={setCurrentSong}
-              />
-            </div>
-            <Link
-              href="https://www.youtube.com/watch?v=1IAs7SytyTg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button variant={"default"} className="mt-3"><FaYoutube className=" mr-3" /> Ver video </Button>
-            </Link>
+                <audio
+                  src={currentSong.url}
+                  ref={audioElem}
+                  onTimeUpdate={onPlaying}
+                />
+                <Player
+                  songs={songs}
+                  isplaying={isplaying}
+                  setisplaying={setisplaying}
+                  audioElem={audioElem}
+                  currentSong={currentSong}
+                  setCurrentSong={setCurrentSong}
+                />
+              </div>
+              <Link
+                href="https://www.youtube.com/watch?v=1IAs7SytyTg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant={"default"} className="mt-3">
+                  <FaYoutube className=" mr-3" /> Ver video{" "}
+                </Button>
+              </Link>
             </div>
             <div className="text-slate-50 aspect-video mx-auto">
               <Image

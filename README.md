@@ -18,3 +18,7 @@ Codigo basado en la page Work del siguiente video de youtube,  https://www.youtu
 
 
 
+-----> Para mergear la working-branch a main
+git merge working-branch
+git commit
+git push origin main

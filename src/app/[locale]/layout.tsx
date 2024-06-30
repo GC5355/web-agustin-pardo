@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-import { Inter as FontSans } from "next/font/google";
-import { Roboto, Montserrat } from "next/font/google";
-
+import {  Montserrat } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { Navbar } from "@/components/navbar";
-// import Footer from "@/components/Footer";
-
-
 import { NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
-  getTranslations,
   unstable_setRequestLocale,
 } from "next-intl/server";
 import Navigation from "@/components/Navigation";

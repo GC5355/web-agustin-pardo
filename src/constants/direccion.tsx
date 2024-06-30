@@ -4,37 +4,32 @@ import laNonna from "@/imagenes/laNonna.jpg";
 import { StaticImageData } from "next/image";
 import { useTranslations } from "next-intl";
 
-interface Instrumento {
-  name: string;
-}
-
 interface Banda {
-  ensamble: string;
+  nombreEnsamble: string;
   fecha: string;
   lugar: string;
   imagen: StaticImageData;
   discoCompleto: string;
   youtube: string;
+  foto: string
 }
 
 // Custom hook to get translations and create the constants
 const useDirecciones = (): Banda[] => {
   const t = useTranslations("Direccion");
 
-  // Obtener el array de ensamble1
-  const ensamble1 = t.raw("ensamble1") as { titulo: string; texto1: string }[];
+  // Obtener el array de ensambles
+  const ensambles = t.raw("ensambles") as { nombreEnsamble: string; fecha: string; lugar: string, videoYoutube: string, foto: string}[];
 
-  const direcciones: Banda[] = [
-    {
-      ensamble: ensamble1[0].titulo,
-      fecha: "20/07/2022",
-      lugar: 'Hamburg, Alemania',
-      imagen: laImbailable,
-      discoCompleto:
-        "https://open.spotify.com/intl-es/album/7lJrgRP80KcBMpG2MWFoir?si=AclovCIhSsKn_T9MXSsRdw",
-      youtube: "https://www.youtube.com/watch?v=zMK7GiA2fEE",
-    },
-  ];
+  const direcciones: Banda[] = ensambles.map((ensamble, index) => ({
+    nombreEnsamble: ensamble.nombreEnsamble,
+    fecha: ensamble.fecha,
+    lugar: ensamble.lugar,
+    imagen: laImbailable, // Ajustar
+    discoCompleto: "",
+    youtube: ensamble.videoYoutube, 
+    foto: ensamble.foto
+  }));
 
   return direcciones;
 };

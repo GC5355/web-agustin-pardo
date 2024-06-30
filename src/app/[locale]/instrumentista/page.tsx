@@ -19,13 +19,13 @@ import { instrumentalista } from "@/constants/instrumentalista";
 
 
 const Instrumentista = () => {
-  const [project, setProject] = useState(instrumentalista[0]);
+  const [proyecto, setProyecto] = useState(instrumentalista[0]);
 
   const handleSlideChange = (swiper: { activeIndex: any }) => {
     // get current slide index
     const currentIndex = swiper.activeIndex;
-    // update project state based on current slide index
-    setProject(instrumentalista[currentIndex]);
+    // update proyecto state based on current slide index
+    setProyecto(instrumentalista[currentIndex]);
   };
 
   return (
@@ -43,23 +43,23 @@ const Instrumentista = () => {
             <div className="flex flex-col gap-[30px] h-[50%]">
               {/* nombre banda */}
               <div className="text-xl leading-none text-amber-100 font-medium uppercase tracking-widest ">
-                {project.banda}
+                {proyecto.banda}
               </div>
               {/* nombre cancion */}
               <div className="text-lg leading-none text-slate-50  font-medium tracking-wider ">
-                {project.nombreDisco}
+                {proyecto.nombreDisco}
               </div>
 
-              {/* project descripcion */}
-              <p className="text-neutral-400">{project.descripcion}</p>
+              {/* proyecto descripcion */}
+              <p className="text-neutral-400">{proyecto.descripcion}</p>
               {/* instrumentos */}
               <ul className="flex gap-4">
-                {project.instrumentos.map((item, index) => {
+                {proyecto.instrumentos.map((item, index) => {
                   return (
                     <li key={index} className="text-md tracking-wider text-amber-50">
                       {item.name}
                       {/* remove the last comma */}
-                      {index !== project.instrumentos.length - 1 && ","}
+                      {index !== proyecto.instrumentos.length - 1 && ","}
                     </li>
                   );
                 })}
@@ -68,9 +68,9 @@ const Instrumentista = () => {
               <div className="border w-2/3 border-white/20"></div>
               {/* buttons */}
               <div className="flex items-center gap-4">
-                {/* discoCompleto project button */}
+                {/* discoCompleto proyecto button */}
                 <Link
-                  href={project.discoCompleto}
+                  href={proyecto.discoCompleto}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -88,7 +88,7 @@ const Instrumentista = () => {
 
                 {/* youtube button */}
                 <Link
-                  href={project.youtube}
+                  href={proyecto.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -113,14 +113,14 @@ const Instrumentista = () => {
               className="xl:h-[520px]"
               onSlideChange={handleSlideChange}
             >
-              {instrumentalista.map((project, index) => {
+              {instrumentalista.map((proyecto, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
                     <div className="h-[460px] relative group flex justify-center items-center ">
                       {/* image */}
                       <div className="relative w-full h-full">
                         <Image
-                          src={project.imagen}
+                          src={proyecto.imagen}
                           fill
                           className="object-scale-down"
                           alt="Fotos de Agustín como instrumentista"

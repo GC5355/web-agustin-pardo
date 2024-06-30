@@ -41,5 +41,11 @@
     "texto": "Si querés contactarme, aquí te dejo varias formas de hacerlo. Te mando un saludo!",
     "texto1": "Enviar email",
     "texto2": "Escribime al WhatsApp"
+  },
+  "Direccion": {
+    "titulo": "Dirección",
+    "texto": "Si querés contactarme, aquí te dejo varias formas de hacerlo. Te mando un saludo!",
+    "texto1": "Enviar email",
+    "texto2": "Escribime al WhatsApp"
   }
 }

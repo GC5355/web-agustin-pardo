@@ -1,71 +1,18 @@
-'use client'
-
-import React, { useRef, useState, useEffect } from "react";
-import Player from "@/components/Player/Player";
-
-interface Song {
-  title: string;
-  url: string;
-  progress: number;
-  length: number;
-}
-
-const songsdata: Song[] = [
-  {
-    title: "Zita",
-    url: "https://pub-11d873aa0eb4407dad2effa87772616b.r2.dev/Zita.mp3",
-    progress: 0,
-    length: 0,
-  },
-  {
-    title: "Zita",
-    url: "https://pub-11d873aa0eb4407dad2effa87772616b.r2.dev/Zita.mp3",
-    progress: 0,
-    length: 0,
-  },
-];
+import React from "react";
+import { useTranslations } from "next-intl";
+import { Separator } from "@/components/ui/separator";
 
 const Direccion: React.FC = () => {
-  const [songs, setSongs] = useState<Song[]>(songsdata);
-  const [isplaying, setisplaying] = useState(false);
-  const [currentSong, setCurrentSong] = useState<Song>(songsdata[1]);
-
-  const audioElem = useRef<HTMLAudioElement | null>(null);
-
-  useEffect(() => {
-    if (isplaying) {
-      audioElem.current?.play();
-    } else {
-      audioElem.current?.pause();
-    }
-  }, [isplaying, currentSong]);
-
-  const onPlaying = () => {
-    if (audioElem.current) {
-      const duration = audioElem.current.duration;
-      const ct = audioElem.current.currentTime;
-
-      setCurrentSong({
-        ...currentSong,
-        progress: (ct / duration) * 100,
-        length: duration,
-      });
-    }
-  };
+  const t = useTranslations("Direccion");
 
   return (
-    <div className="w-6/12 h-screen">
-      <audio src={currentSong.url} ref={audioElem} onTimeUpdate={onPlaying} />
-      <Player
-        songs={songs}
-        isplaying={isplaying}
-        setisplaying={setisplaying}
-        audioElem={audioElem}
-        currentSong={currentSong}
-        setCurrentSong={setCurrentSong}
-      />
-    </div>
+    <main className="flex min-h-screen flex-col  w-10/12 mx-auto items-center text-neutral-300 pt-10  mb-10 font-montserrat font-normal">
+      <h1 className="tracking-widest text-amber-100 text-2xl  lg:text-4xl mt-14 ">
+        {t("titulo").toLocaleUpperCase()}
+      </h1>
+      <Separator className=" mt-8 w-1/2  bg-amber-100" />
+    </main>
   );
-}
+};
 
 export default Direccion;

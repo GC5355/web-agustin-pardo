@@ -10,6 +10,12 @@ import { Button } from "@/components/ui/button";
 import React, { useRef, useState, useEffect } from "react";
 import Player from "@/components/Player/Player";
 import { FaYoutube } from "react-icons/fa";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface Song {
   title: string;
@@ -132,7 +138,7 @@ export default function Composicion() {
               rel="noopener noreferrer"
             >
               <Button variant={"default"} className="mt-3">
-                <FaYoutube className=" mr-3" /> Ver video{" "}
+                <FaYoutube className="text-2xl mr-3" /> Ver video{" "}
               </Button>
             </Link>
           </div>
@@ -237,14 +243,21 @@ export default function Composicion() {
                 />
               </div>
               <Link
-                href="https://www.youtube.com/watch?v=1IAs7SytyTg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant={"default"} className="mt-3">
-                  <FaYoutube className=" mr-3" /> Ver video{" "}
-                </Button>
-              </Link>
+                  href=''
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-neutral-900 flex justify-center items-center group">
+                        <FaYoutube className="text-white text-2xl group-hover:text-amber-100" />
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-neutral-100">
+                        <p>Ver video completo</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
             </div>
             <div className="text-slate-50 aspect-video mx-auto">
               <Image

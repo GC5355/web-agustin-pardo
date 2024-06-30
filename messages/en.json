@@ -42,5 +42,12 @@
     "texto": "If you want to contact me, here you have some ways to do it!",
     "texto1": "Send email!",
     "texto2": "Write me to my WhatsApp!"
+  },
+  
+  "Direccion": {
+    "titulo": "Conductor",
+    "texto": "Si querés contactarme, aquí te dejo varias formas de hacerlo. Te mando un saludo!",
+    "texto1": "Enviar email",
+    "texto2": "Escribime al WhatsApp"
   }
 }

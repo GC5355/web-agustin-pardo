@@ -9,13 +9,12 @@ interface LayoutProps {
 export const metadata: Metadata = {
   title: `Instrumentista`,
   description:
-    'Direcciones de Agustín Pardo.',
+    'Agustín Pardo',
 }
 
 export default function layout({ children }: LayoutProps) {
   return (
     <div className='text-neutral-50 font-montserrat font-normal'>
-  
       {children}
     </div>
   )

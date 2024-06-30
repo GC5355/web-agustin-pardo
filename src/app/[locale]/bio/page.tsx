@@ -25,8 +25,7 @@ export default function Bio() {
     Autoplay({ delay: 1500, stopOnInteraction: true })
   );
   return (
-    <main className="flex min-h-screen flex-col items-center text-neutral-300 pt-10 w-5/6 mx-auto mb-10 font-montserrat font-normal">
-        
+    <main className="flex min-h-screen flex-col  w-10/12 mx-auto items-center text-neutral-300 pt-10  mb-10 font-montserrat font-normal">
       <h1 className="tracking-widest text-amber-100 text-2xl  lg:text-4xl mt-14 ">
         {t("titulo").toLocaleUpperCase()}
       </h1>

@@ -13,11 +13,10 @@ import { Separator } from "@/components/ui/separator";
 import { Card, CardContent } from "@/components/ui/card";
 import fotoContacto from "@/imagenes/proli6.jpg";
 
-
 import { SwiperSlide, Swiper } from "swiper/react";
 import "swiper/css";
 
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsArrowUpRight, BsYoutube, BsSpotify } from "react-icons/bs";
 
 import {
   Tooltip,
@@ -32,37 +31,39 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects = [
   {
-    num: "01",
-    category: "Guitarra",
-    title: "La Imbailable Cumbia Orquesta - La Quinqueña",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: fotoContacto,
-    live: "",
-    github: "",
+    banda: "La Imbailable Cumbia Orquesta",
+    nombreDisco: "La Quinqueña",
+    descripcion:
+      "Toque con la imbailable en el 2020. Tocan cumbia colombiana y esta muy guay!",
+    unstrumentos: [{ name: "Guitarra" }],
+    imagen: fotoContacto,
+    discoCompleto:
+      "https://open.spotify.com/intl-es/album/7lJrgRP80KcBMpG2MWFoir?si=AclovCIhSsKn_T9MXSsRdw",
+    youtube: "https://www.youtube.com/watch?v=zMK7GiA2fEE",
   },
   {
-    num: "02",
-    category: "fullstack",
-    title: "project 2",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: fotoContacto,
-    live: "",
-    github: "",
+    banda: "Lucía Trentini",
+    nombreDisco: " Ya no se",
+    descripcion:
+      "Filmando en “Espacio cultural Alberto Soriano” ECAS, Montevideo.",
+    unstrumentos: [
+      { name: "Guitarra" },
+      { name: "Flauta" },
+      { name: "Clarinete" },
+    ],
+    imagen: fotoContacto,
+    discoCompleto: "",
+    youtube: "",
   },
   {
-    num: "03",
-    category: "frontend",
-    title: "project 3",
-    description:
+    banda: "03",
+    nombreDisco: "project 3",
+    descripcion:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-    image: fotoContacto,
-    live: "",
-    github: "",
+    unstrumentos: [{ name: "Next.js" }, { name: "Tailwind.css" }],
+    imagen: fotoContacto,
+    discoCompleto: "",
+    youtube: "",
   },
 ];
 const Instrumentista = () => {
@@ -76,7 +77,7 @@ const Instrumentista = () => {
   };
 
   return (
-    <div className=" min-h-[80vh] flex flex-col justify-center py-12 xl:px-0">
+    <div className=" min-h-[80vh] w-10/12 mx-auto flex flex-col justify-center py-12 xl:px-0">
       <div className="mb-32">
         <h1 className="tracking-widest text-amber-100 text-2xl  lg:text-4xl mt-14  text-center ">
           INSTRUMENTISTA
@@ -88,25 +89,26 @@ const Instrumentista = () => {
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
-              {/* outline num */}
-              {/* <div className="text-8xl leading-none  text-transparent ">
-                {project.num}
-              </div> */}
-              {/* project category */}
-              <h2 className="text-amber-100 font-semibold uppercase  ">
-                {project.category} project
-              </h2>
+              {/* nombre banda */}
+              <div className="text-xl leading-none text-amber-100 font-medium uppercase tracking-widest ">
+                {project.banda}
+              </div>
 
-              {/* project description */}
-              <p className="text-white/60">{project.description}</p>
-              {/* stack */}
+              {/* nombre cancion */}
+              <div className="text-lg leading-none text-slate-50  font-medium tracking-wider ">
+                {project.nombreDisco}
+              </div>
+
+              {/* project descripcion */}
+              <p className="text-neutral-400">{project.descripcion}</p>
+              {/* instrumentos */}
               <ul className="flex gap-4">
-                {project.stack.map((item, index) => {
+                {project.unstrumentos.map((item, index) => {
                   return (
-                    <li key={index} className="text-xl text-accent">
+                    <li key={index} className="text-md tracking-wider">
                       {item.name}
                       {/* remove the last comma */}
-                      {index !== project.stack.length - 1 && ","}
+                      {index !== project.unstrumentos.length - 1 && ","}
                     </li>
                   );
                 })}
@@ -115,28 +117,37 @@ const Instrumentista = () => {
               <div className="border border-white/20"></div>
               {/* buttons */}
               <div className="flex items-center gap-4">
-                {/* live project button */}
-                <Link href={project.live}>
+                {/* discoCompleto project button */}
+                <Link
+                  href={project.discoCompleto}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-neutral-900 flex justify-center items-center group">
+                        <BsSpotify className="text-white text-2xl group-hover:text-amber-100" />
                       </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live project</p>
+                      <TooltipContent className="bg-neutral-100">
+                        <p>Ir a Spotify</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                {/* github project button */}
-                <Link href={project.github}>
+
+                {/* youtube button */}
+                <Link
+                  href={project.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-neutral-900 flex justify-center items-center group">
+                        <BsYoutube className="text-white text-2xl group-hover:text-amber-100" />
                       </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Github repository</p>
+                      <TooltipContent className="bg-neutral-100">
+                        <p>Ver video completo</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -160,10 +171,10 @@ const Instrumentista = () => {
                       {/* image */}
                       <div className="relative w-full h-full">
                         <Image
-                          src={project.image}
+                          src={project.imagen}
                           fill
                           className="object-cover rounded-sm"
-                          alt=""
+                          alt="Fotos de Agustín como instrumentista"
                         />
                       </div>
                     </div>
@@ -172,8 +183,10 @@ const Instrumentista = () => {
               })}
               {/* slider buttons */}
               <WorkSliderBtns
-                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none "
-                btnStyles="bg-default hover:bg-amber-100 border-solid border border-neutral-600  text-slate-100 hover:text-neutral-600 text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all" iconsStyles={undefined}              />
+                containerStyles="flex gap-2 absolute left-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none "
+                btnStyles="bg-default hover:bg-amber-100 border-solid border border-neutral-600  text-slate-100 hover:text-neutral-600 text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                iconsStyles={undefined}
+              />
             </Swiper>
           </div>
         </div>

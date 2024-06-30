@@ -158,7 +158,7 @@ export default function Composicion() {
         </h2>
         <div className="grid grid-cols-1 gap-16">
           <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-2 lg:p-6">
-            <div className="text-neutral-300 ">
+            <div className="text-neutral-400 ">
               <h3 className="text-xl tracking-widest  font-semibold items-center select-none pb-4">
                 Otro arreglo
               </h3>

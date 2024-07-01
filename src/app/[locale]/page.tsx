@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import fotoProli from "@/imagenes/proli1.jpg";
-import foto from "@/imagenes/portada 2.jpg";
+
 import fotoSection from "@/imagenes/AGU01881.jpg";
 import { useTranslations } from "next-intl";
 import clsx from "clsx";

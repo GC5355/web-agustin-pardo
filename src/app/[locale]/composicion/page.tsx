@@ -61,9 +61,9 @@ export default function Composicion() {
       <h1 className="tracking-widest text-amber-100 text-2xl  lg:text-4xl mt-14 ">
         COMPOSICIONES
       </h1>
-      <Separator className=" mt-8 lg:w-1/2 w-5/6 bg-amber-50 " />
+      <Separator className="xl:w-1/2 w-5/6 bg-amber-50 mt-8 mb-10" />
 
-      <nav className=" text-amber-50 sm:sticky  w-full my-10 p-4 flex justify-center">
+      <nav className=" text-amber-50 sm:sticky  w-full  p-4 flex justify-center">
         <ul className="xl:hidden flex flex-col space-y-6  text-lg text-center text-amber-50">
           {scrollLinks.map((link, i) => (
             <li key={i}>

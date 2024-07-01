@@ -49,32 +49,50 @@
         "nombreEnsamble": "La Típica y la Jazz",
         "fecha": "Grabado el 1 y 2 de abril de 2023",
         "lugar": "Estudios Mastodonte (Montevideo, Uruguay)",
-        "videoYoutube": "https://www.youtube.com/watch?v=1IAs7SytyTg",
-        "foto": "/imagenes/laImbailable.jpeg"
+        "youtube": "https://www.youtube.com/@LaTipicaylaJazz",
+        "foto": {
+          "src": "/imagenes/FotoZita.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Imágenes de Agustín dirigiendo ensambles"
+        }
       },
+   
       {
-        "nombreEnsamble": "La Típica y la Jazz In a Sentimental Mood (Duke Ellington)",
-        "fecha": "Grabado el 1 y 2 de abril de 2023",
-        "lugar": "Estudios Mastodonte (Montevideo, Uruguay)",
-          "videoYoutube": "https://www.youtube.com/watch?v=CIayU-ICisI"
-      },
-      {
-        "nombreEnsamble": "HFMT BIGBAND ",
+        "nombreEnsamble": "HFMT  Big Band ",
         "fecha": "7 noviembre de 2023",
         "lugar": "Jazz Hall, Hamburg, Alemania",
-       "videoYoutube": "https://www.youtube.com/watch?v=i8vvjJ6aFEo"
+        "youtube": "https://www.youtube.com/watch?v=i8vvjJ6aFEo",
+        "foto": {
+          "src": "/imagenes/direccion1.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Imágenes de Agustín dirigiendo ensambles"
+        }
       },
       {
         "nombreEnsamble": "Elbjazz",
         "fecha": "3 de Enero de 2024",
         "lugar": "Jazz Hall, Hamburg, Alemania",
-        "videoYoutube": "https://www.youtube.com/watch?v=SQ-xIDZQUrY"
+        "youtube": "https://www.youtube.com/watch?v=SQ-xIDZQUrY",
+        "foto": {
+          "src": "/imagenes/elbJazz.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Imágenes de Agustín dirigiendo ensambles"
+        }
       },
       {
-        "nombreEnsamble": " Orquesta UTEC",
+        "nombreEnsamble": "Orquesta UTEC",
         "fecha": "2 de Marzo de 2024",
         "lugar": "Jazz a la Calle, Mercedes, Soriano - Uruguay",
-        "videoYoutube": "https://www.youtube.com/watch?v=wTaoxNdOzmQ"
+        "youtube": "https://www.youtube.com/watch?v=wTaoxNdOzmQ",
+        "foto": {
+          "src": "/imagenes/direccion2.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Imágenes de Agustín dirigiendo ensambles"
+        }
       }
     ]
   }

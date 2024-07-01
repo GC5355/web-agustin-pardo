@@ -45,7 +45,7 @@ const Direccion: React.FC = () => {
                 className="mx-auto mt-3 rounded-sm object-cover h-full"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 hover:opacity-100">
-                <span className="text-white text-lg">Ver video</span>
+                <span className="text-white text-lg">Ver videoooooooooooooooooooooo</span>
               </div>
               <Link
                 href={item.youtube}

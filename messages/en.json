@@ -36,7 +36,6 @@
     "titulo": "Compositions",
     "texto1": "Text1"
   },
-  
   "Contacto": {
     "titulo": "Contact",
     "texto": "If you want to contact me, here you have some ways to do it!",
@@ -58,7 +57,6 @@
           "alt": "Images of Agustín conducting ensambles"
         }
       },
-   
       {
         "nombreEnsamble": "HFMT Big Band",
         "fecha": "7 noviembre de 2023",
@@ -68,7 +66,7 @@
           "src": "/imagenes/direccion1.jpg",
           "width": 500,
           "height": 500,
-       "alt": "Images of Agustín conducting ensambles"
+          "alt": "Images of Agustín conducting ensambles"
         }
       },
       {
@@ -80,7 +78,7 @@
           "src": "/imagenes/elbJazz.jpg",
           "width": 500,
           "height": 500,
-              "alt": "Images of Agustín conducting ensambles"
+          "alt": "Images of Agustín conducting ensambles"
         }
       },
       {
@@ -92,15 +90,86 @@
           "src": "/imagenes/direccion2.jpg",
           "width": 500,
           "height": 500,
-              "alt": "Images of Agustín conducting ensambles"
+          "alt": "Images of Agustín conducting ensambles"
         }
       }
     ]
   },
   "Produccion": {
-    "titulo": "Productor",
-    "texto": "Si querés contactarme, aquí te dejo varias formas de hacerlo. Te mando un saludo!",
-    "texto1": "Enviar email",
-    "texto2": "Escribime al WhatsApp"
+    "titulo": "Musical Productor",
+    "producciones": [
+      {
+        "nombreAlbum": "¡Qué Suerte!",
+        "nombreAutor": "Agustín Centurión",
+        "fecha": "2021",
+        "url": "https://open.spotify.com/intl-es/album/5DAuKUFAj6AcbCU1PbqEBx?si=1enGBVtHSCmMcE_kHsbtwA",
+        "imagen": {
+          "src": "/imagenes/produccionCenturion.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Images of the productions made by Pardo."
+        }
+      },
+      {
+        "nombreAlbum": "Rosado Dulce",
+        "nombreAutor": "Sin Palabras",
+        "fecha": "2018 / 2019",
+        "url": "https://open.spotify.com/intl-es/album/3yFCvHW0anZuVNB7ENZ6ro?si=iyhnJdHvS1y2Fz3iMYqc3w",
+        "imagen": {
+          "src": "/imagenes/produccionRosadoDulce.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Images of the productions made by Pardo."
+        }
+      },
+      {
+        "nombreAlbum": "La Imbailable",
+        "nombreAutor": "La Imbailable Cumbia Orquesta",
+        "fecha": "2017 / 2018",
+        "url": "https://open.spotify.com/intl-es/album/5ZyAWyICfbL06phsVHYcuQ?si=dS2zVhwdSA2YpQjVvUwizA",
+        "imagen": {
+          "src": "/imagenes/produccionLaImbailable.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Images of the productions made by Pardo."
+        }
+      },
+      {
+        "nombreAlbum": "Pájaros",
+        "nombreAutor": "Som Sud",
+        "fecha": "2017 / 2018",
+        "url": "https://somsud.bandcamp.com/album/p-jaros",
+        "imagen": {
+          "src": "/imagenes/produccionSomSud.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Images of the productions made by Pardo."
+        }
+      },
+      {
+        "nombreAlbum": "Onírico",
+        "nombreAutor": "La Nonna",
+        "fecha": "2016 / 2017",
+        "url": "https://open.spotify.com/intl-es/album/44x20MkLH9po0aYOYPy0zb?si=trtk3VM6SOag9dZLI1HSnw",
+        "imagen": {
+          "src": "/imagenes/produccionLaNonna.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Images of the productions made by Pardo."
+        }
+      },
+      {
+        "nombreAlbum": "No vuelvo (Single)",
+        "nombreAutor": "Sin Palabras",
+        "fecha": "2020",
+        "url": "https://youtu.be/anh9qUqRKq8?si=mN2xHgv7F1MXtMxK",
+        "imagen": {
+          "src": "/imagenes/Recurso 23-100.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Images of the productions made by Pardo."
+        }
+      }
+    ]
   }
 }

@@ -38,8 +38,7 @@ export default function Home() {
           className="object-cover grayscale w-1/2 h-1/2 lg:w-full lg:h-screen "
           layout="fill"
         />
-
-        <h1 className="text-amber-300 text-2xl md:text-xl lg:text-2xl xl:text-5xl tracking-widest font-medium absolute inset-0 flex items-center justify-center select-none mb-48">
+        <h1 className="text-amber-300 text-2xl md:text-xl lg:text-2xl xl:text-5xl tracking-[14px] font-medium absolute inset-0 flex items-center justify-center select-none mb-48">
           AGUSTÍN PARDO MOTZ
         </h1>
       </div>

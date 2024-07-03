@@ -164,10 +164,34 @@
         "fecha": "2020",
         "url": "https://youtu.be/anh9qUqRKq8?si=mN2xHgv7F1MXtMxK",
         "imagen": {
-          "src": "/imagenes/Recurso 23-100.jpg",
+          "src": "/imagenes/produccionSinPalabras.jpg",
           "width": 500,
           "height": 500,
           "alt": "Images of the productions made by Pardo."
+        }
+      }
+    ]
+  },
+  "Instrumentalista": {
+    "titulo": "Instrumentalista",
+    "instrumentalistaItems": [
+      {
+        "nombreAlbum": "¡Qué Suerte!",
+        "nombreAutor": "Agustín Centurión",
+        "fecha": "2021",
+        "instrumentos": [
+          {
+            "nombre": "Guitarra"
+          }
+        ],
+        "texto": "sd",
+        "urlSpotify": "https://open.spotify.com/intl-es/album/5DAuKUFAj6AcbCU1PbqEBx?si=1enGBVtHSCmMcE_kHsbtwA",
+        "urlYoutube": "https://open.spotify.com/intl-es/album/5DAuKUFAj6AcbCU1PbqEBx?si=1enGBVtHSCmMcE_kHsbtwA",
+        "imagen": {
+          "src": "/imagenes/produccionCenturion.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Imágenes de las producciones hechas por Pardo."
         }
       }
     ]

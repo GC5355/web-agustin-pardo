@@ -1,0 +1,59 @@
+ "Composicion": {
+    "titulo": "Composición",
+    "accordionTriguers": [
+      {
+        "trigger1": "Acerca del Proyecto",
+        "trigger2": "Instrumentación",
+        "trigger3": "Más información"
+      }
+    ],
+    "composicionItem": [
+      {
+        "nombreComposicion": "Sin Palabras & Agustin Pardo - SOL XCIII",
+        "textoAcercaProyecto": "Este fue un proyecto que estuvo barbaro por varios motivos.",
+        "instrumentacion": [
+          {
+            "instrumento": "Bandoneón",
+            "nombre": "Sebastián Mederos"
+          },
+          {
+            "instrumento": "Contrabajo",
+            "nombre": "Germán Álvarez"
+          },
+          {
+            "instrumento": "Piano",
+            "nombre": "Andrés Antúnez"
+          },
+          {
+            "instrumento": "Guitarra",
+            "nombre": "Agustín Pardo"
+          }
+        ],
+        "masInfo": [
+          {
+            "nombre": "Grabación",
+            "texto": "Gustavo de León Grabado el 14 de octubre de 2020 en estudios Sondor, Montevideo, Uruguay."
+          },
+          {
+            "nombre": "Mezcla",
+            "texto": "Gustavo de León"
+          },
+          {
+            "nombre": "Edición Sonido",
+            "texto": "Agustín Pardo"
+          },
+          {
+            "nombre": "Cámara y Edición de Video:",
+            "texto": "Germán Cardoso"
+          }
+        ],
+        "idYouTube": "zZQ21852wV8",
+        "imagen": {
+          "src": "/imagenes/produccionCenturion.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Imágenes de las composiciones hechas por Pardo."
+        }
+      }
+    ]
+  }

@@ -32,10 +32,6 @@
     "texto6": "As a multi-instrumentalist performer, he has participated in numerous international tours, standing out for his versatility in a wide range of instruments and musical styles. Throughout his career, he has also collaborated with various artists on recording productions as a session musician and producer.",
     "texto7": "As an educator, he is currently in charge of the Composition & Arrangements Area and the Research & Project Management Area at the Technological University (UTEC) in Mercedes, Uruguay. He also works in the Theory & Composition Department at the Faculty of Arts of the UdelaR in Montevideo. Previously, he has worked as a teacher at the International School of Contemporary Music at the National Pedro Henríquez Ureña University (UNPHU) in Santo Domingo, Dominican Republic, and at the Conservatorio Sur in Montevideo, Uruguay."
   },
-  "Composicion": {
-    "titulo": "Compositions",
-    "texto1": "Text1"
-  },
   "Contacto": {
     "titulo": "Contact",
     "texto": "If you want to contact me, here you have some ways to do it!",
@@ -173,7 +169,7 @@
     ]
   },
   "Instrumentalista": {
-    "titulo": "Instrumentalista",
+    "titulo": "Performer",
     "instrumentalistaItems": [
       {
         "nombreAlbum": "¡Qué Suerte!",
@@ -187,6 +183,143 @@
         "texto": "sd",
         "urlSpotify": "https://open.spotify.com/intl-es/album/5DAuKUFAj6AcbCU1PbqEBx?si=1enGBVtHSCmMcE_kHsbtwA",
         "urlYoutube": "https://open.spotify.com/intl-es/album/5DAuKUFAj6AcbCU1PbqEBx?si=1enGBVtHSCmMcE_kHsbtwA",
+        "imagen": {
+          "src": "/imagenes/produccionCenturion.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Imágenes de las producciones hechas por Pardo."
+        }
+      }
+    ]
+  },
+  "Composicion": {
+    "titulo": "Composicion",
+    "trigger1": "Acerca del proyecto",
+    "trigger2": "Instrumentacion",
+    "trigger3": "Mas datos",
+    "composicionesBigBandItems": [
+      {
+        "nombreComposicion": "Composicion 1",
+     
+        "textoAcercaProyexto": "Este fue un proyecto que estuvo barbaro por varios motivos.",
+        "instrumentacion": [
+          {
+            "instrumento": "Guitarra",
+            "nombre": "nombre1"
+          },
+          {
+            "instrumento": "Pija",
+            "nombre": "nombre2"
+          }
+        ],
+        "masInfo": [
+          {
+            "titulo": "masInfo titulo",
+            "texto": "masInfo texto"
+          },
+          {
+            "titulo": "masInfo titulo2",
+            "texto": "masInfo texto2"
+          }
+        ],
+       
+        "idYouTube": "zZQ21852wV8",
+        "imagen": {
+          "src": "/imagenes/produccionCenturion.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Imágenes de las producciones hechas por Pardo."
+        }
+      },
+      {
+        "nombreComposicion": "Composicion 2",
+     
+        "textoAcercaProyexto": "Este fue un proyecto que estuvo barbaro por varios motivos.",
+        "instrumentacion": [
+          {
+            "instrumento": "Guitarra 2",
+            "nombre": "nombre 2"
+          },
+          {
+            "instrumento": "Pija",
+            "nombre": "nombre 2"
+          }
+        ],
+        "masInfo": [
+          {
+            "titulo": "masInfo titulo 2",
+            "texto": "masInfo texto 2"
+          },
+          {
+            "titulo": "masInfo titulo3",
+            "texto": "masInfo texto3"
+          }
+        ],
+        "idYouTube": "og9skSDNPto",
+        "imagen": {
+          "src": "/imagenes/produccionCenturion.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Imágenes de las producciones hechas por Pardo."
+        }
+      }
+    ],
+    "composicionesEnsamblesItems": [
+      {
+        "nombreComposicion": "Composicion 1",
+        "textoAcercaProyexto": "Este fue un proyecto que estuvo barbaro por varios motivos.",
+        "instrumentacion": [
+          {
+            "instrumento": "Guitarra",
+            "nombre": "nombre1"
+          },
+          {
+            "instrumento": "Pija",
+            "nombre": "nombre2"
+          }
+        ],
+        "masInfo": [
+          {
+            "titulo": "masInfo titulo",
+            "texto": "masInfo texto"
+          },
+          {
+            "titulo": "masInfo titulo2",
+            "texto": "masInfo texto2"
+          }
+        ],
+        "idYouTube": "zZQ21852wV8",
+        "imagen": {
+          "src": "/imagenes/produccionCenturion.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Imágenes de las producciones hechas por Pardo."
+        }
+      },
+      {
+        "nombreComposicion": "Composicion 2",
+        "textoAcercaProyexto": "Este fue un proyecto que estuvo barbaro por varios motivos.",
+        "instrumentacion": [
+          {
+            "instrumento": "Guitarra 2",
+            "nombre": "nombre 2"
+          },
+          {
+            "instrumento": "Pija",
+            "nombre": "nombre 2"
+          }
+        ],
+        "masInfo": [
+          {
+            "titulo": "masInfo titulo 2",
+            "texto": "masInfo texto 2"
+          },
+          {
+            "titulo": "masInfo titulo3",
+            "texto": "masInfo texto3"
+          }
+        ],
+        "idYouTube": "og9skSDNPto",
         "imagen": {
           "src": "/imagenes/produccionCenturion.jpg",
           "width": 500,

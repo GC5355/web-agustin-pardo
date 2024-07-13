@@ -29,7 +29,6 @@ const Instrumentista = () => {
   };
 
 
-  console.log(proyecto);
   
   return (
     <div className="min-h-[80vh] w-10/12 mx-auto flex flex-col justify-center py-12 xl:px-0">

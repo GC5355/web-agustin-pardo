@@ -1,19 +1,34 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import YouTube from "react-youtube";
 import { Link as ScrollLink, Element } from "react-scroll";
 import Image from "next/image";
 import fotoProli from "@/imagenes/proli1.jpg";
 import { Separator } from "@/components/ui/separator";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import Composiciones from "@/constants/composiciones";
+import { useTranslations } from "next-intl";
 
 export default function Composicion() {
+  const t = useTranslations("Composicion");
+  const { composicionesBigBandItems, composicionesEnsamblesItems } = Composiciones();
+
+  console.log("composicionesBigBandItems ==> " , composicionesBigBandItems);
+  console.log("composicionesEnsamblesItems ==> " , composicionesEnsamblesItems);
+  console.log(t("titulo"));
+  console.log(t("trigger3"));
+
   const optsExtraLarge = {
     height: "250",
     width: "450",
     playerVars: {
       autoplay: 0,
-      origin: window.location.origin,
     },
   };
   const optsLarge = {
@@ -21,7 +36,6 @@ export default function Composicion() {
     width: "350",
     playerVars: {
       autoplay: 0,
-      origin: window.location.origin,
     },
   };
 
@@ -30,7 +44,6 @@ export default function Composicion() {
     width: "400",
     playerVars: {
       autoplay: 0,
-      origin: window.location.origin,
     },
   };
 
@@ -39,7 +52,6 @@ export default function Composicion() {
     width: "290",
     playerVars: {
       autoplay: 0,
-      origin: window.location.origin,
     },
   };
 
@@ -50,11 +62,6 @@ export default function Composicion() {
     { to: "Cuartetos", label: "CUARTETOS" },
     { to: "MusicaAcademica", label: "MÚSICA ACADÉMICA" },
   ];
-
-  const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
 
   return (
     <main className="flex min-h-screen flex-col items-center text-slate-50 pt-10 w-5/6 mx-auto  font-montserrat font-normal">
@@ -90,53 +97,90 @@ export default function Composicion() {
         <h2 className="text-amber-100 text-center justify-center text-2xl mb-10 mt-6">
           BIG BANDS
         </h2>
+
         <div className="grid grid-cols-1 gap-16">
-          <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
+          <section className="grid grid-cols-1 xl:grid-cols-2 gap-10 p-6">
             <div className="">
               <h3 className="text-amber-50  font-semibold text-xl lg:text-lg tracking-widest items-center select-none pb-4">
                 Sin Palabras & Agustín Pardo - SOL XIII
               </h3>
-              <p className=" font-normal text-base  tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold ">Composición:</span> Agustín Pardo
-              </p>
-              <p className="font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold text-neutral-300 ">Músicos:</span>{" "}
-                Sebastián Mederos - Bandoneón Germán Álvarez - Contrabajo Andrés
-                Antúnez - Piano & Agustín Pardo - Guitarra
-              </p>
-              <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
-                <span className="font-bold">Grabación:</span> Gustavo de León
-                Grabado el 14 de octubre de 2020 en estudios Sondor, Montevideo,
-                Uruguay.
-              </p>
-              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold">Mezcla:</span> Gustavo de León
-              </p>
-              <p className=" font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
-                <span className="font-bold">Edición Sonido:</span> Agustín Pardo
-              </p>
-              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold">Cámara y Edición de Video:</span>{" "}
-                Germán Cardoso
-              </p>
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger className="tracking-wider">
+                    Acerca del Proyecto:
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className=" font-normal text-base  tracking-normal text-neutral-300  items-center select-none pb-1">
+                      Este fue un proyecto que estuvo barbaro por varios
+                      motivos.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger className="tracking-wider">
+                    Instrumentacion
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
+                      <p>
+                        <span className="font-semibold ">Bandoneón</span>{" "}
+                        Sebastián Mederos
+                      </p>
+                      <p>
+                        <span className="font-semibold">Contrabajo</span> Germán
+                        Álvarez
+                      </p>
+                      <p>
+                        <span className="font-semibold">Piano</span> Andrés
+                        Antúnez
+                      </p>
+                      <p>
+                        <span className="font-semibold">Guitarra</span> Agustín
+                        Pardo
+                      </p>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger className="tracking-wider">
+                    Más info
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
+                      <span className="font-bold">Grabación:</span> Gustavo de
+                      León Grabado el 14 de octubre de 2020 en estudios Sondor,
+                      Montevideo, Uruguay.
+                    </p>
+                    <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
+                      <span className="font-bold">Mezcla:</span> Gustavo de León
+                    </p>
+                    <p className=" font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
+                      <span className="font-bold">Edición Sonido:</span> Agustín
+                      Pardo
+                    </p>
+                    <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
+                      <span className="font-bold">
+                        Cámara y Edición de Video:
+                      </span>{" "}
+                      Germán Cardoso
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
             <div className="text-slate-50 aspect-video mx-auto">
-              {isLoaded && (
-                <>
-                  <div className="hidden 2xl:block">
-                    <YouTube videoId="zZQ21852wV8" opts={optsExtraLarge} />
-                  </div>
-                  <div className="hidden lg:block 2xl:hidden">
-                    <YouTube videoId="zZQ21852wV8" opts={optsLarge} />
-                  </div>
-                  <div className="hidden md:block lg:hidden">
-                    <YouTube videoId="zZQ21852wV8" opts={optsMedium} />
-                  </div>
-                  <div className="md:hidden">
-                    <YouTube videoId="zZQ21852wV8" opts={optsSmall} />
-                  </div>
-                </>
-              )}
+              <div className="hidden 2xl:block">
+                <YouTube videoId="zZQ21852wV8" opts={optsExtraLarge} />
+              </div>
+              <div className="hidden lg:block 2xl:hidden">
+                <YouTube videoId="zZQ21852wV8" opts={optsLarge} />
+              </div>
+              <div className="hidden md:block lg:hidden">
+                <YouTube videoId="zZQ21852wV8" opts={optsMedium} />
+              </div>
+              <div className="md:hidden">
+                <YouTube videoId="zZQ21852wV8" opts={optsSmall} />
+              </div>
             </div>
           </section>
         </div>
@@ -145,7 +189,7 @@ export default function Composicion() {
       <Separator className="md:hidden  mb-16 bg-amber-50 " />
 
       {/* Ensambles*/}
-      <Element
+      {/* <Element
         name="Ensambles"
         className="border-solid md:border border-neutral-600 rounded-md p-2 mb-8 "
       >
@@ -200,12 +244,12 @@ export default function Composicion() {
             </div>
           </section>
         </div>
-      </Element>
+      </Element> */}
 
       <Separator className="md:hidden  mb-16 bg-amber-50 " />
 
       {/* CUARTETOS */}
-      <Element
+      {/* <Element
         name="Cuartetos"
         className="border-solid md:border border-neutral-600 rounded-md p-2 mb-8 "
       >
@@ -308,7 +352,7 @@ export default function Composicion() {
             </div>
           </section>
         </div>
-      </Element>
+      </Element> */}
     </main>
   );
 }

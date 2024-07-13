@@ -48,7 +48,6 @@ export default async function LocaleLayout({
             <Navigation />
           </div>
           <div className={montserrat_init.variable}>{children}</div>
-          {/* <Footer /> */}
           <FooterNav />
         </NextIntlClientProvider>
       </body>

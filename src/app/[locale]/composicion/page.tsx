@@ -3,8 +3,6 @@
 import React from "react";
 import YouTube from "react-youtube";
 import { Link as ScrollLink, Element } from "react-scroll";
-import Image from "next/image";
-import fotoProli from "@/imagenes/proli1.jpg";
 import { Separator } from "@/components/ui/separator";
 import {
   Accordion,
@@ -12,17 +10,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import Composiciones from "@/constants/composiciones";
+import useComposiciones from "@/constants/composiciones";
 import { useTranslations } from "next-intl";
 
 export default function Composicion() {
   const t = useTranslations("Composicion");
-  const { composicionesBigBandItems, composicionesEnsamblesItems } = Composiciones();
-
-  console.log("composicionesBigBandItems ==> " , composicionesBigBandItems);
-  console.log("composicionesEnsamblesItems ==> " , composicionesEnsamblesItems);
-  console.log(t("titulo"));
-  console.log(t("trigger3"));
+  const { composicionesBigBand, composicionesEnsambles } = useComposiciones();
 
   const optsExtraLarge = {
     height: "250",
@@ -64,21 +57,21 @@ export default function Composicion() {
   ];
 
   return (
-    <main className="flex min-h-screen flex-col items-center text-slate-50 pt-10 w-5/6 mx-auto  font-montserrat font-normal">
-      <h1 className="tracking-widest text-amber-100 text-2xl  lg:text-4xl mt-14 ">
+    <main className="flex min-h-screen flex-col items-center text-slate-50 pt-10 w-5/6 mx-auto font-montserrat font-normal">
+      <h1 className="tracking-widest text-amber-100 text-2xl lg:text-4xl mt-14">
         COMPOSICIONES
       </h1>
       <Separator className="xl:w-1/2 w-5/6 bg-amber-50 mt-8 mb-10" />
 
-      <nav className=" text-amber-50 sm:sticky  w-full  p-4 flex justify-center">
-        <ul className="xl:hidden flex flex-col space-y-6  text-lg text-center text-amber-50">
+      <nav className="text-amber-50 sm:sticky w-full p-4 flex justify-center">
+        <ul className="xl:hidden flex flex-col space-y-6 text-lg text-center text-amber-50">
           {scrollLinks.map((link, i) => (
             <li key={i}>
               <ScrollLink
                 to={link.to}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer  hover:underline underline-offset-8"
+                className="cursor-pointer hover:underline underline-offset-8"
               >
                 {link.label}
               </ScrollLink>
@@ -87,271 +80,144 @@ export default function Composicion() {
         </ul>
       </nav>
 
-      <Separator className="xl:hidden lg:w-1/2 w-5/6 mb-16 bg-amber-50 " />
+      <Separator className="xl:hidden lg:w-1/2 w-5/6 mb-16 bg-amber-50" />
 
       {/* Big Band*/}
-      <Element
-        name="BigBand"
-        className="border-solid md:border border-neutral-600 rounded-md p-2 mb-8 "
-      >
+      <Element name="BigBand" className="mb-8 w-full">
         <h2 className="text-amber-100 text-center justify-center text-2xl mb-10 mt-6">
           BIG BANDS
         </h2>
-
-        <div className="grid grid-cols-1 gap-16">
-          <section className="grid grid-cols-1 xl:grid-cols-2 gap-10 p-6">
-            <div className="">
-              <h3 className="text-amber-50  font-semibold text-xl lg:text-lg tracking-widest items-center select-none pb-4">
-                Sin Palabras & Agustín Pardo - SOL XIII
-              </h3>
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="item-1">
-                  <AccordionTrigger className="tracking-wider">
-                    Acerca del Proyecto:
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <p className=" font-normal text-base  tracking-normal text-neutral-300  items-center select-none pb-1">
-                      Este fue un proyecto que estuvo barbaro por varios
-                      motivos.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-2">
-                  <AccordionTrigger className="tracking-wider">
-                    Instrumentacion
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                      <p>
-                        <span className="font-semibold ">Bandoneón</span>{" "}
-                        Sebastián Mederos
-                      </p>
-                      <p>
-                        <span className="font-semibold">Contrabajo</span> Germán
-                        Álvarez
-                      </p>
-                      <p>
-                        <span className="font-semibold">Piano</span> Andrés
-                        Antúnez
-                      </p>
-                      <p>
-                        <span className="font-semibold">Guitarra</span> Agustín
-                        Pardo
-                      </p>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-3">
-                  <AccordionTrigger className="tracking-wider">
-                    Más info
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
-                      <span className="font-bold">Grabación:</span> Gustavo de
-                      León Grabado el 14 de octubre de 2020 en estudios Sondor,
-                      Montevideo, Uruguay.
-                    </p>
-                    <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                      <span className="font-bold">Mezcla:</span> Gustavo de León
-                    </p>
-                    <p className=" font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
-                      <span className="font-bold">Edición Sonido:</span> Agustín
-                      Pardo
-                    </p>
-                    <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                      <span className="font-bold">
-                        Cámara y Edición de Video:
-                      </span>{" "}
-                      Germán Cardoso
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </div>
-            <div className="text-slate-50 aspect-video mx-auto">
-              <div className="hidden 2xl:block">
-                <YouTube videoId="zZQ21852wV8" opts={optsExtraLarge} />
+        <section className="p-6 w-full">
+          {composicionesBigBand.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="mb-16 w-full md:flex md:flex-col lg:flex-row lg:space-x-10"
+              >
+                <div className="w-full lg:w-1/2">
+                  <h3 className=" font-semibold text-xl lg:text-lg uppercase text-amber-100 tracking-widest items-center select-none">
+                    {item.nombreComposicion}
+                  </h3>
+                  <Accordion type="single" collapsible className="mb-6">
+                    <AccordionItem value="item-1">
+                      <AccordionTrigger className="tracking-wider">
+                        {t("acercaDeTrigger")}
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
+                          {item.textoAcercaProyexto}
+                        </p>
+                      </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-2">
+                      <AccordionTrigger className="tracking-wider">
+                        {t("instrumentacionTrigger")}
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        {item.instrumentacion.map((item, index) => {
+                          return (
+                            <div key={index}>
+                              <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
+                                <span className="font-semibold">
+                                  {item.instrumento}
+                                </span>{" "}
+                                {" - "} {item.nombre}{" "}
+                              </p>
+                            </div>
+                          );
+                        })}
+                      </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-3">
+                      <AccordionTrigger className="tracking-wider">
+                        {t("masDatostrigger")}
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        {item.masInfo.map((item, index) => {
+                          return (
+                            <div key={index}>
+                              <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
+                                <span className="font-semibold">
+                                  {item.titulo}
+                                </span>{" "}
+                                {" - "} {item.texto}{" "}
+                              </p>
+                            </div>
+                          );
+                        })}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                </div>
+                <div className="w-full lg:w-1/2">
+                  <div className="hidden 2xl:block">
+                    <YouTube videoId={item.idYouTube} opts={optsExtraLarge} />
+                  </div>
+                  <div className="hidden lg:block 2xl:hidden">
+                    <YouTube videoId={item.idYouTube} opts={optsLarge} />
+                  </div>
+                  <div className="hidden md:block lg:hidden">
+                    <YouTube videoId={item.idYouTube} opts={optsMedium} />
+                  </div>
+                  <div className="md:hidden">
+                    <YouTube videoId={item.idYouTube} opts={optsSmall} />
+                  </div>
+                </div>
               </div>
-              <div className="hidden lg:block 2xl:hidden">
-                <YouTube videoId="zZQ21852wV8" opts={optsLarge} />
-              </div>
-              <div className="hidden md:block lg:hidden">
-                <YouTube videoId="zZQ21852wV8" opts={optsMedium} />
-              </div>
-              <div className="md:hidden">
-                <YouTube videoId="zZQ21852wV8" opts={optsSmall} />
-              </div>
-            </div>
-          </section>
-        </div>
+            );
+          })}
+        </section>
       </Element>
 
-      <Separator className="md:hidden  mb-16 bg-amber-50 " />
+      <Separator className="my-8 bg-amber-50" />
 
-      {/* Ensambles*/}
-      {/* <Element
-        name="Ensambles"
-        className="border-solid md:border border-neutral-600 rounded-md p-2 mb-8 "
-      >
-        <h2 className="text-center justify-center  text-2xl mb-10 mt-6">
+      {/* ENSAMBLES */}
+      {/* <Element name="Ensambles" className="mb-8 w-full">
+        <h2 className="text-amber-100 text-center justify-center text-2xl mb-10 mt-6">
           ENSAMBLES
         </h2>
-        <div className="grid grid-cols-1 gap-16">
-          <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
-            <div className="text-slate-50">
-              <h3 className="font-montserrat font-semibold text-2xl tracking-widest text-slate-50 items-center select-none pb-4">
-                William Pequeño
-              </h3>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Composición:</span> Agustín Pardo
-              </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Músicos:</span> Gustavo Villalba –
-                Saxo Soprano / Agustín Pardo – Piano / Rodrigo Fernández – Bajo
-                / Mauricio Ramos – Batería
-              </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Grabación:</span> Gino Maiuri
-                Grabado el 23 de diciembre de 2019 en la Escuela Universitaria
-                de Música, UdelaR Montevideo, Uruguay
-              </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Mezcla:</span> Nicolás Demczylo
-              </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Edición Sonido:</span> Gino Maiuri &
-                Agustín Pardo
-              </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Cámara y Edición de Video:</span>{" "}
-                Germán Cardoso
-              </p>
-            </div>
-            <div className="text-slate-50 aspect-video mx-auto">
-              <div className="hidden 2xl:block">
-                <YouTube videoId="og9skSDNPto" opts={optsExtraLarge} />
+        <section className="p-6 w-full">
+          {composicionesEnsambles.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="mb-16 w-full md:flex md:flex-col lg:flex-row lg:space-x-10"
+              >
+                <div className="w-full lg:w-1/2">
+                  <h3 className=" font-semibold text-xl lg:text-lg uppercase text-amber-100 tracking-widest items-center select-none">
+                    {item.nombreComposicion}
+                  </h3>
+                  <Accordion type="single" collapsible className="mb-6">
+                    <AccordionItem value="item-1">
+                      <AccordionTrigger className="tracking-wider">
+                        {t("trigger1")}
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
+                          {item.textoAcercaProyexto}
+                        </p>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                </div>
+                <div className="w-full lg:w-1/2">
+                  <div className="hidden 2xl:block">
+                    <YouTube videoId={item.idYouTube} opts={optsExtraLarge} />
+                  </div>
+                  <div className="hidden lg:block 2xl:hidden">
+                    <YouTube videoId={item.idYouTube} opts={optsLarge} />
+                  </div>
+                  <div className="hidden md:block lg:hidden">
+                    <YouTube videoId={item.idYouTube} opts={optsMedium} />
+                  </div>
+                  <div className="md:hidden">
+                    <YouTube videoId={item.idYouTube} opts={optsSmall} />
+                  </div>
+                </div>
               </div>
-              <div className="hidden lg:block 2xl:hidden">
-                <YouTube videoId="og9skSDNPto" opts={optsLarge} />
-              </div>
-
-              <div className="hidden md:block lg:hidden">
-                <YouTube videoId="og9skSDNPto" opts={optsMedium} />
-              </div>
-              <div className="md:hidden">
-                <YouTube videoId="og9skSDNPto" opts={optsSmall} />
-              </div>
-            </div>
-          </section>
-        </div>
-      </Element> */}
-
-      <Separator className="md:hidden  mb-16 bg-amber-50 " />
-
-      {/* CUARTETOS */}
-      {/* <Element
-        name="Cuartetos"
-        className="border-solid md:border border-neutral-600 rounded-md p-2 mb-8 "
-      >
-        <h2 className="text-center justify-center font-montserrat font-normal text-3xl mb-10 mt-6">
-          CUARTETOS
-        </h2>
-        <div className="grid grid-cols-1 gap-16">
-          <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
-            <div className="text-slate-50">
-              <h3 className="font-montserrat font-semibold text-3xl tracking-widest text-slate-50 items-center select-none pb-4">
-                Candombe de los Mil Años
-              </h3>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Composición: </span> Agustín Pardo
-              </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Músicos: </span> Gustavo Villalba -
-                Saxo Soprano / Andrea Tejera - Saxo Alto / Gonzalo Levin - Saxo
-                Tenor / Alejandra Genta - Saxo Barítono
-              </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Grabación:</span> Gastón Akermann en
-                Mastodonte el 19 de setiembre de 2020
-              </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Mezcla:</span> Nicolás Demczylo
-              </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Edición Sonido:</span> Agustín Pardo
-              </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Cámara y Edición de Video:</span>{" "}
-                Germán Cardoso
-              </p>
-            </div>
-
-            <div className="text-slate-50 aspect-video mx-auto">
-              <div className="hidden 2xl:block">
-                <YouTube videoId="oGXYKgXxJPY" opts={optsExtraLarge} />
-              </div>
-              <div className="hidden lg:block 2xl:hidden">
-                <YouTube videoId="oGXYKgXxJPY" opts={optsLarge} />
-              </div>
-
-              <div className="hidden md:block lg:hidden">
-                <YouTube videoId="oGXYKgXxJPY" opts={optsMedium} />
-              </div>
-              <div className="md:hidden">
-                <YouTube videoId="oGXYKgXxJPY" opts={optsSmall} />
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <div className="grid grid-cols-1 gap-16">
-          <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
-            <div className="text-slate-50 ">
-              <h3 className="font-montserrat font-semibold text-3xl tracking-widest text-slate-50 items-center select-none pb-4">
-                La Floresta
-              </h3>
-
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Composición: </span> Agustín Pardo
-              </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Cuarteto de Cuerdas: </span> Violín
-                I - Diego Swallow / Violín II - Emilio Sunhary / Viola - Gerardo
-                Gramajo / Violonchelo - Pedro Szulak
-              </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Grabación:</span> Grabado el 13 de
-                Agosto de 2020 en el Cuarto Tavella por Martín Tavella
-              </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Mezcla:</span> Nicolás Demczylo
-              </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Edición Sonido:</span> Agustín Pardo
-              </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
-                <span className="font-bold">Cámara y Edición de Video:</span>{" "}
-                Germán Cardoso
-              </p>
-            </div>
-
-            <div className="text-slate-50 aspect-video mx-auto">
-              <div className="hidden 2xl:block">
-                <YouTube videoId="SANbNx12flY" opts={optsExtraLarge} />
-              </div>
-              <div className="hidden lg:block 2xl:hidden">
-                <YouTube videoId="SANbNx12flY" opts={optsLarge} />
-              </div>
-
-              <div className="hidden md:block lg:hidden">
-                <YouTube videoId="SANbNx12flY" opts={optsMedium} />
-              </div>
-              <div className="md:hidden">
-                <YouTube videoId="SANbNx12flY" opts={optsSmall} />
-              </div>
-            </div>
-          </section>
-        </div>
+            );
+          })}
+        </section>
       </Element> */}
     </main>
   );

@@ -197,10 +197,10 @@
   },
   "Composicion": {
     "titulo": "Composicion",
-    "trigger1": "Acerca del proyecto",
-    "trigger2": "Instrumentacion",
-    "trigger3": "Mas datos",
-    "composicionesBigBandItems": [
+    "acercaDeTrigger": "Acerca del proyecto",
+    "instrumentacionTrigger": "Instrumentacion",
+    "masDatostrigger": "Mas datos",
+    "bigBandItems": [
       {
         "nombreComposicion": "Composicion 1",
         "textoAcercaProyexto": "Este fue un proyecto que estuvo barbaro por varios motivos.",
@@ -234,7 +234,7 @@
       },
       {
         "nombreComposicion": "Composicion 2",
-        "textoAcercaProyexto": "Este fue un proyecto que estuvo barbaro por varios motivos.",
+        "textoAcercaProyexto": "Que bueno que estuvo estoooo",
         "instrumentacion": [
           {
             "instrumento": "Guitarra 2",
@@ -264,9 +264,9 @@
         }
       }
     ],
-    "composicionesEnsamblesItems": [
+    "ensamblesItems": [
       {
-        "nombreComposicion": "Composicion 1",
+        "nombreComposicion": "Composicion Ensamble",
         "textoAcercaProyexto": "Este fue un proyecto que estuvo barbaro por varios motivos.",
         "instrumentacion": [
           {

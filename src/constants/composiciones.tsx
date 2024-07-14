@@ -4,6 +4,7 @@ interface Instrumentos {
   instrumento: string,
   nombre: string
 }
+
 interface MasInfo { 
   titulo: string,
   texto: string
@@ -23,13 +24,18 @@ interface Composicion {
   };
 }
 
-const Composiciones = (): { composicionesBigBandItems: Composicion[], composicionesEnsamblesItems: Composicion[] } => {
+interface ComposicionesData {
+  composicionesBigBand: Composicion[];
+  composicionesEnsambles: Composicion[];
+}
+
+const useComposiciones = (): ComposicionesData => {
   const t = useTranslations("Composicion");
 
-  const composicionesBigBandItems = t.raw("composicionesBigBandItems") as Composicion[];
-  const composicionesEnsamblesItems = t.raw("composicionesEnsamblesItems") as Composicion[];
+  const composicionesBigBand = t.raw("bigBandItems") as Composicion[];
+  const composicionesEnsambles = t.raw("ensamblesItems") as Composicion[];
 
-  return { composicionesBigBandItems, composicionesEnsamblesItems };
+  return { composicionesBigBand, composicionesEnsambles };
 };
 
-export default Composiciones;
+export default useComposiciones;

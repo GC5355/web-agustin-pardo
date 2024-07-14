@@ -194,13 +194,12 @@
   },
   "Composicion": {
     "titulo": "Composicion",
-    "trigger1": "Acerca del proyecto",
-    "trigger2": "Instrumentacion",
-    "trigger3": "Mas datos",
-    "composicionesBigBandItems": [
+    "acercaDeTrigger": "Acerca del proyecto",
+    "instrumentacionTrigger": "Instrumentacion",
+    "masDatostrigger": "Mas datos",
+    "bigBandItems": [
       {
         "nombreComposicion": "Composicion 1",
-     
         "textoAcercaProyexto": "Este fue un proyecto que estuvo barbaro por varios motivos.",
         "instrumentacion": [
           {
@@ -222,7 +221,6 @@
             "texto": "masInfo texto2"
           }
         ],
-       
         "idYouTube": "zZQ21852wV8",
         "imagen": {
           "src": "/imagenes/produccionCenturion.jpg",
@@ -233,8 +231,7 @@
       },
       {
         "nombreComposicion": "Composicion 2",
-     
-        "textoAcercaProyexto": "Este fue un proyecto que estuvo barbaro por varios motivos.",
+        "textoAcercaProyexto": "Que bueno que estuvo estoooo",
         "instrumentacion": [
           {
             "instrumento": "Guitarra 2",
@@ -264,9 +261,9 @@
         }
       }
     ],
-    "composicionesEnsamblesItems": [
+    "ensamblesItems": [
       {
-        "nombreComposicion": "Composicion 1",
+        "nombreComposicion": "Composicion Ensamble",
         "textoAcercaProyexto": "Este fue un proyecto que estuvo barbaro por varios motivos.",
         "instrumentacion": [
           {
@@ -289,37 +286,6 @@
           }
         ],
         "idYouTube": "zZQ21852wV8",
-        "imagen": {
-          "src": "/imagenes/produccionCenturion.jpg",
-          "width": 500,
-          "height": 500,
-          "alt": "Imágenes de las producciones hechas por Pardo."
-        }
-      },
-      {
-        "nombreComposicion": "Composicion 2",
-        "textoAcercaProyexto": "Este fue un proyecto que estuvo barbaro por varios motivos.",
-        "instrumentacion": [
-          {
-            "instrumento": "Guitarra 2",
-            "nombre": "nombre 2"
-          },
-          {
-            "instrumento": "Pija",
-            "nombre": "nombre 2"
-          }
-        ],
-        "masInfo": [
-          {
-            "titulo": "masInfo titulo 2",
-            "texto": "masInfo texto 2"
-          },
-          {
-            "titulo": "masInfo titulo3",
-            "texto": "masInfo texto3"
-          }
-        ],
-        "idYouTube": "og9skSDNPto",
         "imagen": {
           "src": "/imagenes/produccionCenturion.jpg",
           "width": 500,

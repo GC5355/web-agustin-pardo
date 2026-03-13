@@ -34,7 +34,7 @@ export default function Home() {
       <div className="relative w-full h-screen ">
         <Image
           src={fotoProli}
-          alt="magen de la portada"
+          alt="Agustín Pardo Motz - Músico, Compositor y Director en Hamburgo"
           className="object-cover grayscale w-full h-screen"
           layout="fill"
         />
@@ -58,7 +58,7 @@ export default function Home() {
             </div>
           </div>
           <Image
-            alt="imagen"
+            alt="Agustín Pardo Motz dirigiendo un ensamble musical"
             src={fotoSection}
             height={700}
             width={700}

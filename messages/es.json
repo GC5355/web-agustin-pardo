@@ -13,6 +13,11 @@
     "label": "Change language",
     "locale": "{locale, select, es {es ESP} en {en ENG} other {Unknown}}"
   },
+  "Metadata": {
+    "title": "Agustín Pardo Motz | Músico, Compositor y Director",
+    "description": "Sitio oficial de Agustín Pardo Motz. Descubre su trabajo en composición, dirección de orquesta, arreglos e investigación musical en Hamburgo y Uruguay.",
+    "keywords": "Agustín Pardo Motz, músico uruguayo, compositor jazz, director de orquesta, arreglador, Hamburgo, HfMT, música contemporánea, Big Band"
+  },
   "LandingPage": {
     "Titulo1": "Bienvenidos a mi web",
     "Texto1": "En esta plataforma, iré subiendo todo lo que hago en composición, dirección, arreglos e instrumentación, para que puedas disfrutar y conocer más de mi trabajo.",

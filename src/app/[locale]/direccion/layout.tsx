@@ -6,10 +6,19 @@ interface LayoutProps {
   children: ReactNode
 }
 
-export const metadata: Metadata = {
-  title: `Dirección`,
-  description:
-    'Direcciones de Agustín Pardo.',
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const t = await getTranslations({ locale, namespace: "Navigation" });
+
+  return {
+    title: t("Dirección"),
+    description: "Actividad de dirección orquestal y ensambles de Agustín Pardo Motz.",
+  };
 }
 
 export default function layout({ children }: LayoutProps) {

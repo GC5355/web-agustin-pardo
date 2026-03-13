@@ -14,9 +14,9 @@
     "locale": "{locale, select, es {es ESP} en {en ENG} other {Unknown}}"
   },
   "LandingPage": {
-    "Titulo1": "Bienvenidos a mi pagina Web",
-    "Texto1": "Esta es la pagina web del pepe, que tan elegantemente esta llevando a cabo.",
-    "Texto2": "Pepe es una persona taaaaan bella como peluda."
+    "Titulo1": "Bienvenidos a mi web",
+    "Texto1": "En esta plataforma, iré subiendo todo lo que hago en composición, dirección, arreglos e instrumentación, para que puedas disfrutar y conocer más de mi trabajo.",
+    "Texto2": ""
   },
   "NotFoundPage": {
     "description": "Please double-check the browser address bar or use the navigation to go to a known page.",

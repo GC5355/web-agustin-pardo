@@ -149,36 +149,36 @@ export default function Composicion() {
         name="Ensambles"
         className="border-solid md:border border-neutral-600 rounded-md p-2 mb-8 "
       >
-        <h2 className="text-center justify-center  text-2xl mb-10 mt-6">
+        <h2 className="text-amber-100 text-center justify-center text-2xl mb-10 mt-6">
           ENSAMBLES
         </h2>
         <div className="grid grid-cols-1 gap-16">
           <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
             <div className="text-slate-50">
-              <h3 className="font-montserrat font-semibold text-2xl tracking-widest text-slate-50 items-center select-none pb-4">
+              <h3 className="text-amber-50  font-semibold text-xl lg:text-lg tracking-widest items-center select-none pb-4">
                 William Pequeño
               </h3>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className=" font-normal text-base  tracking-normal text-neutral-300  items-center select-none pb-1">
                 <span className="font-bold">Composición:</span> Agustín Pardo
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className="font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
                 <span className="font-bold">Músicos:</span> Gustavo Villalba –
                 Saxo Soprano / Agustín Pardo – Piano / Rodrigo Fernández – Bajo
                 / Mauricio Ramos – Batería
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
                 <span className="font-bold">Grabación:</span> Gino Maiuri
                 Grabado el 23 de diciembre de 2019 en la Escuela Universitaria
                 de Música, UdelaR Montevideo, Uruguay
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
                 <span className="font-bold">Mezcla:</span> Nicolás Demczylo
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className=" font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
                 <span className="font-bold">Edición Sonido:</span> Gino Maiuri &
                 Agustín Pardo
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
                 <span className="font-bold">Cámara y Edición de Video:</span>{" "}
                 Germán Cardoso
               </p>
@@ -209,34 +209,34 @@ export default function Composicion() {
         name="Cuartetos"
         className="border-solid md:border border-neutral-600 rounded-md p-2 mb-8 "
       >
-        <h2 className="text-center justify-center font-montserrat font-normal text-3xl mb-10 mt-6">
+        <h2 className="text-amber-100 text-center justify-center text-2xl mb-10 mt-6">
           CUARTETOS
         </h2>
         <div className="grid grid-cols-1 gap-16">
           <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
             <div className="text-slate-50">
-              <h3 className="font-montserrat font-semibold text-3xl tracking-widest text-slate-50 items-center select-none pb-4">
+              <h3 className="text-amber-50  font-semibold text-xl lg:text-lg tracking-widest items-center select-none pb-4">
                 Candombe de los Mil Años
               </h3>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className=" font-normal text-base  tracking-normal text-neutral-300  items-center select-none pb-1">
                 <span className="font-bold">Composición: </span> Agustín Pardo
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className="font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
                 <span className="font-bold">Músicos: </span> Gustavo Villalba -
                 Saxo Soprano / Andrea Tejera - Saxo Alto / Gonzalo Levin - Saxo
                 Tenor / Alejandra Genta - Saxo Barítono
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
                 <span className="font-bold">Grabación:</span> Gastón Akermann en
                 Mastodonte el 19 de setiembre de 2020
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
                 <span className="font-bold">Mezcla:</span> Nicolás Demczylo
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className=" font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
                 <span className="font-bold">Edición Sonido:</span> Agustín Pardo
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
                 <span className="font-bold">Cámara y Edición de Video:</span>{" "}
                 Germán Cardoso
               </p>
@@ -263,29 +263,29 @@ export default function Composicion() {
         <div className="grid grid-cols-1 gap-16">
           <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
             <div className="text-slate-50 ">
-              <h3 className="font-montserrat font-semibold text-3xl tracking-widest text-slate-50 items-center select-none pb-4">
+              <h3 className="text-amber-50  font-semibold text-xl lg:text-lg tracking-widest items-center select-none pb-4">
                 La Floresta
               </h3>
 
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className=" font-normal text-base  tracking-normal text-neutral-300  items-center select-none pb-1">
                 <span className="font-bold">Composición: </span> Agustín Pardo
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className="font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
                 <span className="font-bold">Cuarteto de Cuerdas: </span> Violín
                 I - Diego Swallow / Violín II - Emilio Sunhary / Viola - Gerardo
                 Gramajo / Violonchelo - Pedro Szulak
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
                 <span className="font-bold">Grabación:</span> Grabado el 13 de
                 Agosto de 2020 en el Cuarto Tavella por Martín Tavella
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
                 <span className="font-bold">Mezcla:</span> Nicolás Demczylo
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className=" font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
                 <span className="font-bold">Edición Sonido:</span> Agustín Pardo
               </p>
-              <p className="font-montserrat font-normal text-lg tracking-normal text-slate-50 items-center select-none pb-1">
+              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
                 <span className="font-bold">Cámara y Edición de Video:</span>{" "}
                 Germán Cardoso
               </p>

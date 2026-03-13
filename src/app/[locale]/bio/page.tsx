@@ -34,7 +34,7 @@ export default function Bio() {
         <Image
           src={foto1}
           className=" sm:inline-block object-cover rounded-sm"
-          alt="foto agustín en su oficina"
+          alt="Agustín Pardo Motz tocando la guitarra jazz"
         />
         <div className=" text-base tracking-normal  indent-5 leading-relaxed space-y-10 text-justify">
           <p>{t("texto1")}</p>
@@ -46,7 +46,7 @@ export default function Bio() {
         <Image
           src={foto2}
           className=" sm:inline-block lg:hidden object-cover rounded-sm"
-          alt="foto agustín en su oficina"
+          alt="Agustín Pardo Motz - Compositor y arreglador uruguayo"
         />
         <div className=" text-base tracking-normal col-start-1 indent-5 leading-relaxed space-y-10 text-justify">
           <p>{t("texto3")}</p>
@@ -55,7 +55,7 @@ export default function Bio() {
         <Image
           src={foto2}
           className="hidden lg:inline-block object-cover rounded-sm"
-          alt="foto agustín en su oficina"
+          alt="Agustín Pardo Motz - Compositor y arreglador uruguayo"
         />
       </section>
 
@@ -63,7 +63,7 @@ export default function Bio() {
         <Image
           src={foto3}
           className=" lg:inline-block object-cover rounded-sm"
-          alt="foto agustín en su oficina"
+          alt="Agustín Pardo Motz - Músico y Director en Hamburgo"
         />
         <div className="col-start-2  text-base tracking-normal  indent-5 leading-relaxed space-y-10 text-justify">
           <p>{t("texto5")}</p>

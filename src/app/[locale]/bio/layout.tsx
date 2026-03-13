@@ -6,10 +6,19 @@ interface LayoutProps {
   children: ReactNode
 }
 
-export const metadata: Metadata = {
-  title: `Bio`,
-  description:
-    'Biografia de Agustin Pardo.',
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const t = await getTranslations({ locale, namespace: "Bio" });
+
+  return {
+    title: t("titulo"),
+    description: t("texto1").substring(0, 160),
+  };
 }
 
 export default function layout({ children }: LayoutProps) {

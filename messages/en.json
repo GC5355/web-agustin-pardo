@@ -13,6 +13,11 @@
     "label": "Change language",
     "locale": "{locale, select, es {es ESP} en {en ENG} other {Unknown}}"
   },
+  "Metadata": {
+    "title": "Agustín Pardo Motz | Musician, Composer and Conductor",
+    "description": "Official website of Agustín Pardo Motz. Explore his work in composition, orchestral conducting, arrangements, and musical research in Hamburg and Uruguay.",
+    "keywords": "Agustín Pardo Motz, Uruguayan musician, jazz composer, conductor, arranger, Hamburg, HfMT, contemporary music, Big Band"
+  },
   "LandingPage": {
     "Titulo1": "Welcome to my Web Page",
     "Texto1": "On this platform, I will be uploading everything I do in composition, conducting, arrangements and instrumentation, so that you can enjoy and learn more about my work.",

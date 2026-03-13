@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
+  getTranslations,
   unstable_setRequestLocale,
 } from "next-intl/server";
 import Navigation from "@/components/Navigation";
@@ -16,10 +17,37 @@ const montserrat_init = Montserrat({
   variable: "--font-montserrat",
 });
 
-export const metadata: Metadata = {
-  title: "Web Agustín Pardo",
-  description: "Proximamente...",
-};
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: {
+      default: t("title"),
+      template: `%s | ${t("title")}`,
+    },
+    description: t("description"),
+    keywords: t("keywords"),
+    authors: [{ name: "Agustín Pardo Motz" }],
+    creator: "Agustín Pardo Motz",
+    openGraph: {
+      type: "website",
+      locale: locale,
+      url: `https://agustinpardo.com/${locale}`, // Adjust if necessary
+      title: t("title"),
+      description: t("description"),
+      siteName: t("title"),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+    },
+  };
+}
 
 export default async function LocaleLayout({
   children,

@@ -35,11 +35,13 @@ export default function Home() {
         <Image
           src={fotoProli}
           alt="magen de la portada"
-          className="object-cover grayscale w-1/2 h-1/2 lg:w-full lg:h-screen "
+          className="object-cover grayscale w-full h-screen"
           layout="fill"
         />
+        {/* Capa de oscurecimiento para mejorar contraste */}
+        <div className="absolute inset-0 bg-black/40 lg:bg-black/30" />
 
-        <h1 className="text-amber-300 text-2xl md:text-xl lg:text-2xl xl:text-5xl tracking-widest font-medium absolute inset-0 flex items-center justify-center select-none mb-48">
+        <h1 className="text-amber-300 text-2xl md:text-xl lg:text-2xl xl:text-5xl tracking-widest font-medium absolute inset-0 flex items-center justify-center select-none mb-48 drop-shadow-[0_5px_15px_rgba(0,0,0,0.9)]">
           AGUSTÍN PARDO MOTZ
         </h1>
       </div>

@@ -39,7 +39,49 @@
   },
   "Composicion": {
     "titulo": "Compositions",
-    "texto1": "Text1"
+    "labels": {
+      "composicion": "Composition",
+      "musicos": "Musicians",
+      "grabacion": "Recording",
+      "mezcla": "Mixing",
+      "edicion_sonido": "Sound Editing",
+      "camara": "Camera & Video Editing",
+      "cuarteto_cuerdas": "String Quartet"
+    },
+    "items": {
+      "item1": {
+        "composicion": "Agustín Pardo",
+        "musicos": "Sebastián Mederos - Bandoneon, Germán Álvarez - Double bass, Andrés Antúnez - Piano & Agustín Pardo - Guitar",
+        "grabacion": "Gustavo de León. Recorded on October 14, 2020 at Sondor Studios, Montevideo, Uruguay.",
+        "mezcla": "Gustavo de León",
+        "edicion_sonido": "Agustín Pardo",
+        "camara": "Germán Cardoso"
+      },
+      "item2": {
+        "composicion": "Agustín Pardo",
+        "musicos": "Gustavo Villalba – Soprano Sax / Agustín Pardo – Piano / Rodrigo Fernández – Bass / Mauricio Ramos – Drums",
+        "grabacion": "Gino Maiuri. Recorded on December 23, 2019 at the School of Music, UdelaR, Montevideo, Uruguay",
+        "mezcla": "Nicolás Demczylo",
+        "edicion_sonido": "Gino Maiuri & Agustín Pardo",
+        "camara": "Germán Cardoso"
+      },
+      "item3": {
+        "composicion": "Agustín Pardo",
+        "musicos": "Gustavo Villalba - Soprano Sax / Andrea Tejera - Alto Sax / Gonzalo Levin - Tenor Sax / Alejandra Genta - Baritone Sax",
+        "grabacion": "Gastón Akermann at Mastodonte on September 19, 2020",
+        "mezcla": "Nicolás Demczylo",
+        "edicion_sonido": "Agustín Pardo",
+        "camara": "Germán Cardoso"
+      },
+      "item4": {
+        "composicion": "Agustín Pardo",
+        "cuarteto_cuerdas": "Violin I - Diego Swallow / Violin II - Emilio Sunhary / Viola - Gerardo Gramajo / Cello - Pedro Szulak",
+        "grabacion": "Recorded on August 13, 2020 at Cuarto Tavella by Martín Tavella",
+        "mezcla": "Nicolás Demczylo",
+        "edicion_sonido": "Agustín Pardo",
+        "camara": "Germán Cardoso"
+      }
+    }
   },
   
   "Contacto": {
@@ -66,8 +108,8 @@
    
       {
         "nombreEnsamble": "HFMT Big Band",
-        "fecha": "7 noviembre de 2023",
-        "lugar": "Jazz Hall, Hamburg, Alemania",
+        "fecha": "November 7, 2023",
+        "lugar": "Jazz Hall, Hamburg, Germany",
         "youtube": "https://www.youtube.com/watch?v=i8vvjJ6aFEo",
         "foto": {
           "src": "/imagenes/direccion1.jpg",
@@ -78,8 +120,8 @@
       },
       {
         "nombreEnsamble": "Elbjazz",
-        "fecha": "3 de Enero de 2024",
-        "lugar": "Jazz Hall, Hamburg, Alemania",
+        "fecha": "January 3, 2024",
+        "lugar": "Jazz Hall, Hamburg, Germany",
         "youtube": "https://www.youtube.com/watch?v=SQ-xIDZQUrY",
         "foto": {
           "src": "/imagenes/elbJazz.jpg",
@@ -90,7 +132,7 @@
       },
       {
         "nombreEnsamble": "Orquesta UTEC",
-        "fecha": "2 de Marzo de 2024",
+        "fecha": "March 2, 2024",
         "lugar": "Jazz a la Calle, Mercedes, Soriano - Uruguay",
         "youtube": "https://www.youtube.com/watch?v=wTaoxNdOzmQ",
         "foto": {

@@ -10,7 +10,7 @@
     "Contacto": "Contacto"
   },
   "LocaleSwitcher": {
-    "label": "Change language",
+    "label": "Cambiar idioma",
     "locale": "{locale, select, es {es ESP} en {en ENG} other {Unknown}}"
   },
   "Metadata": {
@@ -24,8 +24,8 @@
     "Texto2": ""
   },
   "NotFoundPage": {
-    "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
-    "title": "Page not found"
+    "description": "Por favor, verifica la barra de direcciones del navegador o usa la navegación para ir a una página conocida.",
+    "title": "Página no encontrada"
   },
   "Bio": {
     "titulo": "Biografía",
@@ -38,8 +38,50 @@
     "texto7": "Como docente, actualmente es encargado del Área de Composición & Arreglos y del Área de Investigación & Gestión de Proyectos en la Universidad Tecnológica (UTEC) en Mercedes, Uruguay. También trabaja en el Departamento de Teoría & Composición en la Facultad de Artes de la UdelaR en Montevideo. Anteriormente ha trabajado como docente en la Escuela Internacional de Música Contemporánea de la Universidad Nacional Pedro Henríquez Ureña (UNPHU) en Santo Domingo, República Dominicana y en el Conservatorio Sur de Montevideo, Uruguay."
   },
   "Composicion": {
-    "titulo": "Compositions",
-    "texto1": "Text1"
+    "titulo": "Composiciones",
+    "labels": {
+      "composicion": "Composición",
+      "musicos": "Músicos",
+      "grabacion": "Grabación",
+      "mezcla": "Mezcla",
+      "edicion_sonido": "Edición Sonido",
+      "camara": "Cámara y Edición de Video",
+      "cuarteto_cuerdas": "Cuarteto de Cuerdas"
+    },
+    "items": {
+      "item1": {
+        "composicion": "Agustín Pardo",
+        "musicos": "Sebastián Mederos - Bandoneón Germán Álvarez - Contrabajo Andrés Antúnez - Piano & Agustín Pardo - Guitarra",
+        "grabacion": "Gustavo de León. Grabado el 14 de octubre de 2020 en estudios Sondor, Montevideo, Uruguay.",
+        "mezcla": "Gustavo de León",
+        "edicion_sonido": "Agustín Pardo",
+        "camara": "Germán Cardoso"
+      },
+      "item2": {
+        "composicion": "Agustín Pardo",
+        "musicos": "Gustavo Villalba – Saxo Soprano / Agustín Pardo – Piano / Rodrigo Fernández – Bajo / Mauricio Ramos – Batería",
+        "grabacion": "Gino Maiuri. Grabado el 23 de diciembre de 2019 en la Escuela Universitaria de Música, UdelaR Montevideo, Uruguay",
+        "mezcla": "Nicolás Demczylo",
+        "edicion_sonido": "Gino Maiuri & Agustín Pardo",
+        "camara": "Germán Cardoso"
+      },
+      "item3": {
+        "composicion": "Agustín Pardo",
+        "musicos": "Gustavo Villalba - Saxo Soprano / Andrea Tejera - Saxo Alto / Gonzalo Levin - Saxo Tenor / Alejandra Genta - Saxo Barítono",
+        "grabacion": "Gastón Akermann en Mastodonte el 19 de setiembre de 2020",
+        "mezcla": "Nicolás Demczylo",
+        "edicion_sonido": "Agustín Pardo",
+        "camara": "Germán Cardoso"
+      },
+      "item4": {
+        "composicion": "Agustín Pardo",
+        "cuarteto_cuerdas": "Violín I - Diego Swallow / Violín II - Emilio Sunhary / Viola - Gerardo Gramajo / Violonchelo - Pedro Szulak",
+        "grabacion": "Grabado el 13 de Agosto de 2020 en el Cuarto Tavella por Martín Tavella",
+        "mezcla": "Nicolás Demczylo",
+        "edicion_sonido": "Agustín Pardo",
+        "camara": "Germán Cardoso"
+      }
+    }
   },
   "Contacto": {
     "titulo": "Contacto",

@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import hamburguesa from "@/imagenes/logos/logo navbar.png";
 import { SetStateAction, useEffect, useState } from "react";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Image from "next/image";
 import { nav_links } from "@/constants/nav-links";
 import { useTranslations } from "next-intl";
@@ -44,7 +44,7 @@ const MobileNav = () => {
             {nav_links.map((link, i) => (
               <DropdownMenuItem key={i}>
                 <Link
-                  href={link.href}
+                  href={link.href as any}
                   className="block font-montserrat font-normal tracking-wide w-full text-left px-3 py-1.5 cursor-pointer transition-all"
                   onClick={() => handleLinkClick(link.title)}
                 >

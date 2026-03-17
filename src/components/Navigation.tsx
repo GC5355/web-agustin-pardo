@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
 import { SetStateAction, useEffect, useState } from "react";
 import { nav_links } from "@/constants/nav-links";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Image from "next/image";
 import fotoRedondaPepe from "@/imagenes/logos/LogoRedondo.png";
 import MobileNav from "./MobileNav";
@@ -54,7 +54,7 @@ export default function Navigation() {
         <div className="flex items-center mr-4">
           <ul className="hidden xl:flex items-end space-x-3">
             {nav_links.map((link, i) => (
-              <Link href={link.href} key={i} className="p-1">
+              <Link href={link.href as any} key={i} className="p-1">
                 <div
                   onClick={() => handleLinkClick(link.title)}
                   className={`font-montserrat font-normal tracking-wide text-sm ml-4 text-slate-50 transition-all hover:text-amber-100 ${

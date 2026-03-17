@@ -6,8 +6,10 @@ import { Link as ScrollLink, Element } from "react-scroll";
 import Image from "next/image";
 import fotoProli from "@/imagenes/proli1.jpg";
 import { Separator } from "@/components/ui/separator";
+import { useTranslations } from "next-intl";
 
 export default function Composicion() {
+  const t = useTranslations("Composicion");
   const optsExtraLarge = {
     height: "250",
     width: "450",
@@ -52,91 +54,73 @@ export default function Composicion() {
   ];
 
   const [isLoaded, setIsLoaded] = useState(false);
+  const [videosReady, setVideosReady] = useState<Record<string, boolean>>({});
+
   useEffect(() => {
     setIsLoaded(true);
   }, []);
 
+  const handleVideoReady = (id: string) => {
+    setVideosReady((prev) => ({ ...prev, [id]: true }));
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center text-slate-50 pt-10 w-5/6 mx-auto  font-montserrat font-normal">
       <h1 className="tracking-widest text-amber-100 text-2xl  lg:text-4xl mt-14 ">
-        COMPOSICIONES
+        {t('titulo').toUpperCase()}
       </h1>
       <Separator className="xl:w-1/2 w-5/6 bg-amber-50 mt-8 mb-10" />
 
-      <nav className=" text-amber-50 sm:sticky  w-full  p-4 flex justify-center">
-        <ul className="xl:hidden flex flex-col space-y-6  text-lg text-center text-amber-50">
-          {scrollLinks.map((link, i) => (
-            <li key={i}>
-              <ScrollLink
-                to={link.to}
-                smooth={true}
-                duration={500}
-                className="cursor-pointer  hover:underline underline-offset-8"
-              >
-                {link.label}
-              </ScrollLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <Separator className="xl:hidden lg:w-1/2 w-5/6 mb-16 bg-amber-50 " />
 
       {/* Big Band*/}
       <Element
         name="BigBand"
         className="border-solid md:border border-neutral-600 rounded-md p-2 mb-8 "
       >
-        <h2 className="text-amber-100 text-center justify-center text-2xl mb-10 mt-6">
-          BIG BANDS
-        </h2>
         <div className="grid grid-cols-1 gap-16">
           <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
-            <div className="">
-              <h3 className="text-amber-50  font-semibold text-xl lg:text-lg tracking-widest items-center select-none pb-4">
-                Sin Palabras & Agustín Pardo - SOL XIII
-              </h3>
-              <p className=" font-normal text-base  tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold ">Composición:</span> Agustín Pardo
-              </p>
-              <p className="font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold text-neutral-300 ">Músicos:</span>{" "}
-                Sebastián Mederos - Bandoneón Germán Álvarez - Contrabajo Andrés
-                Antúnez - Piano & Agustín Pardo - Guitarra
-              </p>
-              <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
-                <span className="font-bold">Grabación:</span> Gustavo de León
-                Grabado el 14 de octubre de 2020 en estudios Sondor, Montevideo,
-                Uruguay.
-              </p>
-              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold">Mezcla:</span> Gustavo de León
-              </p>
-              <p className=" font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
-                <span className="font-bold">Edición Sonido:</span> Agustín Pardo
-              </p>
-              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold">Cámara y Edición de Video:</span>{" "}
-                Germán Cardoso
-              </p>
-            </div>
-            <div className="text-slate-50 aspect-video mx-auto">
+            <div className="relative text-slate-50 aspect-video mx-auto w-full">
+              {!videosReady["zZQ21852wV8"] && (
+                <div className="absolute inset-0 bg-neutral-800 animate-pulse rounded-md" />
+              )}
               {isLoaded && (
                 <>
                   <div className="hidden 2xl:block">
-                    <YouTube videoId="zZQ21852wV8" opts={optsExtraLarge} />
+                    <YouTube videoId="zZQ21852wV8" opts={optsExtraLarge} onReady={() => handleVideoReady("zZQ21852wV8")} />
                   </div>
                   <div className="hidden lg:block 2xl:hidden">
-                    <YouTube videoId="zZQ21852wV8" opts={optsLarge} />
+                    <YouTube videoId="zZQ21852wV8" opts={optsLarge} onReady={() => handleVideoReady("zZQ21852wV8")} />
                   </div>
                   <div className="hidden md:block lg:hidden">
-                    <YouTube videoId="zZQ21852wV8" opts={optsMedium} />
+                    <YouTube videoId="zZQ21852wV8" opts={optsMedium} onReady={() => handleVideoReady("zZQ21852wV8")} />
                   </div>
                   <div className="md:hidden">
-                    <YouTube videoId="zZQ21852wV8" opts={optsSmall} />
+                    <YouTube videoId="zZQ21852wV8" opts={optsSmall} onReady={() => handleVideoReady("zZQ21852wV8")} />
                   </div>
                 </>
               )}
+            </div>
+            <div className="">
+              <p className=" font-normal text-base  tracking-normal text-neutral-300  items-center select-none pb-1">
+                <span className="font-bold ">{t('labels.composicion')}:</span> {t('items.item1.composicion')}
+              </p>
+              <p className="font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
+                <span className="font-bold text-neutral-300 ">{t('labels.musicos')}:</span>{" "}
+                {t('items.item1.musicos')}
+              </p>
+              <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
+                <span className="font-bold">{t('labels.grabacion')}:</span> {t('items.item1.grabacion')}
+              </p>
+              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
+                <span className="font-bold">{t('labels.mezcla')}:</span> {t('items.item1.mezcla')}
+              </p>
+              <p className=" font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
+                <span className="font-bold">{t('labels.edicion_sonido')}:</span> {t('items.item1.edicion_sonido')}
+              </p>
+              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
+                <span className="font-bold">{t('labels.camara')}:</span>{" "}
+                {t('items.item1.camara')}
+              </p>
             </div>
           </section>
         </div>
@@ -149,53 +133,45 @@ export default function Composicion() {
         name="Ensambles"
         className="border-solid md:border border-neutral-600 rounded-md p-2 mb-8 "
       >
-        <h2 className="text-amber-100 text-center justify-center text-2xl mb-10 mt-6">
-          ENSAMBLES
-        </h2>
         <div className="grid grid-cols-1 gap-16">
           <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
             <div className="text-slate-50">
-              <h3 className="text-amber-50  font-semibold text-xl lg:text-lg tracking-widest items-center select-none pb-4">
-                William Pequeño
-              </h3>
               <p className=" font-normal text-base  tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold">Composición:</span> Agustín Pardo
+                <span className="font-bold">{t('labels.composicion')}:</span> {t('items.item2.composicion')}
               </p>
               <p className="font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold">Músicos:</span> Gustavo Villalba –
-                Saxo Soprano / Agustín Pardo – Piano / Rodrigo Fernández – Bajo
-                / Mauricio Ramos – Batería
+                <span className="font-bold">{t('labels.musicos')}:</span> {t('items.item2.musicos')}
               </p>
               <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
-                <span className="font-bold">Grabación:</span> Gino Maiuri
-                Grabado el 23 de diciembre de 2019 en la Escuela Universitaria
-                de Música, UdelaR Montevideo, Uruguay
+                <span className="font-bold">{t('labels.grabacion')}:</span> {t('items.item2.grabacion')}
               </p>
               <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold">Mezcla:</span> Nicolás Demczylo
+                <span className="font-bold">{t('labels.mezcla')}:</span> {t('items.item2.mezcla')}
               </p>
               <p className=" font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
-                <span className="font-bold">Edición Sonido:</span> Gino Maiuri &
-                Agustín Pardo
+                <span className="font-bold">{t('labels.edicion_sonido')}:</span> {t('items.item2.edicion_sonido')}
               </p>
               <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold">Cámara y Edición de Video:</span>{" "}
-                Germán Cardoso
+                <span className="font-bold">{t('labels.camara')}:</span>{" "}
+                {t('items.item2.camara')}
               </p>
             </div>
-            <div className="text-slate-50 aspect-video mx-auto">
+            <div className="relative text-slate-50 aspect-video mx-auto w-full">
+              {!videosReady["og9skSDNPto"] && (
+                <div className="absolute inset-0 bg-neutral-800 animate-pulse rounded-md" />
+              )}
               <div className="hidden 2xl:block">
-                <YouTube videoId="og9skSDNPto" opts={optsExtraLarge} />
+                <YouTube videoId="og9skSDNPto" opts={optsExtraLarge} onReady={() => handleVideoReady("og9skSDNPto")} />
               </div>
               <div className="hidden lg:block 2xl:hidden">
-                <YouTube videoId="og9skSDNPto" opts={optsLarge} />
+                <YouTube videoId="og9skSDNPto" opts={optsLarge} onReady={() => handleVideoReady("og9skSDNPto")} />
               </div>
 
               <div className="hidden md:block lg:hidden">
-                <YouTube videoId="og9skSDNPto" opts={optsMedium} />
+                <YouTube videoId="og9skSDNPto" opts={optsMedium} onReady={() => handleVideoReady("og9skSDNPto")} />
               </div>
               <div className="md:hidden">
-                <YouTube videoId="og9skSDNPto" opts={optsSmall} />
+                <YouTube videoId="og9skSDNPto" opts={optsSmall} onReady={() => handleVideoReady("og9skSDNPto")} />
               </div>
             </div>
           </section>
@@ -209,101 +185,96 @@ export default function Composicion() {
         name="Cuartetos"
         className="border-solid md:border border-neutral-600 rounded-md p-2 mb-8 "
       >
-        <h2 className="text-amber-100 text-center justify-center text-2xl mb-10 mt-6">
-          CUARTETOS
-        </h2>
         <div className="grid grid-cols-1 gap-16">
           <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
-            <div className="text-slate-50">
-              <h3 className="text-amber-50  font-semibold text-xl lg:text-lg tracking-widest items-center select-none pb-4">
-                Candombe de los Mil Años
-              </h3>
-              <p className=" font-normal text-base  tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold">Composición: </span> Agustín Pardo
-              </p>
-              <p className="font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold">Músicos: </span> Gustavo Villalba -
-                Saxo Soprano / Andrea Tejera - Saxo Alto / Gonzalo Levin - Saxo
-                Tenor / Alejandra Genta - Saxo Barítono
-              </p>
-              <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
-                <span className="font-bold">Grabación:</span> Gastón Akermann en
-                Mastodonte el 19 de setiembre de 2020
-              </p>
-              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold">Mezcla:</span> Nicolás Demczylo
-              </p>
-              <p className=" font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
-                <span className="font-bold">Edición Sonido:</span> Agustín Pardo
-              </p>
-              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold">Cámara y Edición de Video:</span>{" "}
-                Germán Cardoso
-              </p>
-            </div>
-
-            <div className="text-slate-50 aspect-video mx-auto">
+            <div className="relative text-slate-50 aspect-video mx-auto w-full">
+              {!videosReady["oGXYKgXxJPY"] && (
+                <div className="absolute inset-0 bg-neutral-800 animate-pulse rounded-md" />
+              )}
               <div className="hidden 2xl:block">
-                <YouTube videoId="oGXYKgXxJPY" opts={optsExtraLarge} />
+                <YouTube videoId="oGXYKgXxJPY" opts={optsExtraLarge} onReady={() => handleVideoReady("oGXYKgXxJPY")} />
               </div>
               <div className="hidden lg:block 2xl:hidden">
-                <YouTube videoId="oGXYKgXxJPY" opts={optsLarge} />
+                <YouTube videoId="oGXYKgXxJPY" opts={optsLarge} onReady={() => handleVideoReady("oGXYKgXxJPY")} />
               </div>
-
               <div className="hidden md:block lg:hidden">
-                <YouTube videoId="oGXYKgXxJPY" opts={optsMedium} />
+                <YouTube videoId="oGXYKgXxJPY" opts={optsMedium} onReady={() => handleVideoReady("oGXYKgXxJPY")} />
               </div>
               <div className="md:hidden">
-                <YouTube videoId="oGXYKgXxJPY" opts={optsSmall} />
+                <YouTube videoId="oGXYKgXxJPY" opts={optsSmall} onReady={() => handleVideoReady("oGXYKgXxJPY")} />
               </div>
+            </div>
+            <div className="text-slate-50">
+              <p className=" font-normal text-base  tracking-normal text-neutral-300  items-center select-none pb-1">
+                <span className="font-bold">{t('labels.composicion')}: </span> {t('items.item3.composicion')}
+              </p>
+              <p className="font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
+                <span className="font-bold">{t('labels.musicos')}: </span> {t('items.item3.musicos')}
+              </p>
+              <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
+                <span className="font-bold">{t('labels.grabacion')}:</span> {t('items.item3.grabacion')}
+              </p>
+              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
+                <span className="font-bold">{t('labels.mezcla')}:</span> {t('items.item3.mezcla')}
+              </p>
+              <p className=" font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
+                <span className="font-bold">{t('labels.edicion_sonido')}:</span> {t('items.item3.edicion_sonido')}
+              </p>
+              <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
+                <span className="font-bold">{t('labels.camara')}:</span>{" "}
+                {t('items.item3.camara')}
+              </p>
             </div>
           </section>
         </div>
+      </Element>
 
+      <Separator className="md:hidden mb-16 bg-amber-50 " />
+
+      <Element
+        name="LaFloresta"
+        className="border-solid md:border border-neutral-600 rounded-md p-2 mb-8 "
+      >
         <div className="grid grid-cols-1 gap-16">
           <section className="grid grid-cols-1 xl:grid-cols-2 gap-6 p-6">
             <div className="text-slate-50 ">
-              <h3 className="text-amber-50  font-semibold text-xl lg:text-lg tracking-widest items-center select-none pb-4">
-                La Floresta
-              </h3>
 
               <p className=" font-normal text-base  tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold">Composición: </span> Agustín Pardo
+                <span className="font-bold">{t('labels.composicion')}: </span> {t('items.item4.composicion')}
               </p>
               <p className="font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold">Cuarteto de Cuerdas: </span> Violín
-                I - Diego Swallow / Violín II - Emilio Sunhary / Viola - Gerardo
-                Gramajo / Violonchelo - Pedro Szulak
+                <span className="font-bold">{t('labels.cuarteto_cuerdas')}: </span> {t('items.item4.cuarteto_cuerdas')}
               </p>
               <p className="font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
-                <span className="font-bold">Grabación:</span> Grabado el 13 de
-                Agosto de 2020 en el Cuarto Tavella por Martín Tavella
+                <span className="font-bold">{t('labels.grabacion')}:</span> {t('items.item4.grabacion')}
               </p>
               <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold">Mezcla:</span> Nicolás Demczylo
+                <span className="font-bold">{t('labels.mezcla')}:</span> {t('items.item4.mezcla')}
               </p>
               <p className=" font-normal text-base tracking-normal text-neutral-300 items-center select-none pb-1">
-                <span className="font-bold">Edición Sonido:</span> Agustín Pardo
+                <span className="font-bold">{t('labels.edicion_sonido')}:</span> {t('items.item4.edicion_sonido')}
               </p>
               <p className=" font-normal text-base tracking-normal text-neutral-300  items-center select-none pb-1">
-                <span className="font-bold">Cámara y Edición de Video:</span>{" "}
-                Germán Cardoso
+                <span className="font-bold">{t('labels.camara')}:</span>{" "}
+                {t('items.item4.camara')}
               </p>
             </div>
 
-            <div className="text-slate-50 aspect-video mx-auto">
+            <div className="relative text-slate-50 aspect-video mx-auto w-full">
+              {!videosReady["SANbNx12flY"] && (
+                <div className="absolute inset-0 bg-neutral-800 animate-pulse rounded-md" />
+              )}
               <div className="hidden 2xl:block">
-                <YouTube videoId="SANbNx12flY" opts={optsExtraLarge} />
+                <YouTube videoId="SANbNx12flY" opts={optsExtraLarge} onReady={() => handleVideoReady("SANbNx12flY")} />
               </div>
               <div className="hidden lg:block 2xl:hidden">
-                <YouTube videoId="SANbNx12flY" opts={optsLarge} />
+                <YouTube videoId="SANbNx12flY" opts={optsLarge} onReady={() => handleVideoReady("SANbNx12flY")} />
               </div>
-
               <div className="hidden md:block lg:hidden">
-                <YouTube videoId="SANbNx12flY" opts={optsMedium} />
+                <YouTube videoId="SANbNx12flY" opts={optsMedium} onReady={() => handleVideoReady("SANbNx12flY")} />
               </div>
               <div className="md:hidden">
-                <YouTube videoId="SANbNx12flY" opts={optsSmall} />
+                <YouTube videoId="SANbNx12flY" opts={optsSmall} onReady={() => handleVideoReady("SANbNx12flY")} />
               </div>
             </div>
           </section>

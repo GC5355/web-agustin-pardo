@@ -22,7 +22,7 @@ export const instrumentalista: Banda[] = [
     banda: "La Imbailable Cumbia Orquesta",
     nombreDisco: "La Quinqueña",
     descripcion:
-      "Toque con la imbailable en el 2020. Tocan cumbia colombiana y esta muy guay!",
+      "Toque con la imbailable en el 2020. Tocan cumbia colombiana.",
     instrumentos: [{ name: "Guitarra" }],
     imagen: laImbailable,
     discoCompleto:
@@ -48,7 +48,7 @@ export const instrumentalista: Banda[] = [
   {
     banda: "La Nonna",
     nombreDisco: "La Nonna",
-    descripcion: "La nonna es una gran banda",
+    descripcion: "",
     instrumentos: [{ name: "Guitarra" }],
     imagen: laNonna,
     discoCompleto:
